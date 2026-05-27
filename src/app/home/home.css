@@ -1208,8 +1208,28 @@ swiper-slide {
   }
 
   .bottom-specs {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
+  swiper-container.testimonialSwiper{
+    height: 100%;
+    clip-path:none;
+  }
+  .service-section .feature-box img{
+    width: 20px;
+  }
+  .spec-row .spec-box{
+    border-right: 1px solid var(--black);
+    border-bottom: none;
+  }
+    .spec-row .spec-box:last-child{
+      border-right: none;
+    }
+    .test-drive-section .booking-form form{
+          padding-bottom: 60px;
+    }
+    .service-section .slider-box swiper-container{
+      clip-path:none;
+    }
 }
 
 /* =========================
