@@ -220,22 +220,24 @@
       <h2 class="title">TAKING RIDES TO A NEWER LEVEL</h2>
 
       <!-- Tabs -->
-      <div class="tabs">
+      <div class="button-vehicle">
         <button
-          class="tab-btn"
-          [class.active]="activeTab === 'motorcycle'"
-          (click)="setTab('motorcycle')"
+        class="tab-btn"
+        [class.active]="activeTab === 'motorcycle'"
+        (click)="setTab('motorcycle')"
         >
-          MOTORCYCLE
-        </button>
+        MOTORCYCLE
+      </button>
 
-        <button
-          class="tab-btn"
-          [class.active]="activeTab === 'scooter'"
-          (click)="setTab('scooter')"
-        >
-          SCOOTER
-        </button>
+      <button
+      class="tab-btn"
+      [class.active]="activeTab === 'scooter'"
+      (click)="setTab('scooter')"
+      >
+      SCOOTER
+    </button>
+  </div>
+  <div class="tabs">
         <p>
           Our certified technicians provide professional servicing, periodic maintenance, repairs,
           and genuine Honda spare parts to ensure safety, performance, and long-lasting reliability
