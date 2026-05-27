@@ -1,5 +1,5 @@
 .page-wrapper {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
 }
@@ -160,6 +160,10 @@
   font-size: 17px;
   transition: 0.3s ease;
 }
+.contact-info .details{
+  display: flex;
+  gap: 30px;
+}
 
 /* .footer-links a::before {
   content: '\f4f4';
@@ -210,6 +214,7 @@
 }
 .contact-info p strong {
   font-size: 23px;
+  color: var(--primary-red);
 }
 
 .open-times {
@@ -243,7 +248,10 @@
   text-decoration: underline;
 }
 /* Responsive */
-
+.details .contact-icon{
+  color: var(--primary-red);
+  font-size: 20px;
+}
 @media (max-width: 991px) {
   .footer-title {
     font-size: 40px;
@@ -325,6 +333,9 @@
     justify-content: center;
   }
   .cta-section #buttons-contact {
+    flex-direction: column;
+  }
+  .contact-info .details{
     flex-direction: column;
   }
 }
