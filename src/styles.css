@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+body {
+  font-family: 'Oswald', sans-serif;
+}
+:root {
+
+  /* Primary */
+  --primary-red: #EC2024;
+
+  /* Gray Shades */
+  --gray-light: #F1F1F1;
+  --gray-dark: #2F2F2F;
+  --gray-medium: #8A8A8A;
+
+  /* Optional Extra */
+  --white: #ffffff;
+  --black: #000000;
+}
+
