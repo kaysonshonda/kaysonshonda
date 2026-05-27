@@ -65,7 +65,7 @@
         <!-- Left Images -->
         <div class="col-lg-4">
           <div class="left-image">
-            <img src="assets/images/mmnww.jpg" alt="Honda Scooter" class="main-img" />
+            <img src="assets/images/mmnww.jpg" alt="Honda Scooter" loading="lazy" class="main-img" />
           </div>
         </div>
 
@@ -87,7 +87,7 @@
               <div class="col-md-6">
                 <div class="feature-box">
                   <div class="icon">
-                    <img src="/assets/images/home-icons/Trusted Legacy.svg" alt="" />
+                    <img src="/assets/images/home-icons/Trusted Legacy.svg"  alt="" />
                   </div>
 
                   <div>
@@ -144,11 +144,11 @@
             <!-- Bottom Images -->
 
             <div class="bottom-images">
-              <img src="assets/images/Untitled-1 copy.jpg" alt="Honda Bikes" />
+              <img src="assets/images/Untitled-1 copy.jpg" loading="lazy" alt="Honda Bikes" />
 
               <img
                 src="	assets/images/Design_555_555-Wide-Petrol-Tank-style-home.jpg"
-                alt="Honda Tank"
+                alt="Honda Tank" loading="lazy"
               />
             </div>
           </div>
@@ -260,7 +260,7 @@
           </div>
 
           <div class="image-box">
-            <img src="/assets/images/kaysons bike/NX200.png" alt="Honda NX200" />
+            <img src="/assets/images/kaysons bike/NX200.png" loading="lazy" alt="Honda NX200" />
           </div>
 
           <div class="spec-row">
@@ -331,7 +331,7 @@
           </div>
 
           <div class="image-box">
-            <img src="/assets/images/kaysons bike/Hornet 2.0.png" alt="Honda Hornet 2.0" />
+            <img src="/assets/images/kaysons bike/Hornet 2.0.png" loading="lazy" alt="Honda Hornet 2.0" />
           </div>
 
           <div class="spec-row">
@@ -402,7 +402,7 @@
           </div>
 
           <div class="image-box">
-            <img src="/assets/images/kaysons bike/Shine100.png" alt="Honda Shine100" />
+            <img src="/assets/images/kaysons bike/Shine100.png" loading="lazy" alt="Honda Shine100" />
           </div>
 
           <div class="spec-row">
@@ -479,7 +479,7 @@
           </div>
 
           <div class="image-box">
-            <img src="/assets/images/kaysons Scooters/Activa 110.png" alt="Honda Activa 110" />
+            <img src="/assets/images/kaysons Scooters/Activa 110.png" loading="lazy" alt="Honda Activa 110" />
           </div>
 
           <div class="spec-row">
@@ -550,7 +550,7 @@
           </div>
 
           <div class="image-box">
-            <img src="/assets/images/kaysons Scooters/Activa 125.png" alt="Honda Activa 125" />
+            <img src="/assets/images/kaysons Scooters/Activa 125.png" loading="lazy" alt="Honda Activa 125" />
           </div>
 
           <div class="spec-row">
@@ -621,7 +621,7 @@
           </div>
 
           <div class="image-box">
-            <img src="/assets/images/kaysons Scooters/Dio X Edition.png" alt="Honda Dio 110" />
+            <img src="/assets/images/kaysons Scooters/Dio X Edition.png" loading="lazy" alt="Honda Dio 110" />
           </div>
 
           <div class="spec-row">
@@ -954,37 +954,30 @@
       </div>
 
       <!-- SWIPER -->
-
- <swiper-container
+<swiper-container
   class="testimonialSwiper"
+  slides-per-view="3"
+  space-between="30"
+  loop="true"
+  speed="1000"
+  pagination="true"
 
-  [slidesPerView]="3"
-  [spaceBetween]="30"
+  autoplay='{
+    "delay": 2500,
+    "disableOnInteraction": false
+  }'
 
-  [loop]="true"
-
-  [speed]="1000"
-
-  [autoplay]="{
-    delay: 2500,
-    disableOnInteraction: false
-  }"
-
-  [pagination]="{
-    clickable: true
-  }"
-
-  [breakpoints]="{
-    '0': {
-      slidesPerView: 1
+  breakpoints='{
+    "0": {
+      "slidesPerView": 1
     },
-    '768': {
-      slidesPerView: 2
+    "768": {
+      "slidesPerView": 2
     },
-    '1200': {
-      slidesPerView: 3
+    "1200": {
+      "slidesPerView": 3
     }
-  }"
+  }'
 >
 
   <swiper-slide *ngFor="let item of testimonials">

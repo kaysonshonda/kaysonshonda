@@ -6,7 +6,7 @@
 .cta-section {
   background: url(/assets/images/wd33.jpg) no-repeat fixed center / cover #0f0f0f;
   position: relative;
-  padding: 100px 0 80px;
+  padding: 50px 0 30px;
   clip-path: polygon(17% 0px, 100% 28%, 100% 100%, 0px 100%, 0px 32%);
   overflow: hidden;
 }
@@ -70,7 +70,7 @@
 
 .footer-section {
   background: var(--black);
-  padding: 80px 0 30px;
+  padding: 30px 0 40px;
   color: var(--white);
   font-family: 'Oswald', sans-serif;
 }
@@ -187,12 +187,13 @@
 
 .footer-line {
   border-top: 1px solid;
-  margin: 60px 0 30px;
+  margin: 30px 0 30px;
 }
 
 .copyright {
-  color: VAR(--GRAY-MEDIUM);
-  font-size: 22px;
+  color: var(--gray-medium);
+  font-size: 18px;
+  font-weight: 400;
 }
 .phone-links a {
   color: var(--white);

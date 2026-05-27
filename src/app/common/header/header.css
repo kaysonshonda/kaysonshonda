@@ -7,6 +7,10 @@
   background-color: var(--black);
 border-bottom: 1px solid var(--gray-light);
 }
+.navbar.scrolled .navbar-toggler {
+  background: #fff;
+  border-color: #fff;
+}
 .navi-bar .navbar &.scrolled {
   background-color: var(--black);
   border: 1px solid var(--gray-light);
