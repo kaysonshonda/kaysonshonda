@@ -1,0 +1,169 @@
+<section class="services-page">
+  <div class="banner">
+    <img src="assets/images/wd33.jpg" alt="Honda Banner" width="100%" />
+  </div>
+  <div class="content">
+    <h1>Complete Honda Two-Wheeler Support Services</h1>
+
+    <p>
+      At Kaysons Honda, we provide complete support and after-sales solutions for all Honda
+      two-wheelers under one roof. Our expert vehicle services include regular maintenance, repairs,
+      engine diagnostics, oil changes, brake inspections, and performance checks to keep your Honda
+      bike or scooter running smoothly. We also offer 100% Honda Genuine Parts that ensure
+      long-lasting durability, perfect fitment, and reliable performance for your vehicle. Customers
+      can conveniently renew their two-wheeler insurance with our hassle-free insurance renewal
+      services, including policy assistance and claim support for added peace of mind. To ensure
+      long-term protection, we also provide Honda Extended Warranty plans that help reduce repair
+      costs and offer additional coverage beyond the standard warranty period. With trusted
+      technicians, quality service standards, and customer-focused support, Kaysons Honda delivers a
+      complete ownership experience for every Honda rider.
+    </p>
+  </div>
+
+  <section class="form-section">
+    <h2>Service Enquiries</h2>
+    <p>Select a service type and send your request.</p>
+
+    <!-- ================= TABS ================= -->
+    <div class="tabs">
+      <button (click)="tab = 'vehicle'" [class.active]="tab === 'vehicle'">Vehicle Services</button>
+
+      <button (click)="tab = 'parts'" [class.active]="tab === 'parts'">Spare Parts</button>
+
+      <button (click)="tab = 'insurance'" [class.active]="tab === 'insurance'">Insurance</button>
+
+      <button (click)="tab = 'warranty'" [class.active]="tab === 'warranty'">Warranty</button>
+    </div>
+
+    <!-- ================= VEHICLE SERVICES ================= -->
+    @if (tab === 'vehicle') {
+      <form #f1="ngForm" (ngSubmit)="submitVehicle(f1)" class="form-card">
+        <div class="row">
+          <input name="fullName" ngModel required placeholder="Full Name" />
+          <input name="phone" ngModel required placeholder="Phone Number" />
+        </div>
+
+        <div class="row">
+          <input name="email" ngModel placeholder="Email" />
+          <input name="model" ngModel placeholder="Model" />
+        </div>
+
+        <div class="row">
+          <select name="serviceType" ngModel required>
+            <option value="">Service Type</option>
+            <option>General Service</option>
+            <option>Engine Repair</option>
+            <option>Oil Change</option>
+            <option>Brake Check</option>
+          </select>
+
+          <textarea name="message" ngModel placeholder="Message"></textarea>
+        </div>
+
+        <button class="btn-primary">Submit Request</button>
+
+        <div class="contact">
+          <h6>Services Team</h6>
+                  <div class="inline-contact-data">
+          <p><i class="bi bi-telephone-fill"></i> 9932031315</p>
+          <p><i class="bi bi-envelope-fill"></i> backoffice.service@kaysonshonda.com</p>
+          <p><i class="bi bi-clock-fill"></i> Mon - Sun 9:30 AM to 7:00 PM</p>
+        </div>
+        </div>
+      </form>
+    }
+
+    <!-- ================= SPARE PARTS ================= -->
+    @if (tab === 'parts') {
+      <form #f2="ngForm" (ngSubmit)="submitParts(f2)" class="form-card">
+        <div class="row">
+          <input name="fullName" ngModel required placeholder="Full Name" />
+          <input name="phone" ngModel required placeholder="Phone Number" />
+        </div>
+
+        <div class="row">
+          <input name="email" ngModel placeholder="Email" />
+          <input name="model" ngModel placeholder="Model" />
+        </div>
+
+        <div class="row">
+          <input name="partsType" ngModel placeholder="Honda Genuine Parts" />
+          <textarea name="message" ngModel placeholder="What parts are you looking for?"></textarea>
+        </div>
+
+        <button class="btn-primary">Send Enquiry</button>
+
+        <div class="contact">
+          <h6>Spare Parts Team</h6>
+                  <div class="inline-contact-data">
+          <p><i class="bi bi-telephone-fill"></i> 9933343300</p>
+          <p><i class="bi bi-envelope-fill"></i> spkaysons@kaysonshonda.com</p>
+          <p><i class="bi bi-clock-fill"></i> Mon - Sun 9:30 AM to 7:00 PM</p>
+        </div>
+        </div>
+      </form>
+    }
+
+    <!-- ================= INSURANCE ================= -->
+    @if (tab === 'insurance') {
+      <form #f3="ngForm" (ngSubmit)="submitInsurance(f3)" class="form-card">
+        <div class="row">
+          <input name="fullName" ngModel required placeholder="Full Name" />
+          <input name="phone" ngModel required placeholder="Phone Number" />
+        </div>
+
+        <div class="row">
+          <input name="email" ngModel placeholder="Email" />
+          <input name="model" ngModel placeholder="Model" />
+        </div>
+
+        <div class="row">
+          <input type="date" name="purchaseDate" ngModel />
+          <textarea name="message" ngModel placeholder="Message"></textarea>
+        </div>
+
+        <button class="btn-primary">Renew Insurance</button>
+
+        <div class="contact">
+          <h6>Insurance Team</h6>
+          <div class="inline-contact-data">
+            <p><i class="bi bi-telephone-fill"></i> 8145601235</p>
+            <p><i class="bi bi-envelope-fill"></i> cuscarekaysons@kaysonshonda.com</p>
+            <p><i class="bi bi-clock-fill"></i> Mon - Sun 9:30 AM to 7:00 PM</p>
+          </div>
+        </div>
+      </form>
+    }
+
+    <!-- ================= WARRANTY ================= -->
+    @if (tab === 'warranty') {
+      <form #f4="ngForm" (ngSubmit)="submitWarranty(f4)" class="form-card">
+        <div class="row">
+          <input name="fullName" ngModel required placeholder="Full Name" />
+          <input name="phone" ngModel required placeholder="Phone Number" />
+        </div>
+
+        <div class="row">
+          <input name="email" ngModel placeholder="Email" />
+          <input name="model" ngModel placeholder="Model" />
+        </div>
+
+        <div class="row">
+          <input type="date" name="purchaseDate" ngModel />
+          <textarea name="note" ngModel placeholder="Note"></textarea>
+        </div>
+
+        <button class="btn-primary">Submit Request</button>
+
+        <div class="contact">
+          <h6>Warranty Team</h6>
+          <div class="inline-contact-data">
+            <p><i class="bi bi-telephone-fill"></i> 9434064141</p>
+            <p><i class="bi bi-envelope-fill"></i> cuscarekaysons@kaysonshonda.com</p>
+            <p><i class="bi bi-clock-fill"></i> Mon - Sun 9:30 AM to 7:00 PM</p>
+          </div>
+        </div>
+      </form>
+    }
+  </section>
+</section>

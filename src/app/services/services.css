@@ -1,0 +1,202 @@
+.services-page {
+  text-align: center;
+}
+
+/* BANNER */
+.services-page .banner {
+width: 100%;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+    clip-path: polygon(0px 0px, 100% 0px, 100% 80%, 83% 100%, 0px 91%);
+}
+
+.services-page .banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 7s ease;
+}
+.services-page .banner::before {
+    background: rgba(0, 0, 0, 0.45);
+    display: block;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+}
+.services-page h1 {
+  margin-top: 60px;
+  font-weight: 500;
+}
+
+.services-page p {
+  max-width: 1100px;
+  margin: 16px auto;
+  font-weight: 400;
+  text-align: center;
+  /* margin: auto; */
+  color: var(--black);
+}
+.services-page .contact p {
+  margin: 0px;
+}
+
+/* FORM SECTION WRAPPER */
+.services-page .form-section {
+  max-width: 900px;
+  margin: 40px auto;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 0px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* TABS (LIKE IMAGE) */
+.services-page .tabs {
+  display: flex;
+  overflow: hidden;
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 0px;
+  border: 1px solid var(--gray-light);
+}
+
+.services-page .tabs button {
+  flex: 1;
+  min-width: 150px;
+  height: 50px;
+  border: none;
+  background: var(--gray-medium);
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.4s ease;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.services-page .tabs .active {
+  background: var(--primary-red);
+  color: var(--white);
+}
+
+/* FORM CARD (IMPORTANT PART LIKE IMAGE) */
+.services-page .form-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.services-page .form-card input,
+.services-page .form-card textarea,
+.services-page .form-card select {
+  height: 45px;
+  border-radius: 0;
+  background-color: var(--gray-light);
+  border: none;
+  font-size: 18px;
+  padding: 10px 10px;
+  box-shadow: none;
+}
+.services-page .form-card textarea {
+  height: auto;
+  resize: none;
+  padding-top: 14px;
+}
+/* BUTTON */
+.services-page .btn-primary {
+background: var(--primary-red);
+    color: var(--white);
+    border: none;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 0;
+    transition: 0.3s;
+}
+
+.services-page .btn-primary:hover {
+  background: var(--primary-red);
+}
+.services-page .contact .inline-contact-data {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* CONTACT BOX */
+.services-page .contact {
+  margin-top: 15px;
+  font-size: 13px;
+  color: var(--black);
+  background: var(--gray-light);
+  padding: 10px;
+  border-radius: 0px;
+}
+.form-card .row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.form-card .row input {
+  flex: 1;
+}
+.services-page .form-section h2 {
+  font-weight: 500;
+  color: var(--primary-red);
+}
+.inline-contact-data i.bi {
+  color: var(--primary-red);
+  font-size: 20px;
+}
+.services-page .contact h6 {
+  color: var(--primary-red);
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .services-page .form-section {
+    /* padding: 20px; */
+  }
+  .form-card .row {
+    flex-direction: column;
+  }
+
+  .services-page .banner {
+    height: 40vh;
+  }
+  .services-page .banner h1 {
+    font-size: 35px;
+  }
+  .services-page .contact .inline-contact-data {
+    flex-direction: column;
+  }
+  .services-page .contact .inline-contact-data p {
+    display: flex;
+    justify-content: start;
+  }
+  .services-page .contact .inline-contact-data p i,
+  .services-page .contact .inline-contact-data p img {
+    margin-right: 10px;
+  }
+  .services-page .tabs {
+    flex-direction: column;
+    gap: 20px;
+    border: 0px;
+  }
+  .services-page .tabs button {
+    padding: 10px 10px;
+  }
+  .services-page .contact p {
+    font-size: 16px;
+  }
+}

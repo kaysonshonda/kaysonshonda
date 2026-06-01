@@ -1,0 +1,77 @@
+<section class="sales-page">
+  <div class="banner">
+    <img src="assets/images/wd33.jpg" alt="Honda Banner" />
+  </div>
+
+  <h1>Ride Your Dream Honda two-wheelers Today</h1>
+
+  <p>Looking for the latest Honda two-wheelers in Siliguri? Explore a wide range of Honda scooters and motorcycles with expert guidance, attractive offers, and trusted customer support. Submit your new enquiry today and find the perfect Honda bike that matches your lifestyle and budget.
+Get hassle-free Honda two-wheeler financing with flexible down payment options and quick loan approvals. Kaysons Honda partners with leading finance providers to make owning your dream Honda bike or scooter simple, affordable, and convenient.</p>
+
+
+  <!-- FORM CARD -->
+  <section class="form-section">
+    <h2>Get started</h2>
+    <p>Choose a tab to send us an enquiry or apply for vehicle financing.
+New Enquiry.</p>
+
+    <div class="tabs">
+      <button (click)="tab = 'enquiry'" [class.active]="tab === 'enquiry'">New Enquiry</button>
+      <button (click)="tab = 'finance'" [class.active]="tab === 'finance'">Financing</button>
+    </div>
+
+    @if (tab === 'enquiry') {
+      <form #f1="ngForm" (ngSubmit)="submitEnquiry(f1)" class="form-card">
+        <div class="row">
+          <input type="text" name="name" ngModel required placeholder="Full name" />
+          <input type="text" name="phone" ngModel required placeholder="Phone number" />
+        </div>
+        <div class="row">
+          <input type="email" name="email" ngModel required placeholder="Email" />
+          <input type="text" name="model" ngModel required placeholder="Model" />
+          <textarea name="message" ngModel placeholder="Message"></textarea>
+        </div>
+        <button class="btn-primary">Submit Enquiry</button>
+
+        <div class="contact">
+          <h6>Sales Team</h6>
+          <div class="inline-contact-data">
+            <p><img src="/assets/images/home-icons/call.svg" alt="" /> 8145601235</p>
+            <p>
+              <i _ngcontent-ng-c1067127687="" class="bi bi-envelope-fill contact-icon"></i>
+              manager.sales@kaysonshonda.com
+            </p>
+            <p><i class="bi bi-clock-fill"></i> Mon - Sun 9:30 AM to 7:00 PM</p>
+          </div>
+        </div>
+      </form>
+    }
+
+    @if (tab === 'finance') {
+      <form #f2="ngForm" (ngSubmit)="submitFinance(f2)" class="form-card">
+        <div class="row">
+          <input type="text" name="name" ngModel required placeholder="Full name" />
+          <input type="text" name="phone" ngModel required placeholder="Phone number" />
+        </div>
+        <div class="row">
+          <input type="email" name="email" ngModel required placeholder="Email" />
+          <input type="text" name="model" ngModel required placeholder="Model" />
+          <textarea name="message" ngModel placeholder="Message"></textarea>
+        </div>
+        <button class="btn-primary">Get Finance Options</button>
+
+        <div class="contact">
+          <h6>Finance Team</h6>
+          <div class="inline-contact-data">
+            <p><img src="/assets/images/home-icons/call.svg" alt="" /> 8145601235</p>
+            <p>
+              <i _ngcontent-ng-c1067127687="" class="bi bi-envelope-fill contact-icon"></i>
+              manager.sales@kaysonshonda.com
+            </p>
+            <p><i class="bi bi-clock-fill"></i> Mon - Sun 9:30 AM to 7:00 PM</p>
+          </div>
+        </div>
+      </form>
+    }
+  </section>
+</section>
