@@ -65,7 +65,12 @@
         <!-- Left Images -->
         <div class="col-lg-4">
           <div class="left-image">
-            <img src="assets/images/mmnww.jpg" alt="Honda Scooter" loading="lazy" class="main-img" />
+            <img
+              src="assets/images/mmnww.jpg"
+              alt="Honda Scooter"
+              loading="lazy"
+              class="main-img"
+            />
           </div>
         </div>
 
@@ -87,7 +92,7 @@
               <div class="col-md-6">
                 <div class="feature-box">
                   <div class="icon">
-                    <img src="/assets/images/home-icons/Trusted Legacy.svg"  alt="" />
+                    <img src="/assets/images/home-icons/Trusted Legacy.svg" alt="" />
                   </div>
 
                   <div>
@@ -148,7 +153,8 @@
 
               <img
                 src="	assets/images/Design_555_555-Wide-Petrol-Tank-style-home.jpg"
-                alt="Honda Tank" loading="lazy"
+                alt="Honda Tank"
+                loading="lazy"
               />
             </div>
           </div>
@@ -222,22 +228,22 @@
       <!-- Tabs -->
       <div class="button-vehicle">
         <button
-        class="tab-btn"
-        [class.active]="activeTab === 'motorcycle'"
-        (click)="setTab('motorcycle')"
+          class="tab-btn"
+          [class.active]="activeTab === 'motorcycle'"
+          (click)="setTab('motorcycle')"
         >
-        MOTORCYCLE
-      </button>
+          MOTORCYCLE
+        </button>
 
-      <button
-      class="tab-btn"
-      [class.active]="activeTab === 'scooter'"
-      (click)="setTab('scooter')"
-      >
-      SCOOTER
-    </button>
-  </div>
-  <div class="tabs">
+        <button
+          class="tab-btn"
+          [class.active]="activeTab === 'scooter'"
+          (click)="setTab('scooter')"
+        >
+          SCOOTER
+        </button>
+      </div>
+      <div class="tabs">
         <p>
           Our certified technicians provide professional servicing, periodic maintenance, repairs,
           and genuine Honda spare parts to ensure safety, performance, and long-lasting reliability
@@ -333,7 +339,11 @@
           </div>
 
           <div class="image-box">
-            <img src="/assets/images/kaysons bike/Hornet 2.0.png" loading="lazy" alt="Honda Hornet 2.0" />
+            <img
+              src="/assets/images/kaysons bike/Hornet 2.0.png"
+              loading="lazy"
+              alt="Honda Hornet 2.0"
+            />
           </div>
 
           <div class="spec-row">
@@ -404,7 +414,11 @@
           </div>
 
           <div class="image-box">
-            <img src="/assets/images/kaysons bike/Shine100.png" loading="lazy" alt="Honda Shine100" />
+            <img
+              src="/assets/images/kaysons bike/Shine100.png"
+              loading="lazy"
+              alt="Honda Shine100"
+            />
           </div>
 
           <div class="spec-row">
@@ -481,7 +495,11 @@
           </div>
 
           <div class="image-box">
-            <img src="/assets/images/kaysons Scooters/Activa 110.png" loading="lazy" alt="Honda Activa 110" />
+            <img
+              src="/assets/images/kaysons Scooters/Activa 110.png"
+              loading="lazy"
+              alt="Honda Activa 110"
+            />
           </div>
 
           <div class="spec-row">
@@ -552,7 +570,11 @@
           </div>
 
           <div class="image-box">
-            <img src="/assets/images/kaysons Scooters/Activa 125.png" loading="lazy" alt="Honda Activa 125" />
+            <img
+              src="/assets/images/kaysons Scooters/Activa 125.png"
+              loading="lazy"
+              alt="Honda Activa 125"
+            />
           </div>
 
           <div class="spec-row">
@@ -623,7 +645,11 @@
           </div>
 
           <div class="image-box">
-            <img src="/assets/images/kaysons Scooters/Dio X Edition.png" loading="lazy" alt="Honda Dio 110" />
+            <img
+              src="/assets/images/kaysons Scooters/Dio X Edition.png"
+              loading="lazy"
+              alt="Honda Dio 110"
+            />
           </div>
 
           <div class="spec-row">
@@ -956,20 +982,18 @@
       </div>
 
       <!-- SWIPER -->
-<swiper-container
-  class="testimonialSwiper"
-  slides-per-view="3"
-  space-between="30"
-  loop="true"
-  speed="1000"
-  pagination="true"
-
-  autoplay='{
+      <swiper-container
+        class="testimonialSwiper"
+        slides-per-view="3"
+        space-between="30"
+        loop="true"
+        speed="1000"
+        pagination="true"
+        autoplay='{
     "delay": 2500,
     "disableOnInteraction": false
   }'
-
-  breakpoints='{
+        breakpoints='{
     "0": {
       "slidesPerView": 1
     },
@@ -980,47 +1004,37 @@
       "slidesPerView": 3
     }
   }'
->
+      >
+        <swiper-slide *ngFor="let item of testimonials">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
 
-  <swiper-slide *ngFor="let item of testimonials">
+            <div class="quote-icon">❞</div>
 
-    <div class="testimonial-card">
+            <h3 class="card-title">
+              {{ item.title }}
+            </h3>
 
-      <div class="stars">★★★★★</div>
+            <p class="card-desc">
+              {{ item.desc }}
+            </p>
 
-      <div class="quote-icon">❞</div>
+            <div class="user-box">
+              <div class="user-circle">AM</div>
 
-      <h3 class="card-title">
-        {{ item.title }}
-      </h3>
+              <div>
+                <h4 class="user-name">
+                  {{ item.name }}
+                </h4>
 
-      <p class="card-desc">
-        {{ item.desc }}
-      </p>
-
-      <div class="user-box">
-
-        <div class="user-circle">
-          AM
-        </div>
-
-        <div>
-          <h4 class="user-name">
-            {{ item.name }}
-          </h4>
-
-          <p class="bike-name">
-            {{ item.bike }}
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </swiper-slide>
-
-</swiper-container>
+                <p class="bike-name">
+                  {{ item.bike }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
     </div>
   </section>
 </div>

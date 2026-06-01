@@ -5,6 +5,11 @@ import { register } from 'swiper/element/bundle';
 register();
 
 
+// platformBrowser()
+//   .bootstrapModule(AppModule, {})
+//   .catch((err) => console.error(err));
 platformBrowser()
-  .bootstrapModule(AppModule, {})
-  .catch((err) => console.error(err));
+  .bootstrapModule(AppModule, {
+    ngZoneEventCoalescing: true
+  })
+  .catch(err => console.error(err));
