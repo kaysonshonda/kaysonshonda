@@ -5,11 +5,11 @@
 
 /* BANNER */
 .sales-page .banner {
-width: 100%;
-    height: 100vh;
-    display: block;
-    overflow: hidden;
-    clip-path: polygon(0px 0px, 100% 0px, 100% 80%, 83% 100%, 0px 91%);
+  width: 100%;
+  height: 100vh;
+  display: block;
+  overflow: hidden;
+  clip-path: polygon(0px 0px, 100% 0px, 100% 80%, 83% 100%, 0px 91%);
 }
 
 .sales-page .banner img {
@@ -20,19 +20,19 @@ width: 100%;
   transition: transform 7s ease;
 }
 .sales-page .banner::before {
-    background: rgba(0, 0, 0, 0.45);
-    display: block;
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: '';
+  background: rgba(0, 0, 0, 0.45);
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
 }
 /* TEXT */
 .sales-page h1 {
-  margin-top: 60px;
+  margin-top: 45px;
   font-weight: 500;
 }
 
@@ -112,14 +112,14 @@ width: 100%;
 }
 /* BUTTON */
 .sales-page .btn-primary {
-background: var(--primary-red);
-    color: var(--white);
-    border: none;
-    height: 50px;
-    font-size: 20px;
-    font-weight: 500;
-    border-radius: 0;
-    transition: 0.3s;
+  background: var(--primary-red);
+  color: var(--white);
+  border: none;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 0;
+  transition: 0.3s;
 }
 
 .sales-page .btn-primary:hover {
@@ -200,6 +200,15 @@ background: var(--primary-red);
     font-size: 16px;
   }
   .sales-page .form-section h2 {
+    font-size: 35px;
+  }
+  .sales-page section.form-section {
+    box-shadow: none;
+  }
+  .sales-page p {
+    padding: 4px 20px;
+  }
+  .sales-page h1 {
     font-size: 35px;
   }
 }
