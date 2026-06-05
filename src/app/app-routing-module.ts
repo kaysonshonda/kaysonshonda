@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { Home } from './home/home';
 import { TestDrive } from './test-drive/test-drive';
 import { Services } from './services/services';
+import { ShineSeries } from './product/shine-series/shine-series';
 
 TestDrive;
 const routes: Routes = [
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'services',
     component: Services,
+  },
+  {
+    path: 'shine-series',
+    component: ShineSeries,
   },
 ];
 
