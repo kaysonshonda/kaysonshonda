@@ -12,10 +12,11 @@ import { CustomCommonModule } from './common/common-module';
 import { Home } from './home/home';
 import { TestDrive } from './test-drive/test-drive';
 import { Services } from './services/services';
-import { ShineSeries } from './product/shine-series/shine-series';
+import { HondaShineSeries } from './product/honda-shine-series/honda-shine-series';
+import { AboutUs } from './about-us/about-us';
 
 @NgModule({
-  declarations: [App, Home, TestDrive, Services, ShineSeries],
+  declarations: [App, Home, TestDrive, Services, HondaShineSeries, AboutUs],
   imports: [BrowserModule, AppRoutingModule, CommonModule, CustomCommonModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],

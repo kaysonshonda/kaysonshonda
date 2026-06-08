@@ -1,0 +1,235 @@
+<div class="shine-series">
+  <div class="banner">
+    <img src="assets/images/wd33.jpg" alt="Honda Banner" width="100%" />
+  </div>
+  <div class="honda-shine-series">
+    <div class="container">
+      <div class="heading my-0">
+        <h1>Best Mileage & Performance Commuter Bikes in India</h1>
+        <h3>Honda Shine Series</h3>
+        <p>
+          The Honda Shine Series is crafted for riders seeking the perfect combination of comfort,
+          performance, and fuel efficiency for everyday commuting. Featuring popular models such as
+          the Honda Shine 100, Shine 100 DX, Shine 125, and Shine 125 Limited Edition, this range
+          delivers stylish design, refined engine performance, and dependable reliability. Designed
+          with modern features and rider-focused engineering, the Shine Series ensures a smooth and
+          comfortable riding experience on both city roads and highways. Its competitive on-road
+          pricing makes it an ideal choice for commuters looking for value without compromising on
+          quality.
+        </p>
+      </div>
+
+      <swiper-container #swiper class="shineSwiper" init="false">
+        <swiper-slide *ngFor="let bike of shineBikes">
+          <div class="bike-card">
+            <!-- Left -->
+            <div class="bike-image">
+              <div class="image">
+                <img [src]="bike.colors[bike.selectedColor].image" [alt]="bike.name" />
+              </div>
+              <h5>
+                Available Colours -
+                {{ bike.colors[bike.selectedColor].name }}
+              </h5>
+
+              <div class="color-list">
+                <span
+                  *ngFor="let color of bike.colors; let i = index"
+                  class="color-circle"
+                  [style.background]="color.code"
+                  [class.active]="bike.selectedColor === i"
+                  (click)="changeColor(bike, i)"
+                >
+                </span>
+              </div>
+              <div class="btn-group">
+                <button class="enquire-btn">Enquire Now</button>
+
+                <button class="brochure-btn" (click)="downloadBrochure(bike)">
+                  Download Brochure
+                </button>
+              </div>
+            </div>
+
+            <!-- Right -->
+            <div class="bike-info">
+              <div class="top-row">
+                <div>
+                  <h2>{{ bike.name }}</h2>
+                  <h4>{{ bike.subtitle }}</h4>
+                </div>
+
+                <h1 class="price">
+                  {{ bike.price }}
+                </h1>
+              </div>
+
+              <div class="spec-row">
+                <div>
+                  <h5>YEAR</h5>
+                  <p>{{ bike.year }}</p>
+                </div>
+
+                <div>
+                  <h5>TYPE</h5>
+                  <p>{{ bike.type }}</p>
+                </div>
+
+                <div>
+                  <h5>MAKE</h5>
+                  <p>{{ bike.make }}</p>
+                </div>
+              </div>
+
+              <hr />
+
+              <div class="spec-grid">
+                <div class="bottom-item">
+                  <img src="/assets/images/home-icons/ENGINE TYPE.svg" alt="" />
+                  <div>
+                    <h5>ENGINE TYPE</h5>
+                    <p>{{ bike.engine }}</p>
+                  </div>
+                </div>
+                <div class="bottom-item">
+                  <img src="/assets/images/home-icons/ENGINE POWER.svg" alt="" />
+                  <div>
+                    <h5>ENGINE POWER</h5>
+                    <p>{{ bike.power }}</p>
+                  </div>
+                </div>
+                <div class="bottom-item">
+                  <img src="/assets/images/home-icons/DISPLACEMENT.svg" alt="" />
+                  <div>
+                    <h5>DISPLACEMENT</h5>
+                    <p>{{ bike.displacement }}</p>
+                  </div>
+                </div>
+                <div class="bottom-item">
+                  <img src="/assets/images/home-icons/FUEL SYSTEM.svg" alt="" />
+                  <div>
+                    <h5>FUEL SYSTEM</h5>
+                    <p>{{ bike.fuel }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
+
+  <div class="enquiry-section">
+    <div class="container">
+      <div class="content-wrapper">
+        <!-- Left Content -->
+        <div class="left-content">
+          <h4>GET IN TOUCH</h4>
+
+          <h2>Enquire about the Honda Shine 100</h2>
+
+          <p>
+            Get the best on-road price, EMI options and test ride availability from your nearest
+            Honda dealership.
+          </p>
+        </div>
+
+        <!-- Right Form -->
+        <div class="form-container">
+          <form #enquiryForm="ngForm" (ngSubmit)="submitForm()">
+            <input
+              type="text"
+              name="fullName"
+              placeholder="Full Name"
+              [(ngModel)]="enquiry.fullName"
+              required
+            />
+
+            <input
+              type="tel"
+              name="mobileNumber"
+              placeholder="Mobile Number"
+              [(ngModel)]="enquiry.mobileNumber"
+              required
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              [(ngModel)]="enquiry.email"
+              required
+            />
+
+            <input type="text" name="model" placeholder="Model" [(ngModel)]="enquiry.model" />
+
+            <textarea
+              rows="2"
+              name="message"
+              placeholder="Message"
+              [(ngModel)]="enquiry.message"
+            ></textarea>
+
+            <button type="submit" [disabled]="enquiryForm.invalid">Submit Enquiry</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- bike slider -->
+  <section class="bike-slider-section">
+    <div class="slider-bg"></div>
+
+    <div class="slider-wrapper">
+      <swiper-container
+        class="bike-swiper"
+        slides-per-view="2"
+        centered-slides="true"
+        loop="true"
+        navigation="true"
+        autoplay-delay="1500"
+        autoplay-disable-on-interaction="false"
+        speed="1000"
+        space-between="30"
+      >
+        <swiper-slide *ngFor="let bike of bikes">
+          <div class="slide-card">
+            <img [src]="bike.image" [alt]="bike.name" />
+
+            <div class="overlay"></div>
+
+            <div class="slide-content">
+              <h3>{{ bike.name }}</h3>
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </section>
+
+  <!-- faq section -->
+
+  <div class="faq-section">
+    <div class="container">
+      <div class="faq-heading">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-card" *ngFor="let faq of faqs; let i = index">
+        <div class="faq-question" (click)="toggleFaq(i)">
+          <h4>{{ faq.question }}</h4>
+
+          <span class="icon">
+            {{ activeIndex === i ? '−' : '+' }}
+          </span>
+        </div>
+
+        <div class="faq-answer" [class.show]="activeIndex === i">
+          <p>{{ faq.answer }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

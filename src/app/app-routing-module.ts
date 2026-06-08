@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { Home } from './home/home';
 import { TestDrive } from './test-drive/test-drive';
 import { Services } from './services/services';
-import { ShineSeries } from './product/shine-series/shine-series';
+import { HondaShineSeries } from './product/honda-shine-series/honda-shine-series';
+import { AboutUs } from './about-us/about-us';
 
 TestDrive;
 const routes: Routes = [
@@ -16,6 +17,10 @@ const routes: Routes = [
     component: Home,
   },
   {
+    path: 'about-us',
+    component: AboutUs,
+  },
+  {
     path: 'test-drive',
     component: TestDrive,
   },
@@ -24,8 +29,8 @@ const routes: Routes = [
     component: Services,
   },
   {
-    path: 'shine-series',
-    component: ShineSeries,
+    path: 'honda-shine-series',
+    component: HondaShineSeries,
   },
 ];
 

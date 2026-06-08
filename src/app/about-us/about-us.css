@@ -1,0 +1,280 @@
+.about-us {
+  text-align: center;
+}
+
+/* BANNER */
+
+.about-us .banner {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 83% 100%, 0 91%);
+}
+
+.about-us .banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.about-us .banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.our-story-section {
+  padding: 30px 0;
+  overflow: hidden;
+}
+
+.our-story-section .container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* TOP SECTION */
+.story-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+  /* margin-bottom: 50px; */
+}
+
+.story-content {
+  flex: 1;
+}
+
+.sub-title {
+  color: var(--primary-red);
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align: start;
+  text-transform: uppercase;
+}
+
+.main-title {
+  font-size: 50px;
+  font-weight: 500;
+  text-align: start;
+    margin-bottom: 15px;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.story-content p,
+.story-bottom p {
+  font-size: 20px;
+  color: var(--black);
+  text-align: justify;
+    font-weight: 400;
+}
+
+/* LOGO */
+.story-logo {
+  width: 380px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.story-logo img {
+  width: 100%;
+  max-width: 350px;
+  object-fit: contain;
+}
+
+/* BOTTOM */
+.story-bottom {
+  width: 100%;
+}
+.leadership-section {
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.leadership-section .container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* HEADING */
+.leadership-section .section-heading {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.leadership-section .section-heading h5 {
+  color: var(--primary-red);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.leadership-section .section-heading h2 {
+  font-size: 45px;
+  line-height: 1.1;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+
+/* LEADERS */
+.leadership-section .leaders-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* CARD */
+.leadership-section .leader-card {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* RED SHAPE */
+.leadership-section .leader-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  height: 100%;
+  background: linear-gradient(to bottom, #d60000, #ff0000);
+  border-radius: 120px 120px 0 0;
+}
+
+/* IMAGE */
+.leadership-section .leader-card img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 280px;
+  object-fit: contain;
+}
+
+/* BOTTOM INFO */
+.leadership-section .leader-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 70px 15px 18px;
+  z-index: 3;
+  background: linear-gradient(
+    to top,
+    rgba(214, 0, 0, 1),
+    rgba(214, 0, 0, 0)
+  );
+}
+
+.leadership-section .leader-info span {
+  display: block;
+  color: #f7d9a5;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.leadership-section .leader-info h4 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* LARGE LAPTOP */
+@media (max-width: 1400px) {
+  .main-title {
+    font-size: 62px;
+  }
+
+  .story-content p,
+  .story-bottom p {
+    font-size: 24px;
+  }
+
+  .story-logo {
+    width: 300px;
+  }
+}
+
+/* TABLET */
+@media (max-width: 991px) {
+  .our-story-section {
+    padding: 70px 0;
+  }
+
+  .story-top {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .story-logo {
+    width: 100%;
+    text-align: left;
+  }
+
+  .story-logo img {
+    max-width: 260px;
+  }
+
+  .sub-title {
+    font-size: 22px;
+  }
+
+  .main-title {
+    font-size: 48px;
+  }
+
+  .story-content p,
+  .story-bottom p {
+    font-size: 20px;
+    line-height: 1.7;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+  .our-story-section {
+    padding: 50px 0;
+  }
+
+  .container {
+    width: 92%;
+  }
+
+  .sub-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .main-title {
+    font-size: 34px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .story-content p,
+  .story-bottom p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+  }
+
+  .story-logo img {
+    max-width: 220px;
+  }
+}
