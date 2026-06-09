@@ -63,7 +63,7 @@
   font-size: 50px;
   font-weight: 500;
   text-align: start;
-    margin-bottom: 15px;
+  margin-bottom: 15px;
   text-transform: uppercase;
   color: var(--black);
 }
@@ -73,7 +73,7 @@
   font-size: 20px;
   color: var(--black);
   text-align: justify;
-    font-weight: 400;
+  font-weight: 400;
 }
 
 /* LOGO */
@@ -94,7 +94,7 @@
   width: 100%;
 }
 .leadership-section {
-  padding: 20px 0;
+  padding: 30px 0;
   overflow: hidden;
 }
 
@@ -112,8 +112,8 @@
 
 .leadership-section .section-heading h5 {
   color: var(--primary-red);
-  font-size: 28px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 500;
   margin-bottom: 15px;
   text-transform: uppercase;
 }
@@ -126,18 +126,17 @@
   color: var(--black);
 }
 
-
 /* LEADERS */
 .leadership-section .leaders-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  gap: 0px;
 }
 
 /* CARD */
 .leadership-section .leader-card {
   position: relative;
-  height: 520px;
+  height: 360px;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
@@ -145,7 +144,7 @@
 }
 
 /* RED SHAPE */
-.leadership-section .leader-bg {
+/* .leadership-section .leader-bg {
   position: absolute;
   top: 0;
   left: 50%;
@@ -154,14 +153,14 @@
   height: 100%;
   background: linear-gradient(to bottom, #d60000, #ff0000);
   border-radius: 120px 120px 0 0;
-}
+} */
 
 /* IMAGE */
 .leadership-section .leader-card img {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 280px;
+  max-width: 250px;
   object-fit: contain;
 }
 
@@ -173,11 +172,7 @@
   width: 100%;
   padding: 70px 15px 18px;
   z-index: 3;
-  background: linear-gradient(
-    to top,
-    rgba(214, 0, 0, 1),
-    rgba(214, 0, 0, 0)
-  );
+  background: linear-gradient(to top, rgba(214, 0, 0, 1), rgba(214, 0, 0, 0));
 }
 
 .leadership-section .leader-info span {
@@ -195,6 +190,146 @@
   text-transform: uppercase;
 }
 
+/* our mission */
+
+.vision-mission-section {
+  background: var(--black);
+  padding: 40px 0;
+  overflow: hidden;
+  margin: 30px 0px;
+}
+
+.vision-mission-section .container {
+  width: 88%;
+  max-width: 1450px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+}
+
+/* CARD */
+.vision-mission-section .vm-card {
+  position: relative;
+  text-align: start;
+  padding-left: 60px;
+}
+
+/* RED VERTICAL LINE */
+.vision-mission-section .vm-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--primary-red);
+}
+
+/* ICON */
+.vision-mission-section .vm-icon {
+  margin-bottom: 15px;
+}
+
+.vision-mission-section .vm-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+/* HEADING */
+.vision-mission-section .vm-card h2 {
+  color: var(--primary-red);
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+/* TEXT */
+.vision-mission-section .vm-card p {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 400;
+  max-width: 90%;
+}
+
+.sales-services-section {
+  margin: 30px 0px;
+}
+
+.sales-services-section .service-card {
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+
+.sales-services-section .service-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.sales-services-section .service-title {
+  background: var(--primary-red);
+  text-align: center;
+  padding: 14px 10px;
+}
+
+.sales-services-section .service-title h2 {
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.sales-services-section .service-card:hover {
+  transform: translateY(-8px);
+}
+.awards {
+  position: relative;
+  background: url('/assets/images/5.jpg') center center/cover no-repeat;
+  padding: 40px 0 80px;
+  clip-path: polygon(100% 0, 100% 84%, 18% 100%, 0 80%, 0 0);
+  overflow: visible;
+}
+
+.awards::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.awards swiper-container {
+  width: 600px;
+  height: 350px;
+  margin: 0px auto 0;
+  overflow: visible;
+}
+.awards swiper-slide {
+  width: 500px !important;
+}
+.awards swiper-slide h3 {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+}
+.awards swiper-slide img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+}
+.awards swiper-container::part(button-prev),
+.awards swiper-container::part(button-next){
+  color: var(--white);
+}
+
+/* active center slide */
+.awards .swiper-slide-active {
+  /* transform: scale(1.1); */
+  z-index: 10;
+}
 /* LARGE LAPTOP */
 @media (max-width: 1400px) {
   .main-title {
@@ -219,7 +354,7 @@
 
   .story-top {
     flex-direction: column;
-    gap: 40px;
+    gap: 10px;
   }
 
   .story-logo {
@@ -244,37 +379,176 @@
     font-size: 20px;
     line-height: 1.7;
   }
+  .sales-services-section .service-title h2 {
+    font-size: 38px;
+  }
+
+  .sales-services-section .service-card img {
+    height: 280px;
+  }
 }
 
 /* MOBILE */
+/* =========================
+   MOBILE VERSION
+========================= */
 @media (max-width: 576px) {
-  .our-story-section {
-    padding: 50px 0;
+
+  /* BANNER */
+  .about-us .banner{
+    height: 45vh;
+    clip-path: polygon(0 0,100% 0,100% 90%,75% 100%,0 92%);
   }
 
-  .container {
+  /* COMMON CONTAINER */
+  .about-us .container{
     width: 92%;
   }
 
-  .sub-title {
+  /* OUR STORY */
+  .our-story-section{
+    padding: 30px 0;
+  }
+
+  .story-top{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .sub-title{
     font-size: 18px;
     margin-bottom: 10px;
   }
 
-  .main-title {
-    font-size: 34px;
+  .main-title{
+    font-size: 32px;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   .story-content p,
-  .story-bottom p {
-    font-size: 16px;
+  .story-bottom p{
+    font-size: 15px;
     line-height: 1.8;
-    margin-bottom: 25px;
+    margin-bottom: 4px;
+    text-align: justify;
   }
 
-  .story-logo img {
+  .story-logo{
+    width: 100%;
+    text-align: center;
+  }
+
+  .story-logo img{
+    max-width: 200px;
+    margin: 10px 0px;
+  }
+
+  /* LEADERSHIP */
+  .leadership-section{
+    padding: 20px 0;
+  }
+
+  .leadership-section .section-heading{
+    margin-bottom: 30px;
+  }
+
+  .leadership-section .section-heading h5{
+    font-size: 16px;
+  }
+
+  .leadership-section .section-heading h2{
+    font-size: 28px;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+
+  .leadership-section .leaders-wrapper{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .leadership-section .leader-card{
+    height: auto;
+  }
+
+  .leadership-section .leader-card img{
     max-width: 220px;
   }
+
+  /* VISION MISSION */
+  .vision-mission-section{
+    padding: 30px 0;
+    margin: 20px 0;
+  }
+
+  .vision-mission-section .container{
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .vision-mission-section .vm-card{
+    padding-left: 25px;
+  }
+
+  .vision-mission-section .vm-card h2{
+    font-size: 22px;
+  }
+
+  .vision-mission-section .vm-card p{
+    font-size: 15px;
+    max-width: 100%;
+    line-height: 1.8;
+  }
+
+  /* AWARDS */
+  .awards{
+    padding: 20px 0 70px;
+    clip-path: polygon(100% 0,100% 90%,20% 100%,0 92%,0 0);
+  }
+
+  .awards swiper-container{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .awards swiper-slide{
+    width: 100% !important;
+  }
+
+  .awards swiper-slide img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .awards swiper-slide h3{
+    font-size: 18px;
+    margin-top: 12px;
+  }
+
+  .awards swiper-container::part(button-prev),
+  .awards swiper-container::part(button-next){
+    transform: scale(.7);
+  }
+
+  /* SALES SERVICES */
+  .sales-services-section{
+    padding: 20px 0;
+    margin: 0;
+  }
+
+  .sales-services-section .service-card img{
+    height: 220px;
+  }
+
+  .sales-services-section .service-title{
+    padding: 12px 10px;
+  }
+
+  .sales-services-section .service-title h2{
+    font-size: 22px;
+  }
+
 }
