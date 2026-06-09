@@ -166,8 +166,9 @@
 /* BOTTOM INFO */
 .leadership-section .leader-info {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 0px;
+  left: 50px;
+  text-align: left;
   width: 100%;
   padding: 70px 0px 18px;
   z-index: 3;
@@ -176,7 +177,8 @@
 
 .leadership-section .leader-info span {
   display: block;
-  color: #ec9b10;
+  color: var(--white);
+  /* text-align: left; */
   font-size: 22px;
   margin-bottom: 5px;
 }
@@ -472,7 +474,7 @@
   }
 
   .leadership-section .leader-card img{
-    max-width: 220px;
+    max-width: 260px;
   }
 
   /* VISION MISSION */
@@ -549,5 +551,8 @@
   .sales-services-section .service-title h2{
     font-size: 22px;
   }
-
+.leadership-section .leader-info{
+  left: 0px;
+  text-align: center;
+}
 }
