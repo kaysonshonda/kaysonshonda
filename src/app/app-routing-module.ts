@@ -5,6 +5,8 @@ import { TestDrive } from './test-drive/test-drive';
 import { Services } from './services/services';
 import { HondaShineSeries } from './product/honda-shine-series/honda-shine-series';
 import { AboutUs } from './about-us/about-us';
+import { ContactUs } from './contact-us/contact-us';
+
 
 TestDrive;
 const routes: Routes = [
@@ -19,6 +21,10 @@ const routes: Routes = [
   {
     path: 'about-us',
     component: AboutUs,
+  },
+  {
+    path: 'contact-us',
+    component: ContactUs,
   },
   {
     path: 'test-drive',

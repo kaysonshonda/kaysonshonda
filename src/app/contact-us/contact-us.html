@@ -1,0 +1,200 @@
+<!-- <p>contact-us works!</p> -->
+<div class="contact-us">
+  <div class="banner">
+    <img src="assets/images/wd33.jpg" alt="Honda Banner" width="100%" />
+  </div>
+  <div class="contact-heading">
+    <div class="container">
+      <h1>Get in Touch with Kaysons Honda</h1>
+      <h3>
+        get in touch with us for buying or selling motorcycles. Also you can take a test drive
+        latest models from almost all brands.
+      </h3>
+    </div>
+  </div>
+  <div class="contact-info-section">
+    <div class="container">
+      <!-- Sales -->
+      <div class="info-card">
+        <div class="icon-box">
+          <i class="fas fa-store"></i>
+        </div>
+
+        <h3>Sales</h3>
+
+        <p class="address">
+          PCJM+95Q, Kapil Centre, Sevoke Rd,<br />
+          Ward Number 13, Bankim Nagar,<br />
+          Siliguri, West Bengal 734001
+        </p>
+
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:8145601235">8145601235</a>
+        </div>
+
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:manager.sales@kaysonshonda.com"> manager.sales@kaysonshonda.com </a>
+        </div>
+      </div>
+
+      <!-- Service -->
+      <div class="info-card">
+        <div class="icon-box">
+          <i class="fas fa-tools"></i>
+        </div>
+
+        <h3>Services</h3>
+
+        <p class="address">
+          Plot No-2, Sevoke Rd, Behind Hotel Suchitra,<br />
+          Jyoti Nagar, Industrial Estate,<br />
+          Bankim Nagar, Siliguri, West Bengal 734001
+        </p>
+
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:9932031315">9932031315</a>
+        </div>
+
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:backoffice.service@kaysonshonda.com">
+            backoffice.service@kaysonshonda.com
+          </a>
+        </div>
+      </div>
+
+      <!-- Spare -->
+      <div class="info-card">
+        <div class="icon-box">
+          <i class="fas fa-cogs"></i>
+        </div>
+
+        <h3>Spare</h3>
+
+        <p class="address">
+          Ward Number 13, Behind Kapil Centre Building,<br />
+          Bankim Nagar, Sevoke,<br />
+          Siliguri, West Bengal 734001
+        </p>
+
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:9933343300">9933343300</a>
+        </div>
+
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:spkaysons@kaysonshonda.com"> spkaysons@kaysonshonda.com </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-form-section">
+    <div class="container">
+      <div class="section-title">
+        <div class="bike-icon">
+          <i class="fas fa-motorcycle"></i>
+        </div>
+
+        <span>TAKING RIDES TO A NEWER LEVEL</span>
+
+        <h2>SEND A MESSAGE</h2>
+      </div>
+
+ <form #contactForm="ngForm" (ngSubmit)="submitForm(contactForm)">
+
+  <div class="row">
+    <!-- Name -->
+    <div class="col-md-6 mb-3">
+      <label>YOUR NAME</label>
+      <input
+        type="text"
+        class="form-control"
+        name="name"
+        placeholder="Your Name"
+        ngModel
+        required
+        #name="ngModel"
+      />
+      <small class="text-danger" *ngIf="name.invalid && name.touched">
+        Name is required
+      </small>
+    </div>
+
+    <!-- Email -->
+    <div class="col-md-6 mb-3">
+      <label>EMAIL ADDRESS</label>
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        placeholder="Email"
+        ngModel
+        required
+        email
+        #email="ngModel"
+      />
+      <small class="text-danger" *ngIf="email.invalid && email.touched">
+        Valid email is required
+      </small>
+    </div>
+  </div>
+
+  <!-- Subject -->
+  <div class="mb-3">
+    <label>SUBJECT</label>
+    <input
+      type="text"
+      class="form-control"
+      name="subject"
+      placeholder="Subject"
+      ngModel
+      required
+      #subject="ngModel"
+    />
+    <small class="text-danger" *ngIf="subject.invalid && subject.touched">
+      Subject is required
+    </small>
+  </div>
+
+  <!-- Message -->
+  <div class="mb-4">
+    <label>MESSAGE</label>
+    <textarea
+      rows="3"
+      class="form-control"
+      name="message"
+      placeholder="Your Message"
+      ngModel
+      required
+      #message="ngModel"
+    ></textarea>
+
+  </div>
+
+  <!-- Submit Button -->
+  <button
+    type="submit"
+    class="btn send-btn"
+  >
+    SEND MESSAGE
+  </button>
+
+</form>
+    </div>
+  </div>
+  <div class="map-location">
+  <div class="container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.4245846298113!2d88.4317769!3d26.730823799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e441053bf83efd%3A0xf7531425122fd679!2sKaysons%20Honda%20Showroom%20Siliguri%20-%20Authorised%20Dealer!5e0!3m2!1sen!2sin!4v1781152067796!5m2!1sen!2sin"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+</div>
