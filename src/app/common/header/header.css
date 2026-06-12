@@ -117,7 +117,54 @@ border-bottom: 1px solid var(--gray-light);
 .mega-list a:hover {
   color:var(--primary-red);
 }
+/* Dropdown Menu */
+.navi-bar .dropdown-menu {
+  border-radius: 0;
+  border: none;
+  padding: 0;
+  min-width: 220px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
 
+/* Dropdown Items */
+.navi-bar .dropdown-menu .dropdown-item {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 20px;
+  color: var(--black);
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.navi-bar .dropdown-menu .dropdown-item:hover {
+  background: var(--primary-red);
+  color: var(--white);
+}
+
+/* Active */
+.navi-bar .dropdown-menu .dropdown-item.active,
+.navi-bar .dropdown-menu .dropdown-item:active {
+  background: var(--primary-red);
+  color: var(--white);
+}
+
+/* More Menu Hover */
+.navi-bar .navbar-nav .dropdown:hover > .nav-link,
+.navi-bar .navbar-nav .dropdown .nav-link.show {
+  color: var(--primary-red);
+}
+
+/* Dropdown Arrow Color */
+.navi-bar .navbar-nav .dropdown-toggle::after {
+  transition: 0.3s;
+}
+
+.navi-bar .navbar-nav .dropdown:hover .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+.navi-bar .nav-item.dropdown .nav-link.active {
+  color: var(--primary-red) !important;
+}
 /* Desktop dropdown hover only */
 @media (min-width: 992px) {
   .dropdown:hover .dropdown-menu {

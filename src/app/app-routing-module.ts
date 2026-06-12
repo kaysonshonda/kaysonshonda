@@ -6,6 +6,8 @@ import { Services } from './services/services';
 import { HondaShineSeries } from './product/honda-shine-series/honda-shine-series';
 import { AboutUs } from './about-us/about-us';
 import { ContactUs } from './contact-us/contact-us';
+import { Blog } from './blogs/blog/blog';
+import { BlogDetails } from './blogs/blog-details/blog-details';
 
 
 TestDrive;
@@ -37,6 +39,14 @@ const routes: Routes = [
   {
     path: 'honda-shine-series',
     component: HondaShineSeries,
+  },
+  {
+    path: 'blog',
+    component: Blog,
+  },
+  {
+    path: 'blog/:slug', // ':id' allows you to pass a dynamic parameter for specific blog posts
+    component: BlogDetails,
   },
 ];
 

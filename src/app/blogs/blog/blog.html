@@ -1,0 +1,28 @@
+<div class="blog-posts">
+  <div class="banner">
+    <img src="assets/images/wd33.jpg" alt="Honda Banner" width="100%" />
+  </div>
+  <div class="container">
+  <div class="journal-container mt-5 mb-5">
+      <a
+        *ngFor="let blog of blogs"
+        [routerLink]="['/blog', blog.slug]"
+        style="text-decoration: none; color: inherit"
+      >
+        <div class="journal-card">
+          <img [src]="blog.image" [alt]="blog.title" />
+
+          <div class="journal-card-content">
+            <div class="date-div">
+              <p class="date">{{ blog.date }}</p>
+            </div>
+
+            <h4>{{ blog.title }}</h4>
+
+            <p>{{ blog.description }}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

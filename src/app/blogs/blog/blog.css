@@ -1,0 +1,96 @@
+.blog-posts .banner {
+  width: 100%;
+  height: 100vh;
+  display: block;
+  overflow: hidden;
+  clip-path: polygon(0px 0px, 100% 0px, 100% 80%, 83% 100%, 0px 91%);
+}
+
+.blog-posts .banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 7s ease;
+}
+.blog-posts .banner::before {
+  background: rgba(0, 0, 0, 0.45);
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+}
+
+.blog-posts .journal-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.blog-posts .journal-card {
+  background: var(--white);
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.blog-posts .journal-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-posts .journal-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.blog-posts .journal-card-content {
+  padding: 20px;
+}
+
+.blog-posts .journal-card h4 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--primary-red);
+}
+
+.blog-posts .journal-card p {
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.blog-posts .date {
+  font-size: 14px;
+  color: var(----gray-light);
+  margin-bottom: 10px;
+}
+@media (max-width: 991px) {
+  .blog-posts .journal-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .blog-posts .journal-container {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-posts .journal-card img {
+    height: 220px;
+  }
+
+  .blog-posts .journal-card h4 {
+    font-size: 20px;
+  }
+  .blog-posts .banner {
+    height: 45vh;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 75% 100%, 0 92%);
+  }
+}

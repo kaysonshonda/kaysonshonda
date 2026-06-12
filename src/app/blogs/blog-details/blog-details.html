@@ -1,0 +1,17 @@
+<!-- <p>blog-details works!</p> -->
+<div class="blog-details">
+  <div class="banner">
+    <img src="assets/images/wd33.jpg" alt="Honda Banner" width="100%" />
+  </div>
+<div class="container py-5" *ngIf="blog">
+
+  <h1>{{ blog.title }}</h1>
+
+  <img [src]="blog.image"
+       [alt]="blog.title"
+       class="img-fluid my-4">
+
+  <div [innerHTML]="blog.content"></div>
+
+</div>
+</div>
