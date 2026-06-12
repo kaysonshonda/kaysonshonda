@@ -86,13 +86,13 @@
   height: 110px;
   margin: 0 auto 25px;
   border-radius: 50%;
-  background: var(--black);
+  background: var(--gray-dark);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.icon-box i {
+.icon-box img {
   font-size: 48px;
   color: var(--primary-red);
 }
