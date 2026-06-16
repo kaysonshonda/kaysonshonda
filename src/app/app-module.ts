@@ -12,12 +12,11 @@ import { CustomCommonModule } from './common/common-module';
 import { Home } from './home/home';
 import { TestDrive } from './test-drive/test-drive';
 import { Services } from './services/services';
-import { HondaShineSeries } from './product/honda-shine-series/honda-shine-series';
 import { AboutUs } from './about-us/about-us';
 import { ContactUs } from './contact-us/contact-us';
 import { Blog } from './blogs/blog/blog';
 import { BlogDetails } from './blogs/blog-details/blog-details';
-
+import { VehicleSeries } from './product/vehicle-series/vehicle-series';
 
 @NgModule({
   declarations: [
@@ -25,11 +24,11 @@ import { BlogDetails } from './blogs/blog-details/blog-details';
     Home,
     TestDrive,
     Services,
-    HondaShineSeries,
     AboutUs,
     ContactUs,
     Blog,
     BlogDetails,
+    VehicleSeries,
   ],
   imports: [BrowserModule, AppRoutingModule, CommonModule, CustomCommonModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners()],

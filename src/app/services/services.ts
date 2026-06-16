@@ -11,7 +11,7 @@ export class Services {
 
    tab: string = 'vehicle';
 
-  // ================= VEHICLE SERVICES =================
+  // VEHICLE SERVICES
   submitVehicle(form: NgForm) {
     if (form.invalid) return;
 
@@ -23,7 +23,7 @@ export class Services {
     this.tab = 'vehicle';
   }
 
-  // ================= SPARE PARTS =================
+  // SPARE PARTS
   submitParts(form: NgForm) {
     if (form.invalid) return;
 
@@ -35,7 +35,7 @@ export class Services {
     this.tab = 'parts';
   }
 
-  // ================= INSURANCE =================
+  // INSURANCE
   submitInsurance(form: NgForm) {
     if (form.invalid) return;
 
@@ -47,7 +47,7 @@ export class Services {
     this.tab = 'insurance';
   }
 
-  // ================= WARRANTY =================
+  // WARRANTY
   submitWarranty(form: NgForm) {
     if (form.invalid) return;
 

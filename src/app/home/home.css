@@ -917,7 +917,7 @@ swiper-slide {
   font-size: 20px;
   font-weight: 600;
 }
-.button-vehicle{
+.button-vehicle {
   display: flex;
   justify-content: center;
   margin: 20px auto;
@@ -1128,6 +1128,7 @@ swiper-slide {
   .caption {
     left: 5%;
     right: 5%;
+    top: 45% !important;
     max-width: 100%;
   }
 
@@ -1218,26 +1219,26 @@ swiper-slide {
   .bottom-specs {
     grid-template-columns: repeat(2, 1fr);
   }
-  swiper-container.testimonialSwiper{
+  swiper-container.testimonialSwiper {
     height: 100%;
-    clip-path:none;
+    clip-path: none;
   }
-  .service-section .feature-box img{
+  .service-section .feature-box img {
     width: 20px;
   }
-  .spec-row .spec-box{
+  .spec-row .spec-box {
     border-right: 1px solid var(--black);
     border-bottom: none;
   }
-    .spec-row .spec-box:last-child{
-      border-right: none;
-    }
-    .test-drive-section .booking-form form{
-          padding-bottom: 80px;
-    }
-    .service-section .slider-box swiper-container{
-      clip-path:none;
-    }
+  .spec-row .spec-box:last-child {
+    border-right: none;
+  }
+  .test-drive-section .booking-form form {
+    padding-bottom: 80px;
+  }
+  .service-section .slider-box swiper-container {
+    clip-path: none;
+  }
 }
 
 /* =========================
@@ -1246,10 +1247,9 @@ swiper-slide {
 
 @media (max-width: 480px) {
   .service-section .sub-title {
- letter-spacing: 0px;
- font-size: 25px;
-
-}
+    letter-spacing: 0px;
+    font-size: 25px;
+  }
   .service-section .section-title {
     font-size: 30px;
   }
@@ -1310,12 +1310,15 @@ swiper-slide {
   .about-section .main-img {
     height: 350px;
   }
-  .button-vehicle{
+  .button-vehicle {
     flex-direction: row;
   }
   .button-vehicle .tab-btn {
     min-width: 150px;
     height: 46px;
     font-size: 20px;
-}
+  }
+  swiper-container.swiper-s {
+    height: 85vh;
+  }
 }

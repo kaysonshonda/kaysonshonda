@@ -197,10 +197,17 @@ export class Home implements OnInit, AfterViewInit {
     'Honda SP125',
     'Honda Unicorn',
   ];
-
-  onSubmit(): void {
-    console.log('Booking Data:', this.bookingData);
-
-    alert('Test Drive Booking Confirmed!');
+onSubmit(): void {
+  if (
+    !this.bookingData.fullName ||
+    !this.bookingData.phone ||
+    !this.bookingData.email ||
+    !this.bookingData.model
+  ) {
+    return;
   }
+
+  console.log('Booking Data:', this.bookingData);
+  alert('Test Drive Booking Confirmed!');
+}
 }

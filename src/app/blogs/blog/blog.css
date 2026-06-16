@@ -24,7 +24,20 @@
   height: 100%;
   content: '';
 }
+.blog-posts .banner-content {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  z-index: 22;
+  transform: translateY(-50%);
+}
 
+.blog-posts .banner-content h1 {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0;
+}
 .blog-posts .journal-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

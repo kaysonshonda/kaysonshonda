@@ -1,0 +1,743 @@
+.vehicle-series {
+  text-align: center;
+}
+
+/* BANNER */
+
+.vehicle-series .banner {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 83% 100%, 0 91%);
+}
+
+.vehicle-series .banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.vehicle-series .banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 7s ease;
+}
+
+.vehicle-series .banner:hover img {
+  transform: scale(1.05);
+}
+
+/* CONTENT */
+
+.honda-vehicle-series {
+  text-align: left;
+  padding: 30px 0;
+}
+
+.honda-vehicle-series .heading h1 {
+  color: var(--primary-red);
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.honda-vehicle-series .heading h3 {
+  color: var(--black);
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.honda-vehicle-series .heading p {
+  color: var(--gray-dark);
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 50px;
+}
+
+/* SWIPER */
+
+.honda-vehicle-series .shineSwiper {
+  width: 100%;
+  min-height: 100%;
+  display: block;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+/* PAGINATION CONTAINER */
+
+.honda-vehicle-series .shineSwiper::part(pagination) {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+/* NORMAL DOT */
+
+.honda-vehicle-series .shineSwiper::part(bullet) {
+  width: 12px;
+  height: 12px;
+  background: #cccccc;
+  opacity: 1;
+  border-radius: 0;
+  transition: 0.3s ease;
+}
+
+/* ACTIVE DOT */
+
+.honda-vehicle-series .shineSwiper::part(bullet-active) {
+  background: var(--primary-red);
+  border: 2px solid var(--primary-red);
+  transform: scale(1.1);
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+}
+
+.honda-vehicle-series swiper-slide {
+  padding: 10px;
+}
+
+/* BIKE CARD */
+
+.honda-vehicle-series .bike-card {
+  display: flex;
+  align-items: self-start;
+  gap: 40px;
+  background: var(--gray-light);
+  /* padding: 40px; */
+  border-radius: 0px;
+}
+
+.honda-vehicle-series .bike-image {
+  width: 40%;
+  text-align: center;
+}
+.honda-vehicle-series .bike-image .image {
+  background-color: #cccccc;
+}
+.honda-vehicle-series .bike-image img {
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s ease;
+}
+
+.honda-vehicle-series .bike-image h5 {
+  margin-top: 20px;
+  color: var(--gray-dark);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* COLORS */
+
+.honda-vehicle-series .color-list {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.honda-vehicle-series .color-circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid var(--gray-light);
+  transition: all 0.3s ease;
+}
+
+.honda-vehicle-series .color-circle:hover {
+  transform: scale(1.1);
+}
+
+.honda-vehicle-series .color-circle.active {
+  border: 3px solid var(--primary-red);
+  transform: scale(1.15);
+}
+
+/* BIKE INFO */
+
+.bike-card .bike-info {
+  flex: 1;
+  margin-top: 40px;
+}
+
+.bike-card .top-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bike-card .top-row h2 {
+  color: var(--black);
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.bike-card .top-row h4 {
+  color: var(--black);
+  font-weight: 400;
+}
+
+.honda-vehicle-series .price {
+  color: var(--primary-red);
+  font-size: 25px;
+  font-weight: 500;
+}
+
+/* SPEC ROW */
+
+.honda-vehicle-series .spec-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 10px 0;
+  gap: 20px;
+}
+
+.honda-vehicle-series .spec-row div {
+  text-align: left;
+}
+
+.honda-vehicle-series .spec-row h5 {
+  color: var(--black);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.honda-vehicle-series .spec-row p {
+  color: var(--black);
+  margin: 0;
+  text-align: center;
+}
+.shineSwiper hr {
+  border-top: 1px solid var(--black);
+}
+.honda-vehicle-series .spec-row div {
+  position: relative;
+}
+
+.honda-vehicle-series .spec-row div:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top: 1px;
+  width: 1px;
+  height: 50px;
+  background: var(--black);
+}
+
+/* SPEC GRID */
+
+.honda-vehicle-series .spec-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+.honda-vehicle-series .spec-grid .bottom-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.honda-vehicle-series .spec-grid .bottom-item img {
+  width: 30px;
+  color: var(--black);
+  margin-top: 3px;
+}
+.honda-vehicle-series .spec-grid div {
+  border-radius: 8px;
+}
+
+.honda-vehicle-series .spec-grid h5 {
+  color: var(--black);
+  margin-top: 3px;
+}
+
+.honda-vehicle-series .spec-grid p {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--black);
+  margin: 0;
+}
+
+/* BUTTONS */
+
+.honda-vehicle-series .btn-group {
+  display: flex;
+  gap: 15px;
+  margin-left: 10%;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.honda-vehicle-series .enquire-btn {
+  background: var(--primary-red);
+  color: var(--white);
+  border: none;
+  min-width: 200px;
+  padding: 14px 30px;
+  font-size: 22px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.honda-vehicle-series .enquire-btn:hover {
+  transform: translateY(-2px);
+}
+
+.honda-vehicle-series .brochure-btn {
+  background: transparent;
+  border: 2px solid var(--gray-dark);
+  color: var(--gray-dark);
+  padding: 14px 30px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.honda-vehicle-series .brochure-btn:hover {
+  background: var(--gray-dark);
+  color: var(--white);
+}
+
+/* FAQ SECTION */
+
+.faq-section {
+  padding: 30px 0;
+}
+
+.faq-section .faq-heading h2 {
+  color: var(--black);
+  font-size: 35px;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 40px;
+}
+.faq-section .faq-card {
+  background: var(--white);
+  border-radius: 0px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  border: 1px solid var(--gray-light);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.faq-section .faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.faq-section .faq-question h4 {
+  color: var(--gray-dark);
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0;
+}
+.faq-section .faq-question span {
+  color: var(--primary-red);
+  font-size: 36px;
+  font-weight: 300;
+}
+.faq-section .icon {
+  color: var(--primary-red);
+  font-size: 36px;
+  font-weight: 300;
+}
+
+.faq-section .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.faq-section .faq-answer.show {
+  max-height: 300px;
+}
+
+.faq-section .faq-answer p {
+  padding: 0 20px 25px;
+  margin: 0;
+  text-align: left;
+  color: var(--gray-dark);
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* SWIPER PAGINATION */
+
+.honda-vehicle-series .swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  background: var(--gray-light);
+  opacity: 1;
+}
+
+.honda-vehicle-series .swiper-pagination-bullet-active {
+  background: var(--primary-red);
+}
+
+.enquiry-section {
+  background: var(--black);
+  height: 100%;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.enquiry-section .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+
+.enquiry-section .content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Left Side */
+
+.enquiry-section .left-content {
+  flex: 1;
+  color: var(--white);
+}
+
+.enquiry-section .left-content h4 {
+  color: var(--primary-red);
+  font-size: 22px;
+  text-align: left;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.enquiry-section .left-content h2 {
+  font-size: 35px;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.enquiry-section .left-content p {
+  font-size: 20px;
+  text-align: left;
+  color: var(--gray-light);
+  max-width: 450px;
+}
+
+/* Form */
+
+.enquiry-section .form-container {
+  flex: 1;
+  background: var(--white);
+  padding: 25px;
+  border-radius: 0px;
+}
+
+.enquiry-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.enquiry-section input,
+.enquiry-section textarea {
+  width: 100%;
+
+  padding: 14px;
+  border: 1px solid var(--gray-dark);
+  border-radius: 0px;
+  font-size: 15px;
+  outline: none;
+}
+
+.enquiry-section input:focus,
+.enquiry-section textarea:focus {
+  border-color: var(--primary-red);
+}
+
+.enquiry-section button {
+  background: var(--primary-red);
+  color: var(--white);
+  border: none;
+  padding: 14px;
+  border-radius: 0px;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.enquiry-section button:hover {
+  background: var(--primary-red);
+}
+
+.enquiry-section utton:disabled {
+  background: var(--gray-light);
+  cursor: not-allowed;
+}
+
+/*  */
+.bike-slider-section {
+  position: relative;
+  overflow: hidden;
+  /* padding: 80px 0; */
+  margin: 40px 0px;
+  background: url('/assets/images/5.jpg') center center/cover no-repeat;
+  padding: 100px 0 0px;
+  clip-path: polygon(100% 0, 100% 84%, 18% 100%, 0 80%, 0 0);
+  z-index: 1;
+}
+
+/* Background */
+
+.bike-slider-section .slider-bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.slider-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* Slider */
+.bike-slider-section swiper-container {
+  --swiper-theme-color: #fff;
+}
+
+.bike-slider-section .bike-swiper {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: visible;
+  transform: translateY(-20%);
+}
+
+.bike-slider-section swiper-slide {
+  opacity: 0.3;
+  transform: scale(0.85);
+  transition: all 0.5s ease;
+}
+
+.bike-slider-section swiper-slide.swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.bike-slider-section .slide-card {
+  position: relative;
+  width: 100%;
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+.bike-slider-section .slide-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bike-slider-section .overlay {
+  position: absolute;
+  inset: 0;
+  /* background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)); */
+}
+
+.bike-slider-section .slide-content {
+  /* position: absolute; */
+  margin-top: 30px;
+}
+
+.bike-slider-section .slide-content h3 {
+  color: var(--white);
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 15px;
+
+  transition: all 0.5s ease;
+}
+
+@media (max-width: 991px) {
+  .honda-vehicle-series .heading h3 {
+    font-size: 34px;
+  }
+
+  .honda-vehicle-series .top-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .honda-vehicle-series .price {
+    font-size: 38px;
+  }
+
+  .honda-vehicle-series .faq-heading h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bike-slider-section .slide-content h3 {
+    font-size: 20px;
+  }
+  .honda-vehicle-series .shineSwiper::part(pagination) {
+    bottom: 20px;
+  }
+  .vehicle-series .honda-vehicle-series {
+    padding: 10px 0px;
+  }
+  .enquiry-section .content-wrapper {
+    gap: 1px;
+  }
+  .vehicle-series .banner {
+    height: 50vh;
+  }
+
+  .honda-vehicle-series {
+    padding: 50px 0;
+  }
+
+  .honda-vehicle-series .heading h1 {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+
+  .honda-vehicle-series .heading h3 {
+    font-size: 28px;
+  }
+
+  .honda-vehicle-series .heading p {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .honda-vehicle-series .bike-card {
+    flex-direction: column;
+    padding: 20px;
+    gap: 0;
+    align-items: center;
+  }
+  .enquiry-section .content-wrapper {
+    flex-direction: column;
+  }
+  .honda-vehicle-series .bike-image {
+    width: 100%;
+  }
+
+  .honda-vehicle-series .top-row {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .honda-vehicle-series .top-row h2 {
+    font-size: 28px;
+  }
+
+  .honda-vehicle-series .price {
+    font-size: 32px;
+  }
+
+  .honda-vehicle-series .spec-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+
+  .honda-vehicle-series .spec-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .honda-vehicle-series .btn-group {
+    flex-direction: column;
+    margin-left: 0%;
+
+    margin-bottom: 0px;
+  }
+
+  .honda-vehicle-series .enquire-btn,
+  .honda-vehicle-series .brochure-btn {
+    width: 100%;
+  }
+
+  .honda-vehicle-series .faq-section {
+    padding: 50px 0;
+  }
+
+  .honda-vehicle-series .faq-section h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .honda-vehicle-series .faq-question {
+    padding: 18px;
+  }
+
+  .honda-vehicle-series .faq-question h4 {
+    font-size: 20px;
+    width: 85%;
+  }
+
+  .honda-vehicle-series .icon {
+    font-size: 28px;
+  }
+
+  .honda-vehicle-series .faq-answer p {
+    padding: 0 18px 18px;
+    font-size: 15px;
+  }
+
+  .enquiry-section {
+    padding: 50px 15px;
+  }
+
+  .enquiry-section .left-content h4 {
+    font-size: 18px;
+  }
+
+  .enquiry-section .left-content h2 {
+    font-size: 26px;
+  }
+
+  .enquiry-section .left-content p {
+    font-size: 14px;
+  }
+
+  .enquiry-section .form-container {
+    padding: 15px;
+    width: 100%;
+  }
+  .faq-section .faq-question h4 {
+    text-align: left;
+  }
+  .enquiry-section input,
+  .enquiry-section textarea,
+  .enquiry-section button {
+    font-size: 14px;
+  }
+  .honda-vehicle-series .spec-row div:not(:last-child)::after {
+    right: -10px;
+  }
+}

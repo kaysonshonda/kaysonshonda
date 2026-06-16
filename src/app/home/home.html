@@ -736,6 +736,7 @@
                 [(ngModel)]="bookingData.fullName"
                 placeholder="Your name"
                 required
+
               />
             </div>
 
@@ -772,7 +773,7 @@
           <div class="mb-3">
             <label>SELECT MODEL</label>
 
-            <select class="form-select" name="model" [(ngModel)]="bookingData.model">
+            <select class="form-select" name="model" [(ngModel)]="bookingData.model" required>
               <option *ngFor="let bike of bikeModels" [value]="bike">
                 {{ bike }}
               </option>

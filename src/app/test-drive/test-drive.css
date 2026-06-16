@@ -19,6 +19,20 @@
   transform: scale(1);
   transition: transform 7s ease;
 }
+.sales-page  .banner-content {
+  position: absolute;
+  top: 50%;
+  z-index: 33;
+  left: 8%;
+  transform: translateY(-50%);
+}
+
+.sales-page  .banner-content h1 {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0;
+}
 .sales-page .banner::before {
   background: rgba(0, 0, 0, 0.45);
   display: block;
@@ -211,4 +225,7 @@
   .sales-page h1 {
     font-size: 35px;
   }
+   .sales-page .banner-content {
+    top: 20%;
+   }
 }
