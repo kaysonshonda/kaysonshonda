@@ -20,7 +20,7 @@
             <!-- LEFT -->
             <div class="bike-image">
               <div class="image">
-              <img [src]="bike.colors[bike.selectedColor]?.image" />
+                <img [src]="bike.colors[bike.selectedColor]?.image" />
               </div>
 
               <h5>Available Colours - {{ bike.colors[bike.selectedColor]?.name }}</h5>
@@ -64,7 +64,7 @@
                 </div>
 
                 <div>
-                  <h5>MAKE</h5>
+                  <h5>BATTERY</h5>
                   <p>{{ bike.make }}</p>
                 </div>
               </div>
@@ -74,14 +74,14 @@
                 <div class="bottom-item">
                   <img src="/assets/images/home-icons/ENGINE TYPE.svg" alt="" />
                   <div>
-                    <h5>ENGINE TYPE</h5>
+                    <h5>ENGINE</h5>
                     <p>{{ bike.engine }}</p>
                   </div>
                 </div>
                 <div class="bottom-item">
                   <img src="/assets/images/home-icons/ENGINE POWER.svg" alt="" />
                   <div>
-                    <h5>ENGINE POWER</h5>
+                    <h5>MAX POWER</h5>
 
                     <p>{{ bike.power }}</p>
                   </div>
@@ -89,14 +89,14 @@
                 <div class="bottom-item">
                   <img src="/assets/images/home-icons/DISPLACEMENT.svg" alt="" />
                   <div>
-                    <h5>DISPLACEMENT</h5>
+                    <h5>Kerb Weight</h5>
                     <p>{{ bike.displacement }}</p>
                   </div>
                 </div>
                 <div class="bottom-item">
                   <img src="/assets/images/home-icons/FUEL SYSTEM.svg" alt="" />
                   <div>
-                    <h5>FUEL SYSTEM</h5>
+                    <h5>Fuel Tank</h5>
                     <p>{{ bike.fuel }}</p>
                   </div>
                 </div>
@@ -124,7 +124,7 @@
               [(ngModel)]="enquiry.fullName"
               required
             />
-
+            <small class="error"> Full Name is required </small>
             <input
               type="tel"
               name="mobileNumber"
@@ -132,7 +132,7 @@
               [(ngModel)]="enquiry.mobileNumber"
               required
             />
-
+            <small class="error"> Mobile Number is required </small>
             <input
               type="email"
               name="email"
@@ -140,8 +140,16 @@
               [(ngModel)]="enquiry.email"
               required
             />
+            <small class="error"> Email is required </small>
+            <!-- <input type="text" name="model" placeholder="Model" [(ngModel)]="enquiry.model" /> -->
+            <select name="model" [(ngModel)]="enquiry.model" required>
+              <option value="">Select Model</option>
 
-            <input type="text" name="model" placeholder="Model" [(ngModel)]="enquiry.model" />
+              <option *ngFor="let model of seriesData?.models" [value]="model">
+                {{ model }}
+              </option>
+            </select>
+            <small class="error"> Model is required </small>
 
             <textarea rows="3" name="message" placeholder="Message" [(ngModel)]="enquiry.message">
             </textarea>
