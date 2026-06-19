@@ -14,9 +14,9 @@
   transition: transform 7s ease;
 }
 .blog-posts .banner::before {
-  background: rgba(0, 0, 0, 0.45);
+  /* background: rgba(0, 0, 0, 0.45);
   display: block;
-  z-index: 1;
+  z-index: 1; */
   position: absolute;
   top: 0;
   left: 0;

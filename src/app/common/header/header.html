@@ -67,18 +67,28 @@
               <li>
                 <a class="dropdown-item" routerLink="/commuter-series">Commuter Series</a>
               </li>
-
-              <li>
-                <a class="dropdown-item" routerLink="/activa-series">Activa Series</a>
-              </li>
-
-              <li>
-                <a class="dropdown-item" routerLink="/dio-series">Dio Series</a>
-              </li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/scooters" routerLinkActive="active"> Scooters </a>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Scooters
+            </a>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" routerLink="/activa-series"> Activa Series </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item" routerLink="/dio-series"> Dio Series </a>
+              </li>
+            </ul>
           </li>
 
           <li class="nav-item">
@@ -110,13 +120,6 @@
                 <a class="dropdown-item" routerLink="/blog" routerLinkActive="active"> Blogs </a>
               </li>
 
-              <li>
-                <a class="dropdown-item" routerLink="/gallery"> Gallery </a>
-              </li>
-
-              <li>
-                <a class="dropdown-item" routerLink="/faq"> FAQ </a>
-              </li>
             </ul>
           </li>
         </ul>

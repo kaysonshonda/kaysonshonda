@@ -12,13 +12,13 @@
   clip-path: polygon(0 0, 100% 0, 100% 80%, 83% 100%, 0 91%);
 }
 
-.about-us .banner::before {
+/* .about-us .banner::before {
   content: '';
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
   z-index: 1;
-}
+} */
 .about-us .banner-content {
   position: absolute;
   top: 50%;
@@ -28,7 +28,7 @@
 }
 
 .about-us .banner-content h1 {
-  color: #fff;
+  color: var(--white);
   font-size: 35px;
   font-weight: 600;
   margin: 0;

@@ -8,7 +8,8 @@ import { ContactUs } from './contact-us/contact-us';
 import { Blog } from './blogs/blog/blog';
 import { BlogDetails } from './blogs/blog-details/blog-details';
 import { VehicleSeries } from './product/vehicle-series/vehicle-series';
-
+import { PrivacyPolicy } from './privacy-policy/privacy-policy';
+PrivacyPolicy
 TestDrive;
 const routes: Routes = [
   {
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'services',
     component: Services,
+  },
+   {
+    path: 'privacy-policy',
+    component: PrivacyPolicy,
   },
   {
     path: 'blog',

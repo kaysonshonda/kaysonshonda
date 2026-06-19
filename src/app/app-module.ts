@@ -17,6 +17,7 @@ import { ContactUs } from './contact-us/contact-us';
 import { Blog } from './blogs/blog/blog';
 import { BlogDetails } from './blogs/blog-details/blog-details';
 import { VehicleSeries } from './product/vehicle-series/vehicle-series';
+import { PrivacyPolicy } from './privacy-policy/privacy-policy';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { VehicleSeries } from './product/vehicle-series/vehicle-series';
     Blog,
     BlogDetails,
     VehicleSeries,
+    PrivacyPolicy,
   ],
   imports: [BrowserModule, AppRoutingModule, CommonModule, CustomCommonModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners()],

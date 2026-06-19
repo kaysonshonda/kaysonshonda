@@ -15,9 +15,9 @@
 .vehicle-series .banner::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 1;
+  /* inset: 0;
+  background: rgba(0, 0, 0, 0.45); */
+  /* z-index: 1; */
 }
 
 .vehicle-series .banner img {

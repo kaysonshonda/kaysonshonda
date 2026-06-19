@@ -128,4 +128,8 @@ export class VehicleSeries implements OnInit, AfterViewInit {
     a.download = bike.name;
     a.click();
   }
+
+  openWhatsapp() {
+  window.open('https://wa.me/918145601235', '_blank');
+}
 }

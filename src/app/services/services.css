@@ -33,9 +33,9 @@ width: 100%;
   transition: transform 7s ease;
 }
 .services-page .banner::before {
-    background: rgba(0, 0, 0, 0.45);
+    /* background: rgba(0, 0, 0, 0.45); */
     display: block;
-    z-index: 1;
+    /* z-index: 1; */
     position: absolute;
     top: 0;
     left: 0;
@@ -43,7 +43,7 @@ width: 100%;
     height: 100%;
     content: '';
 }
-.services-page h1 {
+.services-page h2 {
   margin-top: 45px;
   font-weight: 500;
 }
@@ -225,5 +225,8 @@ background: var(--primary-red);
   }
   .services-page .banner-content {
     top: 20%;
+   }
+   .services-page h2 {
+    font-size: 25px;
    }
 }

@@ -26,7 +26,10 @@
   left: 8%;
   transform: translateY(-50%);
 }
-
+.test-drive-content h2{
+     margin-top: 45px;
+    font-weight: 500;
+}
 .sales-page  .banner-content h1 {
   color: #fff;
   font-size: 35px;
@@ -34,7 +37,7 @@
   margin: 0;
 }
 .sales-page .banner::before {
-  background: rgba(0, 0, 0, 0.45);
+  /* background: rgba(0, 0, 0, 0.45); */
   display: block;
   z-index: 1;
   position: absolute;
@@ -227,5 +230,8 @@
   }
    .sales-page .banner-content {
     top: 20%;
+   }
+   .test-drive-content h2{
+    font-size: 25px;
    }
 }
