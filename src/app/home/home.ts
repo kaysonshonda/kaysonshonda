@@ -1,4 +1,6 @@
 import { Component, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormService } from '../c-services/form-service';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +13,19 @@ export class Home implements OnInit, AfterViewInit {
 
   @ViewChild('swiperRef', { static: false })
   swiperRef!: ElementRef;
-
+  bookingForm: FormGroup;
+  constructor(
+    private fb: FormBuilder,
+    private formService: FormService
+  ) {
+    this.bookingForm = this.fb.group({
+      fullName: ['', Validators.required],
+      phone: ['', Validators.required],
+      email: ['', Validators.required],
+      model: ['Honda NX200', Validators.required],
+      note: [''],
+    });
+  }
   // TESTIMONIALS
 
   testimonials = [
@@ -54,7 +68,7 @@ export class Home implements OnInit, AfterViewInit {
       name: 'Karan Verma',
       bike: 'Honda Hness',
     },
-     {
+    {
       title: 'The Performance & Service Enthusiast',
       desc: `Bought the CB650R from Honda BigWing last year.
       The delivery day felt incredibly special and their
@@ -182,14 +196,6 @@ export class Home implements OnInit, AfterViewInit {
 
   // TEST DRIVE FORM
 
-  bookingData = {
-    fullName: '',
-    phone: '',
-    email: '',
-    model: 'Honda NX200',
-    note: '',
-  };
-
   bikeModels: string[] = [
     'Honda NX200',
     'Honda Hornet 2.0',
@@ -197,17 +203,24 @@ export class Home implements OnInit, AfterViewInit {
     'Honda SP125',
     'Honda Unicorn',
   ];
-onSubmit(): void {
-  if (
-    !this.bookingData.fullName ||
-    !this.bookingData.phone ||
-    !this.bookingData.email ||
-    !this.bookingData.model
-  ) {
-    return;
-  }
+  onSubmit(): void {
+    if (this.bookingForm.invalid) {
+      this.bookingForm.markAllAsTouched();
+      alert('Please fill all required fields.');
+      return;
+    }
 
-  console.log('Booking Data:', this.bookingData);
-  alert('Test Drive Booking Confirmed!');
-}
+    console.log('Booking Data:', this.bookingForm.value);
+    this.formService.submitTestDriveForm(this.bookingForm.value).subscribe(
+      (response) => {
+        console.log('Form submitted successfully:', response);
+        alert('Your test drive booking has been submitted successfully!');
+        this.bookingForm.reset();
+      },
+      (error) => {
+        console.error('Error submitting form:', error);
+        alert('There was an error submitting your booking. Please try again later.');
+      }
+    );
+  }
 }
