@@ -108,7 +108,7 @@
         <h2>SEND A MESSAGE</h2>
       </div>
 
- <form #contactForm="ngForm" (ngSubmit)="submitForm(contactForm)">
+ <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
 
   <div class="row">
     <!-- Name -->
@@ -119,11 +119,9 @@
         class="form-control"
         name="name"
         placeholder="Your Name"
-        ngModel
-        required
-        #name="ngModel"
+        formControlName="name"
       />
-      <small class="text-danger" *ngIf="name.invalid && name.touched">
+      <small class="text-danger" *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
         Name is required
       </small>
     </div>
@@ -136,12 +134,9 @@
         class="form-control"
         name="email"
         placeholder="Email"
-        ngModel
-        required
-        email
-        #email="ngModel"
+        formControlName="email"
       />
-      <small class="text-danger" *ngIf="email.invalid && email.touched">
+      <small class="text-danger" *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
         Valid email is required
       </small>
     </div>
@@ -155,11 +150,9 @@
       class="form-control"
       name="subject"
       placeholder="Subject"
-      ngModel
-      required
-      #subject="ngModel"
+      formControlName="subject"
     />
-    <small class="text-danger" *ngIf="subject.invalid && subject.touched">
+    <small class="text-danger" *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched">
       Subject is required
     </small>
   </div>
@@ -172,9 +165,7 @@
       class="form-control"
       name="message"
       placeholder="Your Message"
-      ngModel
-      required
-      #message="ngModel"
+      formControlName="message"
     ></textarea>
 
   </div>

@@ -19,4 +19,9 @@ export class FormService {
     const url = `${this.baseUrl}/index.php`;
     return this.http.post(url, formData, { headers: this.headers });
   }
+
+  submitContactUsForm(formData: any) {
+    const url = `${this.baseUrl}/contact-us.php`;
+    return this.http.post(url, formData, { headers: this.headers });
+  }
 }
