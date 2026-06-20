@@ -24,15 +24,15 @@ New Enquiry.</p>
     </div>
 
     @if (tab === 'enquiry') {
-      <form #f1="ngForm" (ngSubmit)="submitEnquiry(f1)" class="form-card">
+      <form [formGroup]="enquiryForm" (ngSubmit)="submitEnquiry()" class="form-card">
         <div class="row">
-          <input type="text" name="name" ngModel required placeholder="Full name" />
-          <input type="text" name="phone" ngModel required placeholder="Phone number" />
+          <input type="text" formControlName="fullName" placeholder="Full name" />
+          <input type="text" formControlName="mobileNumber" placeholder="Phone number" />
         </div>
         <div class="row">
-          <input type="email" name="email" ngModel required placeholder="Email" />
-          <input type="text" name="model" ngModel required placeholder="Model" />
-          <textarea name="message" ngModel placeholder="Message"></textarea>
+          <input type="email" formControlName="email" placeholder="Email" />
+          <input type="text" formControlName="model" placeholder="Model" />
+          <textarea formControlName="message" placeholder="Message"></textarea>
         </div>
         <button class="btn-primary">Submit Enquiry</button>
 
@@ -51,15 +51,15 @@ New Enquiry.</p>
     }
 
     @if (tab === 'finance') {
-      <form #f2="ngForm" (ngSubmit)="submitFinance(f2)" class="form-card">
+      <form [formGroup]="financeForm" (ngSubmit)="submitFinance()" class="form-card">
         <div class="row">
-          <input type="text" name="name" ngModel required placeholder="Full name" />
-          <input type="text" name="phone" ngModel required placeholder="Phone number" />
+          <input type="text" formControlName="fullName" placeholder="Full name" />
+          <input type="text" formControlName="mobileNumber" placeholder="Phone number" />
         </div>
         <div class="row">
-          <input type="email" name="email" ngModel required placeholder="Email" />
-          <input type="text" name="model" ngModel required placeholder="Model" />
-          <textarea name="message" ngModel placeholder="Message"></textarea>
+          <input type="email" formControlName="email" placeholder="Email" />
+          <input type="text" formControlName="model" placeholder="Model" />
+          <textarea formControlName="message" placeholder="Message"></textarea>
         </div>
         <button class="btn-primary">Get Finance Options</button>
 

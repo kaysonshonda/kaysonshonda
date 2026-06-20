@@ -89,14 +89,6 @@ export class VehicleSeries implements OnInit, AfterViewInit {
     this.activeIndex = this.activeIndex === i ? null : i;
   }
 
-  enquiry = {
-    fullName: '',
-    mobileNumber: '',
-    email: '',
-    model: '',
-    message: '',
-  };
-
   submitForm() {
     if (this.enquiryForm.invalid) {
       this.enquiryForm.markAllAsTouched();

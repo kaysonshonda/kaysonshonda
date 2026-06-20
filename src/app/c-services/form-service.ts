@@ -29,4 +29,9 @@ export class FormService {
     const url = `${this.baseUrl}/enquiry.php`;
     return this.http.post(url, formData, { headers: this.headers });
   }
+
+  financeForm(formData: any) {
+    const url = `${this.baseUrl}/finance.php`;
+    return this.http.post(url, formData, { headers: this.headers });
+  }
 }
