@@ -24,4 +24,9 @@ export class FormService {
     const url = `${this.baseUrl}/contact-us.php`;
     return this.http.post(url, formData, { headers: this.headers });
   }
+
+  enquiryForm(formData: any) {
+    const url = `${this.baseUrl}/enquiry.php`;
+    return this.http.post(url, formData, { headers: this.headers });
+  }
 }

@@ -4,6 +4,8 @@ import { DOCUMENT } from '@angular/common';
 import { Inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { VEHICLE_DATA } from '../vehicle-data';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormService } from '../../c-services/form-service';
 
 @Component({
   selector: 'app-vehicle-series',
@@ -16,13 +18,23 @@ export class VehicleSeries implements OnInit, AfterViewInit {
 
   seriesData: any;
   activeIndex: number | null = null;
-
+  enquiryForm: FormGroup;
   constructor(
     private route: ActivatedRoute,
     private titleService: Title,
     private meta: Meta,
     @Inject(DOCUMENT) private document: Document,
-  ) {}
+    private fb: FormBuilder,
+    private formService: FormService
+  ) {
+    this.enquiryForm = this.fb.group({
+      fullName: ['', Validators.required],
+      mobileNumber: ['', Validators.required],
+      email: ['', [Validators.email, Validators.required]],
+      model: ['', Validators.required],
+      message: ['']
+    });
+  }
 
   // ngOnInit() {
   //   const type = this.route.snapshot.data['type'];
@@ -86,22 +98,23 @@ export class VehicleSeries implements OnInit, AfterViewInit {
   };
 
   submitForm() {
-    if (!this.enquiry.fullName || !this.enquiry.mobileNumber || !this.enquiry.model) {
-      alert('Please fill required fields');
+    if (this.enquiryForm.invalid) {
+      this.enquiryForm.markAllAsTouched();
+      alert('Please fill all required fields.');
       return;
     }
 
-    console.log('Enquiry Data:', this.enquiry);
-
-    alert('Submitted successfully');
-
-    this.enquiry = {
-      fullName: '',
-      mobileNumber: '',
-      email: '',
-      model: '',
-      message: '',
-    };
+    this.formService.enquiryForm(this.enquiryForm.value).subscribe(
+      (response) => {
+        console.log('Form submitted successfully:', response);
+        alert('Your enquiry has been submitted successfully!');
+        this.enquiryForm.reset();
+      },
+      (error) => {
+        console.error('Error submitting form:', error);
+        alert('There was an error submitting your enquiry. Please try again later.');
+      }
+    );
   }
 
   ngAfterViewInit() {
@@ -130,6 +143,6 @@ export class VehicleSeries implements OnInit, AfterViewInit {
   }
 
   openWhatsapp() {
-  window.open('https://wa.me/918145601235', '_blank');
-}
+    window.open('https://wa.me/918145601235', '_blank');
+  }
 }

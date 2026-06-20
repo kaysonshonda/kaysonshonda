@@ -116,33 +116,30 @@
         </div>
 
         <div class="form-container">
-          <form #enquiryForm="ngForm" (ngSubmit)="submitForm()">
+          <form [formGroup]="enquiryForm" (ngSubmit)="submitForm()">
             <input
               type="text"
               name="fullName"
               placeholder="Full Name"
-              [(ngModel)]="enquiry.fullName"
-              required
+              formControlName="fullName"
             />
             <small class="error"> Full Name is required </small>
             <input
               type="tel"
               name="mobileNumber"
               placeholder="Mobile Number"
-              [(ngModel)]="enquiry.mobileNumber"
-              required
+              formControlName="mobileNumber"
             />
             <small class="error"> Mobile Number is required </small>
             <input
               type="email"
               name="email"
               placeholder="Email"
-              [(ngModel)]="enquiry.email"
-              required
+              formControlName="email"
             />
             <small class="error"> Email is required </small>
             <!-- <input type="text" name="model" placeholder="Model" [(ngModel)]="enquiry.model" /> -->
-            <select name="model" [(ngModel)]="enquiry.model" required>
+            <select name="model" formControlName="model">
               <option value="">Select Model</option>
 
               <option *ngFor="let model of seriesData?.models" [value]="model">
@@ -151,10 +148,10 @@
             </select>
             <small class="error"> Model is required </small>
 
-            <textarea rows="3" name="message" placeholder="Message" [(ngModel)]="enquiry.message">
+            <textarea rows="3" name="message" placeholder="Message" formControlName="message">
             </textarea>
 
-            <button type="submit" [disabled]="enquiryForm.invalid">Submit Enquiry</button>
+            <button type="submit">Submit Enquiry</button>
           </form>
         </div>
       </div>
