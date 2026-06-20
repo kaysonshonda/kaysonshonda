@@ -34,4 +34,24 @@ export class FormService {
     const url = `${this.baseUrl}/finance.php`;
     return this.http.post(url, formData, { headers: this.headers });
   }
+
+  vehicleServiceForm(formData: any) {
+    const url = `${this.baseUrl}/vehicle-service.php`;
+    return this.http.post(url, formData, { headers: this.headers });
+  }
+
+  sparePartsForm(formData: any) {
+    const url = `${this.baseUrl}/spare-parts.php`;
+    return this.http.post(url, formData, { headers: this.headers });
+  }
+
+  insuranceForm(formData: any) {
+    const url = `${this.baseUrl}/insurance.php`;
+    return this.http.post(url, formData, { headers: this.headers });
+  }
+
+  warrantyForm(formData: any) {
+    const url = `${this.baseUrl}/warranty.php`;
+    return this.http.post(url, formData, { headers: this.headers });
+  }
 }

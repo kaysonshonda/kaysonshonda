@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Request</title>
+    <style>
+        /* General resets */
+        body {
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            background: #f4f6f8;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        /* Container */
+        .email-wrapper {
+            width: 100%;
+            background: #f4f6f8;
+            padding: 24px 12px;
+        }
+
+        .email-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Card */
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+        }
+
+        .card-inner {
+            padding: 28px;
+        }
+
+        h1 {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 20px;
+            margin: 0 0 8px;
+            color: #0f172a;
+        }
+
+        p.lead {
+            margin: 0 0 16px;
+            color: #475569;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .details {
+            width: 100%;
+            margin: 18px 0 0;
+        }
+
+        .row {
+            padding: 12px 0;
+            border-bottom: 1px solid #eef2f7;
+        }
+
+        .label {
+            width: 28%;
+            color: #64748b;
+            font-size: 13px;
+            vertical-align: middle;
+            padding: 8px 12px;
+        }
+
+        .value {
+            width: 72%;
+            color: #0f172a;
+            font-size: 14px;
+            vertical-align: middle;
+        }
+
+        .footer {
+            padding: 18px 28px;
+            font-size: 12px;
+            color: #94a3b8;
+            text-align: center;
+        }
+
+        @media (max-width:480px) {
+            .label {
+                display: block;
+                width: 100%;
+                padding-right: 0;
+                margin-bottom: 6px;
+                color: #475569;
+            }
+
+            .value {
+                display: block;
+                width: 100%;
+            }
+
+            .card-inner {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+        <tr>
+            <td align="center">
+                <table class="email-content" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                    <tr>
+                        <td>
+                            <table class="card" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                                <tr>
+                                    <td class="card-inner">
+                                        <h1>Vehicle Service Form Submission</h1>
+                                        <p class="lead">You have a new vehicle service form submission. Below are the details
+                                            submitted by the user.</p>
+
+                                        <table class="details" width="100%" cellpadding="0" cellspacing="0"
+                                            role="presentation">
+                                            <tr class="row">
+                                                <td class="label">Full Name</td>
+                                                <td class="value">{{fullName}}</td>
+                                            </tr>
+                                            <tr class="row">
+                                                <td class="label">Email</td>
+                                                <td class="value">{{email}}</td>
+                                            </tr>
+                                            <tr class="row">
+                                                <td class="label">Mobile Number</td>
+                                                <td class="value">{{mobileNumber}}</td>
+                                            </tr>
+                                            <tr class="row">
+                                                <td class="label">Model</td>
+                                                <td class="value">{{model}}</td>
+                                            </tr>
+                                            <tr class="row">
+                                                <td class="label">Service Type</td>
+                                                <td class="value">{{serviceType}}</td>
+                                            </tr>
+                                            <tr class="row">
+                                                <td class="label">Message</td>
+                                                <td class="value">{{message}}</td>
+                                            </tr>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

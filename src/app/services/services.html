@@ -40,19 +40,19 @@
 
     <!-- ================= VEHICLE SERVICES ================= -->
     @if (tab === 'vehicle') {
-      <form #f1="ngForm" (ngSubmit)="submitVehicle(f1)" class="form-card">
+      <form [formGroup]="vehicleServiceForm" (ngSubmit)="submitVehicle()" class="form-card">
         <div class="row">
-          <input name="fullName" ngModel required placeholder="Full Name" />
-          <input name="phone" ngModel required placeholder="Phone Number" />
+          <input name="fullName" formControlName="fullName" placeholder="Full Name" />
+          <input name="phone" formControlName="mobileNumber" placeholder="Phone Number" />
         </div>
 
         <div class="row">
-          <input name="email" ngModel placeholder="Email" />
-          <input name="model" ngModel placeholder="Model" />
+          <input name="email" formControlName="email" placeholder="Email" />
+          <input name="model" formControlName="model" placeholder="Model" />
         </div>
 
         <div class="row">
-          <select name="serviceType" ngModel required>
+          <select name="serviceType" formControlName="serviceType">
             <option value="">Service Type</option>
             <option>General Service</option>
             <option>Engine Repair</option>
@@ -60,7 +60,7 @@
             <option>Brake Check</option>
           </select>
 
-          <textarea name="message" ngModel placeholder="Message"></textarea>
+          <textarea name="message" formControlName="message" placeholder="Message"></textarea>
         </div>
 
         <button class="btn-primary">Submit Request</button>
@@ -78,20 +78,20 @@
 
     <!-- ================= SPARE PARTS ================= -->
     @if (tab === 'parts') {
-      <form #f2="ngForm" (ngSubmit)="submitParts(f2)" class="form-card">
+      <form [formGroup]="sparePartsForm" (ngSubmit)="submitParts()" class="form-card">
         <div class="row">
-          <input name="fullName" ngModel required placeholder="Full Name" />
-          <input name="phone" ngModel required placeholder="Phone Number" />
+          <input name="fullName" formControlName="fullName" placeholder="Full Name" />
+          <input name="phone" formControlName="mobileNumber" placeholder="Phone Number" />
         </div>
 
         <div class="row">
-          <input name="email" ngModel placeholder="Email" />
-          <input name="model" ngModel placeholder="Model" />
+          <input name="email" formControlName="email" placeholder="Email" />
+          <input name="model" formControlName="model" placeholder="Model" />
         </div>
 
         <div class="row">
-          <input name="partsType" ngModel placeholder="Honda Genuine Parts" />
-          <textarea name="message" ngModel placeholder="What parts are you looking for?"></textarea>
+          <input name="partsType" formControlName="partName" placeholder="Honda Genuine Parts" />
+          <textarea name="message" formControlName="message" placeholder="What parts are you looking for?"></textarea>
         </div>
 
         <button class="btn-primary">Send Enquiry</button>
@@ -109,20 +109,20 @@
 
     <!-- ================= INSURANCE ================= -->
     @if (tab === 'insurance') {
-      <form #f3="ngForm" (ngSubmit)="submitInsurance(f3)" class="form-card">
+      <form [formGroup]="insuranceForm" (ngSubmit)="submitInsurance()" class="form-card">
         <div class="row">
-          <input name="fullName" ngModel required placeholder="Full Name" />
-          <input name="phone" ngModel required placeholder="Phone Number" />
+          <input name="fullName" formControlName="fullName" placeholder="Full Name" />
+          <input name="phone" formControlName="mobileNumber" placeholder="Phone Number" />
         </div>
 
         <div class="row">
-          <input name="email" ngModel placeholder="Email" />
-          <input name="model" ngModel placeholder="Model" />
+          <input name="email" formControlName="email" placeholder="Email" />
+          <input name="model" formControlName="model" placeholder="Model" />
         </div>
 
         <div class="row">
-          <input type="date" name="purchaseDate" ngModel />
-          <textarea name="message" ngModel placeholder="Message"></textarea>
+          <input type="date" name="purchaseDate" formControlName="date" />
+          <textarea name="message" formControlName="message" placeholder="Message"></textarea>
         </div>
 
         <button class="btn-primary">Renew Insurance</button>
@@ -140,20 +140,20 @@
 
     <!-- ================= WARRANTY ================= -->
     @if (tab === 'warranty') {
-      <form #f4="ngForm" (ngSubmit)="submitWarranty(f4)" class="form-card">
+      <form [formGroup]="warrantyForm" (ngSubmit)="submitWarranty()" class="form-card">
         <div class="row">
-          <input name="fullName" ngModel required placeholder="Full Name" />
-          <input name="phone" ngModel required placeholder="Phone Number" />
+          <input name="fullName" formControlName="fullName" placeholder="Full Name" />
+          <input name="phone" formControlName="mobileNumber" placeholder="Phone Number" />
         </div>
 
         <div class="row">
-          <input name="email" ngModel placeholder="Email" />
-          <input name="model" ngModel placeholder="Model" />
+          <input name="email" formControlName="email" placeholder="Email" />
+          <input name="model" formControlName="model" placeholder="Model" />
         </div>
 
         <div class="row">
-          <input type="date" name="purchaseDate" ngModel />
-          <textarea name="note" ngModel placeholder="Note"></textarea>
+          <input type="date" name="purchaseDate" formControlName="date" />
+          <textarea name="note" formControlName="message" placeholder="Note"></textarea>
         </div>
 
         <button class="btn-primary">Submit Request</button>
