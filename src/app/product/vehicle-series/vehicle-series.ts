@@ -15,7 +15,7 @@ import { FormService } from '../../c-services/form-service';
 })
 export class VehicleSeries implements OnInit, AfterViewInit {
   @ViewChild('swiper') swiperEl!: ElementRef;
-
+successMessage = '';
   seriesData: any;
   activeIndex: number | null = null;
   enquiryForm: FormGroup;
@@ -99,7 +99,8 @@ export class VehicleSeries implements OnInit, AfterViewInit {
     this.formService.enquiryForm(this.enquiryForm.value).subscribe(
       (response) => {
         console.log('Form submitted successfully:', response);
-        alert('Your enquiry has been submitted successfully!');
+        // alert('Your enquiry has been submitted successfully!');
+          this.successMessage = 'Thank you! Your enquiry has been submitted successfully.';
         this.enquiryForm.reset();
       },
       (error) => {
@@ -135,6 +136,13 @@ export class VehicleSeries implements OnInit, AfterViewInit {
   }
 
   openWhatsapp() {
-    window.open('https://wa.me/918145601235', '_blank');
+     const element = document.getElementById('get-in-touch-form');
+
+  if (element) {
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
   }
 }

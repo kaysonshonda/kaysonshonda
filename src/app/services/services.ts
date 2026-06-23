@@ -9,7 +9,7 @@ import { FormService } from '../c-services/form-service';
   styleUrl: './services.css',
 })
 export class Services {
-
+successMessage = '';
   tab: string = 'vehicle';
   vehicleServiceForm: FormGroup;
   sparePartsForm: FormGroup;
@@ -68,7 +68,9 @@ export class Services {
     this.formService.vehicleServiceForm(this.vehicleServiceForm.value).subscribe(
       (response) => {
         console.log('Form submitted successfully:', response);
-        alert('Your Vehicle Service form has been submitted successfully!');
+        // alert('Your Vehicle Service form has been submitted successfully!');
+          this.successMessage = 'Thank you! Your Vehicle Service request has been submitted successfully.';
+
         this.vehicleServiceForm.reset();
       },
       (error) => {
@@ -90,7 +92,8 @@ export class Services {
     this.formService.sparePartsForm(this.sparePartsForm.value).subscribe(
       (response) => {
         console.log('Form submitted successfully:', response);
-        alert('Your Spare Parts form has been submitted successfully!');
+        // alert('Your Spare Parts form has been submitted successfully!');
+          this.successMessage = 'Thank you! Your Spare Parts request has been submitted successfully.';
         this.sparePartsForm.reset();
       },
       (error) => {
@@ -112,7 +115,9 @@ export class Services {
     this.formService.insuranceForm(this.insuranceForm.value).subscribe(
       (response) => {
         console.log('Form submitted successfully:', response);
-        alert('Your Insurance form has been submitted successfully!');
+        // alert('Your Insurance form has been submitted successfully!');
+        this.successMessage = 'Thank you! Your Vehicle Insurance Service request has been submitted successfully.';
+
         this.insuranceForm.reset();
       },
       (error) => {

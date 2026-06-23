@@ -10,7 +10,7 @@ import { FormService } from '../c-services/form-service';
 })
 export class Home implements OnInit, AfterViewInit {
   // SWIPER REF
-
+successMessage = '';
   @ViewChild('swiperRef', { static: false })
   swiperRef!: ElementRef;
   bookingForm: FormGroup;
@@ -191,7 +191,8 @@ export class Home implements OnInit, AfterViewInit {
     this.formService.submitTestDriveForm(this.bookingForm.value).subscribe(
       (response) => {
         console.log('Form submitted successfully:', response);
-        alert('Your test drive booking has been submitted successfully!');
+        // alert('Your test drive booking has been submitted successfully!');
+         this.successMessage = 'Thank you! Your test drive booking has been submitted successfully.';
         this.bookingForm.reset();
       },
       (error) => {

@@ -186,6 +186,9 @@
   text-decoration:none;
   color: var(--white);
 }
+.contact-info .details .address{
+  min-height: 70px;
+}
 
 /* .footer-links a::before {
   content: '\f4f4';

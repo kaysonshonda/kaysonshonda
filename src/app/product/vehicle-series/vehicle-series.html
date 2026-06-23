@@ -152,6 +152,9 @@
             </textarea>
 
             <button type="submit">Submit Enquiry</button>
+            <p class="text-success mt-2" *ngIf="successMessage">
+  {{ successMessage }}
+</p>
           </form>
         </div>
       </div>

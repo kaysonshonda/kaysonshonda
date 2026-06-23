@@ -10,15 +10,17 @@ import { FormService } from '../c-services/form-service';
 })
 export class ContactUs {
   contactForm: FormGroup;
+  successMessage = '';
 
-  constructor(private fb: FormBuilder,
-    private formService: FormService
+  constructor(
+    private fb: FormBuilder,
+    private formService: FormService,
   ) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       subject: ['', Validators.required],
-      message: ['']
+      message: [''],
     });
   }
 
@@ -32,13 +34,15 @@ export class ContactUs {
     this.formService.submitContactUsForm(this.contactForm.value).subscribe(
       (response) => {
         console.log('Form submitted successfully:', response);
-        alert('Your message has been sent successfully!');
+        // alert('Your message has been sent successfully!');
+        this.successMessage =
+          'Thank you! Your message has been sent successfully. Our team will contact you shortly.';
         this.contactForm.reset();
       },
       (error) => {
         console.error('Error submitting form:', error);
         alert('There was an error submitting your message. Please try again later.');
-      }
+      },
     );
   }
 }

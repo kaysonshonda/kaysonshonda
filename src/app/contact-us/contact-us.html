@@ -2,13 +2,13 @@
 <div class="contact-us">
   <div class="banner">
     <img src="/assets/images/contact/Contact us.webp" alt="Honda Banner" width="100%" />
-    <div class="banner-content">
+    <!-- <div class="banner-content">
       <h1>Contact Us</h1>
-    </div>
+    </div> -->
   </div>
   <div class="contact-heading">
     <div class="container">
-      <h2>Get in Touch with Kaysons Honda</h2>
+      <h1>Get in Touch with Kaysons Honda</h1>
       <h3>
         get in touch with us for buying or selling motorcycles. Also you can take a test drive
         latest models from almost all brands.
@@ -191,6 +191,9 @@
 
         <!-- Submit Button -->
         <button type="submit" class="btn send-btn">SEND MESSAGE</button>
+        <p *ngIf="successMessage" class="success-message">
+  {{ successMessage }}
+</p>
       </form>
     </div>
   </div>

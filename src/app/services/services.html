@@ -65,6 +65,10 @@
 
         <button class="btn-primary">Submit Request</button>
 
+        <p *ngIf="successMessage" class="text-success mt-3">
+  {{ successMessage }}
+</p>
+
         <div class="contact">
           <h6>Services Team</h6>
                   <div class="inline-contact-data">
@@ -95,6 +99,9 @@
         </div>
 
         <button class="btn-primary">Send Enquiry</button>
+        <p *ngIf="successMessage" class="text-success mt-3">
+  {{ successMessage }}
+</p>
 
         <div class="contact">
           <h6>Spare Parts Team</h6>
@@ -126,6 +133,9 @@
         </div>
 
         <button class="btn-primary">Renew Insurance</button>
+        <p *ngIf="successMessage" class="text-success mt-3">
+  {{ successMessage }}
+</p>
 
         <div class="contact">
           <h6>Insurance Team</h6>

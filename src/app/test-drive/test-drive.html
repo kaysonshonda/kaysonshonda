@@ -34,6 +34,10 @@ New Enquiry.</p>
         </div>
         <button class="btn-primary">Submit Enquiry</button>
 
+        <p *ngIf="successMessage" class="text-success mt-2">
+  {{ successMessage }}
+</p>
+
         <div class="contact">
           <h6>Sales Team</h6>
           <div class="inline-contact-data">
@@ -60,6 +64,10 @@ New Enquiry.</p>
           <textarea formControlName="message" placeholder="Message"></textarea>
         </div>
         <button class="btn-primary">Get Finance Options</button>
+
+        <p *ngIf="successMessage" class="text-success mt-2">
+  {{ successMessage }}
+</p>
 
         <div class="contact">
           <h6>Finance Team</h6>
