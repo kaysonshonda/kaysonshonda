@@ -32,7 +32,7 @@ import { PrivacyPolicy } from './privacy-policy/privacy-policy';
     VehicleSeries,
     PrivacyPolicy,
   ],
-  imports: [BrowserModule, AppRoutingModule, CommonModule, CustomCommonModule, FormsModule,ReactiveFormsModule],
+  imports: [BrowserModule, AppRoutingModule, CommonModule, CustomCommonModule, FormsModule, ReactiveFormsModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
