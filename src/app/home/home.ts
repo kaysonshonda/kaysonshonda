@@ -15,53 +15,31 @@ export class Home implements OnInit, AfterViewInit {
   // TESTIMONIALS
 
   testimonials = [
-    {
-      title: 'The Performance & Service Enthusiast',
-      desc: `Bought the CB650R from Honda BigWing last year.
-      The delivery day felt incredibly special and their
-      maintenance service has been top-notch.`,
-      name: 'Arjun Mehta',
-      bike: 'Honda CB650R',
-    },
+   {
+  desc: `I recently purchased a Honda SP125 DLX DISK OBD2B, and the delivery experience was exceptional. The process was seamless, with the bike delivered within two hours, including the completion of all EMI formalities and other paperwork. The staff were courteous, professional, and highly efficient, making the entire experience enjoyable. I highly recommend their service for a smooth and hassle-free purchase.`,
+  name: 'Sanjay Basak',
+},
 
-    {
-      title: 'The Test Ride & Buying Experience',
-      desc: `The test ride experience at Honda BigWing
-      was phenomenal. Staff guided me through every detail.`,
-      name: 'Deepika Rao',
-      bike: 'Honda CB125 Hornet',
-    },
+{
+  desc: `I recently purchased my scooty from Kaysons Honda, Siliguri, and had a great experience. The staff was very helpful, professional, and guided me through the entire process smoothly. The delivery was timely, and all my queries were handled with patience. Highly satisfied with the service and would definitely recommend Kaysons Honda to anyone planning to buy a two-wheeler!`,
+  name: 'Mrinmoy Paul',
+},
 
-    {
-      title: 'The Smooth Delivery & Financing Experience',
-      desc: `Financing my H’ness CB350 was seamless and
-      the bike delivery was perfect with all accessories.`,
-      name: 'Vikram Malhotra',
-      bike: 'Honda SP160',
-    },
+{
+  desc: `Excellent service! I am very happy and impressed with the service they provide. The finance team really cares about their customers. Their sales staff made my vehicle buying experience easy and enjoyable. I would 100% recommend Kaysons Honda for a great vehicle purchase and service experience!`,
+  name: 'Sanjoy Mallick',
+},
 
-    {
-      title: 'Best Honda Showroom',
-      desc: `Excellent customer support and fast service.`,
-      name: 'Rahul Sharma',
-      bike: 'Honda Hornet 2.0',
-    },
+{
+  desc: `Excellent service experience. Special thanks to Ms. Puja and Mr. Shib for their professionalism and clear communication. They ensured all issues were addressed and kept me updated throughout the process. The bike feels great post-service. Highly satisfied with the quality and customer support. Will definitely recommend and return for future servicing needs.`,
+  name: 'Shovan',
+},
 
-    {
-      title: 'Premium Experience',
-      desc: `Very professional staff and premium
-      showroom atmosphere.`,
-      name: 'Karan Verma',
-      bike: 'Honda Hness',
-    },
-     {
-      title: 'The Performance & Service Enthusiast',
-      desc: `Bought the CB650R from Honda BigWing last year.
-      The delivery day felt incredibly special and their
-      maintenance service has been top-notch.`,
-      name: 'Arjun Mehta',
-      bike: 'Honda CB650R',
-    },
+{
+  desc: `Got my Honda Activa insurance claim done here. The service was outstanding with instant claim processing and timely delivery. The advisor was very polite, and the customer lounge was neat and clean. I was guided step by step throughout the process. I highly recommend Kaysons Honda Service Center to every Honda two-wheeler owner. Truly Siliguri's No.1 Honda showroom and service center.`,
+  name: 'Yash Agarwal',
+},
+
   ];
 
   // COUNTERS

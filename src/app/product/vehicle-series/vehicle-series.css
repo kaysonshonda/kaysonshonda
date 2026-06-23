@@ -40,9 +40,9 @@
 
 .honda-vehicle-series .heading h1 {
   color: var(--primary-red);
-  font-size: 28px;
-  font-weight: 600;
-  text-transform: uppercase;
+     font-size: 22px;
+    font-weight: 600;
+  /* text-transform: uppercase; */
   margin-bottom: 15px;
 }
 
@@ -177,8 +177,9 @@
 
 .bike-card .top-row {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding-right: 30px;
 }
 
 .bike-card .top-row h2 {
@@ -198,7 +199,19 @@
   font-size: 25px;
   font-weight: 500;
 }
-
+.shineSwiper::part(button-next) {
+  width: 20px;
+  padding: 10px;
+  height: 20px;
+  background: transparent;
+  color: var(--primary-red);
+  border: 1px solid var(--primary-red);
+  border-radius: 50%;
+   background: url('/assets/images/right-arrow.svg') center no-repeat;
+}
+.shineSwiper::part(button-prev) {
+  display: none;
+}
 /* SPEC ROW */
 
 .honda-vehicle-series .spec-row {

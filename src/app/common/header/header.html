@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <!-- Logo -->
       <a class="navbar-brand" routerLink="/">
-        <img src="/assets/images/honda logo/header-logo.png" alt="Logo" />
+        <img src="/assets/images/header-logo.png" alt="Logo" />
         <!-- <img src="/assets/images/honda logo/Kaysons logo.png" alt="Logo" /> -->
       </a>
 
@@ -126,7 +126,7 @@
 
         <!-- Search / Book Now (optional UI like screenshot) -->
         <div class="d-flex align-items-center gap-3">
-          <button class="btn btn-book-now">BOOK NOW</button>
+          <button class="btn btn-book-now" (click)="callNow()">Book Now</button>
         </div>
       </div>
     </div>

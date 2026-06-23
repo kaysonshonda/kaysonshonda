@@ -18,11 +18,11 @@ width: 100%;
   z-index: 33;
   transform: translateY(-50%);
 }
-.services-page .banner-content h1 {
-  color: #fff;
+.services-page .content h1 {
+  color: var(--black);
   font-size: 35px;
-  font-weight: 600;
-  margin: 0;
+  font-weight: 500;
+      margin-top: 35px;
 }
 
 .services-page .banner img {
@@ -44,8 +44,9 @@ width: 100%;
     content: '';
 }
 .services-page h2 {
-  margin-top: 45px;
+  /* margin-top: 45px; */
   font-weight: 500;
+  font-size: 22px;
 }
 
 .services-page p {
@@ -89,10 +90,10 @@ width: 100%;
   color: var(--white);
   font-size: 20px;
   font-weight: 500;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   transition: 0.4s ease;
   cursor: pointer;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
 }
 
 .services-page .tabs .active {

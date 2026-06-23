@@ -8,9 +8,9 @@ export const VEHICLE_DATA: any = {
     models: ['NX200'],
     bikes: [
       {
-        name: 'Honda NX200',
+        name: ' NX200',
         subtitle: 'Powered by Honda',
-        price: '₹158591',
+        price: '₹1,58,591*',
         year: '2026',
         type: 'Motorcycle',
         make: '12V, 5.0Ah',
@@ -43,23 +43,23 @@ export const VEHICLE_DATA: any = {
     ],
     features: [
       {
-        image: '/assets/images/kaysons bike/NX200/TFT Display.webp',
+        image: '/assets/images/product-futures/NX200/TFT Display.jpg',
         name: 'TFT Display',
       },
       {
-        image: '/assets/images/kaysons bike/NX200/Honda RoadSync.webp',
+        image: '/assets/images/product-futures/NX200/Honda RoadSync.jpg',
         name: 'Honda RoadSync ',
       },
       {
-        image: '/assets/images/kaysons bike/NX200/Assist Slipper Clutch.webp',
+        image: '/assets/images/product-futures/NX200/AssistSlipper Clutch.jpg',
         name: 'Slipper Clutch',
       },
       {
-        image: '/assets/images/kaysons bike/NX200/Tall Wind Visor.webp',
+        image: '/assets/images/product-futures/NX200/Tall Wind Visor.jpg',
         name: 'Tall Wind Visor ',
       },
       {
-        image: '/assets/images/kaysons bike/NX200/Diamond-Type Steel Frame.webp',
+        image: '/assets/images/product-futures/NX200/Diamond-Type Steel Frame.jpg',
         name: 'Diamond-Type Steel Frame ',
       },
     ],
@@ -105,12 +105,12 @@ export const VEHICLE_DATA: any = {
     description:
       'The trusted Honda Shine Series includes the Shine100, Shine100 DX, Shine125, and Shine125 Limited. Known for their reliability, fuel efficiency, and comfortable ride quality, these motorcycles  are ideal for daily commuting and long-term ownership. Whether you are looking for the Honda  Shine100 On Road Price in Siliguri, Honda Shine100 DX On Road Price in Siliguri, Honda Shine125  On Road Price in Siliguri, or Honda Shine125 Limited On Road Price in Siliguri, our team can help  with the latest prices, finance options, and offers. Visit Kaysons Honda to explore the complete Shine  Series. ',
 
-    models: ['Shine100', 'Shine100 DX', 'Shine125', 'Shine 125 Limited'],
+    models: [' Shine100', ' Shine100 DX', ' Shine125', ' Shine 125 Limited'],
     bikes: [
       {
-        name: 'Shine100',
+        name: ' Shine100',
         subtitle: 'Powered by Honda',
-        price: '₹65,390',
+        price: '₹65,390*',
         year: '2026',
         type: 'Motorcycle',
         make: '12V, 3.0Ah',
@@ -151,9 +151,9 @@ export const VEHICLE_DATA: any = {
       },
 
       {
-        name: 'Shine100 DX',
+        name: ' Shine100 DX',
         subtitle: 'Powered by Honda',
-        price: '₹74,000',
+        price: '₹74,000*',
         year: '2026',
         type: 'Motorcycle',
         make: '12V, 3.0Ah',
@@ -189,7 +189,7 @@ export const VEHICLE_DATA: any = {
       },
 
       {
-        name: 'Shine125',
+        name: ' Shine125',
         subtitle: 'Powered by Honda',
         price: '₹71,893*',
         year: '2026',
@@ -237,9 +237,9 @@ export const VEHICLE_DATA: any = {
       },
 
       {
-        name: 'Shine 125 Limited ',
+        name: ' Shine 125 Limited ',
         subtitle: 'Powered by Honda',
-        price: '₹90,000',
+        price: '₹90,000*',
         year: '2026',
         type: 'Motorcycle',
         make: '12V, 5Ah',
@@ -323,12 +323,12 @@ export const VEHICLE_DATA: any = {
 
     description:
       'The exciting Honda Hornet Series features the sporty Honda CB125 Hornet and the powerful Honda Hornet 2.0. Designed for riders who value sporty styling, everyday comfort, and dependable performance, the Hornet Series offers a thrilling riding experience for both city commutes and weekend rides. Whether you are searching for the Honda CB125 Hornet On Road Price in Siliguri or the Honda Hornet 2.0 On Road Price in Siliguri, our team is ready to assist with the latest pricing, finance options, and offers. Visit Kaysons Honda to explore the complete Hornet Series today.',
-    models: ['CB125', 'Hornet 2.0'],
+    models: [' CB125', ' Hornet 2.0'],
     bikes: [
       {
-        name: 'CB125',
+        name: ' CB125',
         subtitle: 'Powered by Honda',
-        price: '₹1,15,235',
+        price: '₹1,15,235*',
         year: '2026',
         type: 'Motorcycle',
         make: '12V, 4.0Ah',
@@ -368,9 +368,9 @@ export const VEHICLE_DATA: any = {
       },
 
       {
-        name: 'Honda Hornet 2.0',
+        name: ' Hornet 2.0',
         subtitle: 'Powered by Honda',
-        price: '₹1,47,847',
+        price: '₹1,47,847*',
         year: '2026',
         type: 'Motorcycle',
         make: '12V, 5.0Ah',
@@ -411,24 +411,23 @@ export const VEHICLE_DATA: any = {
 
     features: [
       {
-        image: '/assets/images/kaysons bike/hornet-series/CB-125/Side Stand Engine Cut-off.webp',
+        image: '/assets/images/product-futures/CB-125/Side Stand Engine Cut-off.jpg',
         name: 'Side Stand Engine Cut-off',
       },
       {
-        image: '/assets/images/kaysons bike/hornet-series/CB-125/Wider Tyres.webp',
+        image: '/assets/images/product-futures/CB-125/Wider Tyres.jpg',
         name: 'Wider Tyres',
       },
       {
-        image: '/assets/images/kaysons bike/hornet-series/CB-125/1-CH ABS.webp',
+        image: '/assets/images/product-futures/CB-125/1-CH ABS.jpg',
         name: '1-CH ABS',
       },
       {
-        image: '/assets/images/kaysons bike/hornet-series/CB-125/Honda RoadSync.webp',
+        image: '/assets/images/product-futures/CB-125/Honda RoadSync.jpg',
         name: 'Honda RoadSync',
       },
       {
-        image:
-          '/assets/images/kaysons bike/hornet-series/CB-125/Honda Selectable Torque Control.webp',
+        image: '/assets/images/product-futures/CB-125/Honda Selectable Torque Control.jpg',
         name: 'Honda Selectable Torque Control',
       },
     ],
@@ -466,12 +465,12 @@ export const VEHICLE_DATA: any = {
     banner: 'assets/images/products-banner/SP Series.webp',
     description:
       'The Honda SP Series includes the sporty SP125, SP125 Nav, and SP160. Designed for riders who want style, performance, and everyday practicality, the SP Series delivers a comfortable and enjoyable riding experience. With modern features, fuel-efficient engines, and bold styling, these motorcycles are ideal for both daily commutes and weekend rides. Whether you are searching for the Honda SP125 On Road Price in Siliguri, Honda SP125 Nav On Road Price in Siliguri, or Honda SP160 On Road Price in Siliguri, visit Kaysons Honda for the latest prices, offers, and finance options.',
-    models: ['SP125', 'SP160'],
+    models: [' SP125', ' SP160'],
     bikes: [
       {
-        name: 'Honda SP125',
+        name: ' SP125',
         subtitle: 'Powered by Honda',
-        price: '₹92,000',
+        price: '₹92,000*',
         year: '2026',
         type: 'Motorcycle',
         make: '12V, 5.0Ah',
@@ -509,9 +508,9 @@ export const VEHICLE_DATA: any = {
         ],
       },
       {
-        name: 'Honda SP160',
+        name: ' SP160',
         subtitle: 'Powered by Honda',
-        price: '₹1,21,241',
+        price: '₹1,21,241*',
         year: '2026',
         type: 'Motorcycle',
         make: '12V, 5.0Ah',
@@ -547,16 +546,20 @@ export const VEHICLE_DATA: any = {
     ],
     features: [
       {
-        image: '/assets/images/kaysons bike/SP-Series/SP125/Side Stand Engine Cut-off.webp',
+        image: '/assets/images/product-futures/SP125/Side Stand Engine Cut-off.jpg',
         name: 'Side Stand Engine Cut-off',
       },
       {
-        image: '/assets/images/kaysons bike/SP-Series/SP125/Wider Rear Tyre.webp',
+        image: '/assets/images/product-futures/SP125/Wider Rear Tyre.jpg',
         name: 'Wider Rear Tyre',
       },
       {
-        image: '/assets/images/kaysons bike/SP-Series/SP125/5-Step Rear Suspension.webp',
+        image: '/assets/images/product-futures/SP125/5-Step Rear Suspension.jpg',
         name: '5-Step Rear Suspension',
+      },
+      {
+        image: '/assets/images/product-futures/SP125/1 CH ABS.jpg',
+        name: '1-CH ABS',
       },
     ],
     faqs: [
@@ -591,12 +594,12 @@ export const VEHICLE_DATA: any = {
     banner: 'assets/images/products-banner/Unicorn Series.webp',
     description:
       'The Honda Unicorn is a trusted name in the Unicorn Series known for its comfort, reliability, and refined performance. Designed for riders who value a smooth and dependable riding experience, the Unicorn is well-suited for daily commuting as well as longer journeys. Its powerful engine, comfortable ergonomics, and durable build have made it a popular choice among motorcycle enthusiasts. If you are looking for the Honda Unicorn On Road Price in Siliguri, visit Kaysons Honda for the latest pricing, attractive offers, finance options, and expert assistance on the complete Unicorn Series.',
-    models: ['Unicorn'],
+    models: [' Unicorn'],
     bikes: [
       {
-        name: 'Honda Unicorn',
+        name: ' Unicorn',
         subtitle: 'Powered by Honda',
-        price: '₹1,13,786',
+        price: '₹1,13,786*',
         year: '2026',
         type: 'Motorcycle',
         make: '12V, 5.0Ah',
@@ -628,24 +631,23 @@ export const VEHICLE_DATA: any = {
 
     features: [
       {
-        image: '/assets/images/kaysons bike/Unicorn-Series/Unicorn/LCD Digital Panel.jpg',
+        image: '/assets/images/product-futures/Unicorn/LCD Digital Panel.jpg',
         name: 'LCD Digital Panel',
       },
       {
-        image: '/assets/images/kaysons bike/Unicorn-Series/Unicorn/High Ground Clearance.webp',
+        image: '/assets/images/product-futures/Unicorn/High Ground Clearance.jpg',
         name: 'High Ground Clearance',
       },
       {
-        image: '/assets/images/kaysons bike/Unicorn-Series/Unicorn/Side Stand Engine Cut Off.webp',
+        image: '/assets/images/product-futures/Unicorn/Side Stand Engine Cut Off.jpg',
         name: 'Side Stand Engine Cut Off',
       },
       {
-        image:
-          '/assets/images/kaysons bike/Unicorn-Series/Unicorn/Anti-lock Braking System (ABS).webp',
+        image: '/assets/images/product-futures/Unicorn/Anti-lock Braking System (ABS).jpg',
         name: 'Anti-lock Braking System (ABS)',
       },
       {
-        image: '/assets/images/kaysons bike/Unicorn-Series/Unicorn/LED Headlamp.jpg',
+        image: '/assets/images/product-futures/Unicorn/LCD Digital Panel2.jpg',
         name: 'LED Headlamp',
       },
     ],
@@ -682,13 +684,13 @@ export const VEHICLE_DATA: any = {
     description:
       "The Honda Livo is a popular motorcycle from Honda's trusted Commuter Series. Designed for everyday riders, the Livo offers a blend of fuel efficiency, comfort, and stylish looks, making it an ideal choice for daily commuting. Its refined engine, comfortable seating, and reliable performance ensure a smooth riding experience on city roads and beyond. If you are searching for the Honda Livo On Road Price in Siliguri, visit Kaysons Honda for the latest pricing, attractive offers, finance options, and expert guidance. Discover why the Livo continues to be a preferred commuter motorcycle.",
 
-    models: ['Livo'],
+    models: ['Hnda Livo'],
 
     bikes: [
       {
-        name: 'Honda Livo',
+        name: ' Livo',
         subtitle: 'Powered by Honda',
-        price: '₹82,094',
+        price: '₹82,094*',
         year: '2026',
         type: 'Bike',
         make: '12V, 4.0Ah',
@@ -723,25 +725,21 @@ export const VEHICLE_DATA: any = {
 
     features: [
       {
-        image: '/assets/images/kaysons bike/Commuter-Series/Livo/Service Due Indicator.webp',
+        image: '/assets/images/product-futures/Livo-resize/Service Due Indicator.jpg',
         name: 'Service Due Indicator',
       },
       {
-        image: '/assets/images/kaysons bike/Commuter-Series/Livo/Long and Comfortable Seat.webp',
+        image: '/assets/images/product-futures/Livo-resize/Long and Comfortable Seat.jpg',
         name: 'Long and Comfortable Seat',
       },
       {
-        image: '/assets/images/kaysons bike/Commuter-Series/Livo/Side Stand Engine Cut Off.webp',
+        image: '/assets/images/product-futures/Livo-resize/Side Stand Engine Cut Off.jpg',
         name: 'Side Stand Engine Cut Off',
       },
+
       {
         image:
-          '/assets/images/kaysons bike/Commuter-Series/Livo/Fully Digital Instrument Cluster.png',
-        name: 'Fully Digital Instrument Cluster',
-      },
-      {
-        image:
-          '/assets/images/kaysons bike/Commuter-Series/Livo/Muscular Tank with Attractive Graphics.png',
+          '/assets/images/product-futures/Livo-resize/Muscular Tank with Attractive Graphics.jpg',
         name: 'Muscular Tank with Attractive Graphics',
       },
     ],
@@ -773,24 +771,24 @@ export const VEHICLE_DATA: any = {
     ],
   },
   activa: {
-    title: 'Activa Series',
+    title: ' Activa Series',
     subtitle: 'Best Mileage & Performance Commuter Bikes in India',
     banner: 'assets/images/products-banner/Activa Series.webp',
     description:
       'The Honda Activa Series features the Activa 110, Activa 125, Activa 110 Anniversary Edition, and Activa 125 Anniversary Edition. Renowned for reliability, comfort, and fuel efficiency, the Activa range continues to be a preferred choice for riders of all ages. Whether for daily commuting or family use, these scooters offer a smooth and convenient riding experience. If you are searching for the Honda Activa 110 On Road Price in Siliguri, Honda Activa 125 On Road Price in Siliguri, or the latest Anniversary Edition prices, visit Kaysons Honda for current offers, finance options, and expert assistance.',
 
     models: [
-      'Activa 110',
-      'Activa 125',
-      'Activa 110 Anniversary Edition',
-      'Activa 125 Anniversary Edition',
+      ' Activa 110',
+      ' Activa 125',
+      ' Activa 110 Anniversary Edition',
+      ' Activa 125 Anniversary Edition',
     ],
 
     bikes: [
       {
-        name: 'Honda Activa 110',
+        name: ' Activa 110',
         subtitle: 'Powered by Honda',
-        price: '₹88,643',
+        price: '₹88,643*',
         year: '2026',
         type: 'Scooter',
         make: '12V, 5.0Ah',
@@ -836,9 +834,9 @@ export const VEHICLE_DATA: any = {
       },
 
       {
-        name: 'Activa 110 Anniversary Edition',
+        name: ' Activa 110 Anniversary Edition',
         subtitle: 'Powered by Honda',
-        price: '₹87,872',
+        price: '₹87,872*',
         year: '2026',
         type: 'Scooter',
         make: 'Honda',
@@ -865,9 +863,9 @@ export const VEHICLE_DATA: any = {
       },
 
       {
-        name: 'Activa 125',
+        name: ' Activa 125',
         subtitle: 'Powered by Honda',
-        price: '₹93,775',
+        price: '₹93,775*',
         year: '2026',
         type: 'Scooter',
         make: '12V, 5.0 Ah',
@@ -914,9 +912,9 @@ export const VEHICLE_DATA: any = {
       },
 
       {
-        name: 'Activa 125 Anniversary Edition',
+        name: ' Activa 125 Anniversary Edition',
         subtitle: 'Powered by Honda',
-        price: '₹93,003',
+        price: '₹93,003*',
         year: '2026',
         type: 'Scooter',
         make: '12V, 5.0Ah',
@@ -945,27 +943,25 @@ export const VEHICLE_DATA: any = {
 
     features: [
       {
-        image:
-          '/assets/images/kaysons bike/Activa-Series/Activa-110/Premium Chrome Stroke on Side Panel.png',
+        image: '/assets/images/product-futures/Activa-110/Premium Chrome Stroke on Side Panel.jpg',
         name: 'Premium Chrome Stroke on Side Panel',
       },
       {
         image:
-          '/assets/images/kaysons bike/Activa-Series/Activa-110/LED Headlamp and Signature LED Position Lamp.png',
+          '/assets/images/product-futures/Activa-110/LED Headlamp and Signature LED Position Lamp.jpg',
         name: 'LED Headlamp and Signature LED Position Lamp',
       },
       {
-        image:
-          '/assets/images/kaysons bike/Activa-Series/Activa-110/Multi-Function Switch Unit.png',
+        image: '/assets/images/product-futures/Activa-110/Multi-Function Switch Unit.jpg',
         name: 'Multi-Function Switch Unit',
       },
       {
-        image: '/assets/images/kaysons bike/Activa-Series/Activa-110/25 Year​ Anniversary Logo.jpg',
+        image: '/assets/images/product-futures/Activa-110/25 Year Anniversary Logo.jpg',
         name: '25 Year Anniversary Logo',
       },
       {
         image:
-          '/assets/images/kaysons bike/Activa-Series/Activa-110/Anniversary Graphics and special black chrome.jpg',
+          '/assets/images/product-futures/Activa-110/Anniversary Graphics and special black chrome.jpg',
         name: 'Anniversary Graphics and Special Black Chrome',
       },
     ],
@@ -1005,13 +1001,13 @@ export const VEHICLE_DATA: any = {
     description:
       'The stylish Honda Dio Series features the Dio 110, Dio 125, and Dio X Edition. Designed for riders who want sporty looks, everyday convenience, and reliable performance, the Dio range offers an enjoyable riding experience for city commutes and daily travel. With modern features, comfortable ergonomics, and fuel-efficient engines, the Dio Series remains a popular choice among scooter enthusiasts. Whether you are searching for the Honda Dio 110 On Road Price in Siliguri, Honda Dio 125 On Road Price in Siliguri, or Honda Dio X Edition On Road Price in Siliguri, visit Kaysons Honda for the latest offers and pricing.',
 
-    models: ['Dio 110', 'Dio 125', 'Dio X Edition'],
+    models: [' Dio 110', ' Dio 125', ' Dio X Edition'],
 
     bikes: [
       {
-        name: 'Dio 110',
+        name: ' Dio 110',
         subtitle: 'Powered by Honda',
-        price: '₹86,576',
+        price: '₹86,576*',
         year: '2026',
         type: 'Scooter',
         make: '12V, 5.0Ah',
@@ -1052,9 +1048,9 @@ export const VEHICLE_DATA: any = {
       },
 
       {
-        name: 'Dio 125',
+        name: ' Dio 125',
         subtitle: 'Powered by Honda',
-        price: '₹96,610',
+        price: '₹96,610*',
         year: '2026',
         type: 'Scooter',
         make: '12V, 5.0Ah',
@@ -1101,9 +1097,9 @@ export const VEHICLE_DATA: any = {
       },
 
       {
-        name: 'Dio X Edition',
+        name: ' Dio X Edition',
         subtitle: 'Powered by Honda',
-        price: '₹92,285',
+        price: '₹92,285*',
         year: '2026',
         type: 'Scooter',
         make: '12V, 5.0Ah',
@@ -1126,23 +1122,23 @@ export const VEHICLE_DATA: any = {
 
     features: [
       {
-        image: '/assets/images/kaysons bike/Dio-Series/Dio-110/Stylish Muffler Protector.png',
+        image: '/assets/images/product-futures/Dio-110/Stylish Muffler Protector.jpg',
         name: 'Stylish Muffler Protector',
       },
       {
-        image: '/assets/images/kaysons bike/Dio-Series/Dio-110/Alloy Wheels.png',
+        image: '/assets/images/product-futures/Dio-110/Alloy Wheels.jpg',
         name: 'Alloy Wheels',
       },
       {
-        image: '/assets/images/kaysons bike/Dio-Series/Dio-110/Stylish and Dynamic Graphics.jpg',
+        image: '/assets/images/product-futures/Dio-110/Stylish and Dynamic Graphics.jpg',
         name: 'Stylish and Dynamic Graphics',
       },
       {
-        image: '/assets/images/kaysons bike/Dio-Series/Dio-110/Dual Colour Body.jpg',
+        image: '/assets/images/product-futures/Dio-110/Dual Colour Body.jpg',
         name: 'Dual Colour Body',
       },
       {
-        image: '/assets/images/kaysons bike/Dio-Series/Dio-110/Exclusive X-Edition decals.jpg',
+        image: '/assets/images/product-futures/Dio-110/Exclusive X-Edition decals.jpg',
         name: 'Exclusive X-Edition Decals',
       },
     ],

@@ -1,12 +1,12 @@
 <section class="services-page">
   <div class="banner">
     <img src="/assets/images/services/services.webp" alt="Honda Banner" width="100%" />
-     <div class="banner-content">
+     <!-- <div class="banner-content">
       <h1>Services</h1>
-    </div>
+    </div> -->
   </div>
   <div class="content">
-    <h2>Complete Honda Two-Wheeler Support Services</h2>
+    <h1>Complete Honda Two-Wheeler Support Services</h1>
 
     <p>
       At Kaysons Honda, we provide complete support and after-sales solutions for all Honda
@@ -35,7 +35,7 @@
 
       <button (click)="tab = 'insurance'" [class.active]="tab === 'insurance'">Insurance Renewal</button>
 
-      <button (click)="tab = 'warranty'" [class.active]="tab === 'warranty'">Extended Warranty</button>
+      <!-- <button (click)="tab = 'warranty'" [class.active]="tab === 'warranty'">Extended Warranty</button> -->
     </div>
 
     <!-- ================= VEHICLE SERVICES ================= -->
@@ -139,7 +139,7 @@
     }
 
     <!-- ================= WARRANTY ================= -->
-    @if (tab === 'warranty') {
+    <!-- @if (tab === 'warranty') {
       <form #f4="ngForm" (ngSubmit)="submitWarranty(f4)" class="form-card">
         <div class="row">
           <input name="fullName" ngModel required placeholder="Full Name" />
@@ -167,6 +167,6 @@
           </div>
         </div>
       </form>
-    }
+    } -->
   </section>
 </section>

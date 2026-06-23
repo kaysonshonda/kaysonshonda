@@ -15,20 +15,20 @@
       <div class="slide-content">
         <img src="/assets/images/home-icons/Home 1st banner.webp" class="slider-img" />
 
-        <div class="overlay"></div>
+        <!-- <div class="overlay"></div> -->
 
         <div class="caption">
-          <span class="sub-title"> TAKING RIDES TO A NEWER LEVEL </span>
+          <!-- <span class="sub-title"> TAKING RIDES TO A NEWER LEVEL </span>
 
-          <h3>A Legacy Built on Trust, Growth & Automotive Excellence</h3>
+          <h3>A Legacy Built on Trust, Growth & Automotive Excellence</h3> -->
 
-          <p>
-            KAYSONS Group began as a small transportation venture in Siliguri and has grown into a
-            trusted name in the automobile industry.
-          </p>
+          <h1>
+            Explore the Latest Honda Bikes and Ride Home Happy Every Model. Every Budget. Right
+            Here.
+          </h1>
 
           <div class="slider-buttons">
-            <a href="#" class="btn-learn"> LEARN MORE </a>
+            <a href="#" class="btn-learn"> Learn More </a>
           </div>
         </div>
       </div>
@@ -39,20 +39,17 @@
       <div class="slide-content">
         <img src="/assets/images/home-icons/Home 2nd banner.webp" class="slider-img" />
 
-        <div class="overlay"></div>
+        <!-- <div class="overlay"></div> -->
 
         <div class="caption">
-          <span class="sub-title"> TAKING RIDES TO A NEWER LEVEL </span>
+          <!-- <span class="sub-title"> TAKING RIDES TO A NEWER LEVEL </span> -->
 
-          <h1>A Legacy Built on Trust, Growth & Automotive Excellence</h1>
+          <!-- <h1>A Legacy Built on Trust, Growth & Automotive Excellence</h1> -->
 
-          <p>
-            KAYSONS Group began as a small transportation venture in Siliguri and has grown into a
-            trusted name in the automobile industry.
-          </p>
+          <h1>Honda Scooters for Every Road and Every Rider Explore. Book. Ride Today.</h1>
 
           <div class="slider-buttons">
-            <a href="#" class="btn-learn"> LEARN MORE </a>
+            <a href="#" class="btn-learn"> Learn More </a>
           </div>
         </div>
       </div>
@@ -233,7 +230,7 @@
   <section class="vehicle-section">
     <div class="container">
       <!-- Heading -->
-      <h2 class="title">Browse Our Honda Two-Wheeler Range </h2>
+      <h2 class="title">Browse Our Honda Two-Wheeler Range</h2>
 
       <!-- Tabs -->
       <div class="button-vehicle">
@@ -242,7 +239,7 @@
           [class.active]="activeTab === 'motorcycle'"
           (click)="setTab('motorcycle')"
         >
-          MOTORCYCLE
+          Motorcycle
         </button>
 
         <button
@@ -250,14 +247,14 @@
           [class.active]="activeTab === 'scooter'"
           (click)="setTab('scooter')"
         >
-          SCOOTER
+          Scooter
         </button>
       </div>
       <div class="tabs">
         <p>
-          Explore the complete range of Honda bikes and scooters at Kaysons Honda, Siliguri. From daily
-commuters to premium models, find the perfect Honda two-wheeler built for every road and every
-rider.
+          Explore the complete range of Honda bikes and scooters at Kaysons Honda, Siliguri. From
+          daily commuters to premium models, find the perfect Honda two-wheeler built for every road
+          and every rider.
         </p>
       </div>
 
@@ -267,225 +264,230 @@ rider.
 
       <div *ngIf="activeTab === 'motorcycle'" class="card-container">
         <!-- Card 1 -->
-        <div class="bike-card">
-          <div class="card-top">
-            <div>
-              <h3>Honda NX200</h3>
-              <span>Powered by Honda</span>
-            </div>
-
-            <div class="price">₹1,68,000*</div>
-          </div>
-
-          <div class="image-box">
-            <img src="/assets/images/kaysons bike/NX200.png" loading="lazy" alt="Honda NX200" />
-          </div>
-
-          <div class="spec-row">
-            <div class="spec-box">
-              <h5>YEAR</h5>
-              <p>2025</p>
-            </div>
-
-            <div class="spec-box">
-              <h5>TYPE</h5>
-              <p>Adventure</p>
-            </div>
-
-            <div class="spec-box">
-              <h5>MAKE</h5>
-              <p>Honda</p>
-            </div>
-          </div>
-
-          <div class="bottom-specs">
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/ENGINE TYPE.svg" alt="" />
-
+        <a routerLink="/nx-series" class="bike-card-link">
+          <div class="bike-card">
+            <div class="card-top">
               <div>
-                <h6>ENGINE TYPE</h6>
-                <p>184.4 cc</p>
+                <h3>NX200</h3>
+                <span>Powered by Honda</span>
+              </div>
+
+              <div class="price">₹1,58,591*</div>
+            </div>
+
+            <div class="image-box">
+              <img src="/assets/images/home-page-product-images/Honda NX200.png" loading="lazy" alt=" NX200" />
+            </div>
+
+            <div class="spec-row">
+              <div class="spec-box">
+                <h5>YEAR</h5>
+                <p>2026</p>
+              </div>
+
+              <div class="spec-box">
+                <h5>TYPE</h5>
+                <p>Motorcycle</p>
+              </div>
+
+              <div class="spec-box">
+                <h5>MAKE</h5>
+                <p>12V, 5.0Ah</p>
               </div>
             </div>
 
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/ENGINE POWER.svg" alt="" />
+            <div class="bottom-specs">
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/ENGINE TYPE.svg" alt="" />
 
-              <div>
-                <h6>ENGINE POWER</h6>
-                <p>16.9 PS</p>
+                <div>
+                  <h6>Engine Type</h6>
+                  <p>184.4cc, Single-Cylinder, Air-Cooled</p>
+                </div>
               </div>
-            </div>
 
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/DISPLACEMENT.svg" alt="" />
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/ENGINE POWER.svg" alt="" />
 
-              <div>
-                <h6>Mileage</h6>
-                <p>40-45 km/l</p>
+                <div>
+                  <h6>Max Power</h6>
+                  <p>16.99 PS @ 8500 rpm</p>
+                </div>
               </div>
-            </div>
 
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/FUEL SYSTEM.svg" alt="" />
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/DISPLACEMENT.svg" alt="" />
 
-              <div>
-                <h6>FUEL SYSTEM</h6>
-                <p>PGM-FI</p>
+                <div>
+                  <h6>Kerb Weight</h6>
+                  <p>148 KG</p>
+                </div>
+              </div>
+
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/FUEL SYSTEM.svg" alt="" />
+
+                <div>
+                  <h6>Fuel Tank</h6>
+                  <p>12L</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
+        </a>
         <!-- Card 2 -->
-        <div class="bike-card">
-          <div class="card-top">
-            <div>
-              <h3>Honda Hornet 2.0</h3>
-              <span>Powered by Honda</span>
-            </div>
-
-            <div class="price">₹1,40,000*</div>
-          </div>
-
-          <div class="image-box">
-            <img
-              src="/assets/images/kaysons bike/Hornet 2.0.png"
-              loading="lazy"
-              alt="Honda Hornet 2.0"
-            />
-          </div>
-
-          <div class="spec-row">
-            <div class="spec-box">
-              <h5>YEAR</h5>
-              <p>2025</p>
-            </div>
-
-            <div class="spec-box">
-              <h5>TYPE</h5>
-              <p>Sports Bike</p>
-            </div>
-
-            <div class="spec-box">
-              <h5>MAKE</h5>
-              <p>Honda</p>
-            </div>
-          </div>
-
-          <div class="bottom-specs">
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/ENGINE TYPE.svg" alt="" />
-
+        <a routerLink="/hornet-series" class="bike-card-link">
+          <div class="bike-card">
+            <div class="card-top">
               <div>
-                <h6>ENGINE TYPE</h6>
-                <p>184.4 cc</p>
+                <h3>Hornet 2.0</h3>
+                <span>Powered by Honda</span>
+              </div>
+
+              <div class="price">₹1,47,847*</div>
+            </div>
+
+            <div class="image-box">
+              <img
+                src="/assets/images/home-page-product-images/Honda Hornet 2.0.png"
+                loading="lazy"
+                alt="Honda Hornet 2.0"
+              />
+            </div>
+
+            <div class="spec-row">
+              <div class="spec-box">
+                <h5>YEAR</h5>
+                <p>2026</p>
+              </div>
+
+              <div class="spec-box">
+                <h5>TYPE</h5>
+                <p>Motorcycle</p>
+              </div>
+
+              <div class="spec-box">
+                <h5>MAKE</h5>
+                <p>12V, 5.0Ah</p>
               </div>
             </div>
 
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/ENGINE POWER.svg" alt="" />
+            <div class="bottom-specs">
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/ENGINE TYPE.svg" alt="" />
 
-              <div>
-                <h6>ENGINE POWER</h6>
-                <p>17.2 PS</p>
+                <div>
+                  <h6>Engine Type</h6>
+                  <p>184.4cc, Single-Cylinder, Air-Cooled</p>
+                </div>
               </div>
-            </div>
 
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/DISPLACEMENT.svg" alt="" />
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/ENGINE POWER.svg" alt="" />
 
-              <div>
-                <h6>Mileage</h6>
-                <p>42-45 km/l</p>
+                <div>
+                  <h6>Max Power</h6>
+                  <p>17.03 PS @ 8500 rpm</p>
+                </div>
               </div>
-            </div>
 
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/FUEL SYSTEM.svg" alt="" />
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/DISPLACEMENT.svg" alt="" />
 
-              <div>
-                <h6>FUEL SYSTEM</h6>
-                <p>PGM-FI</p>
+                <div>
+                  <h6>Kerb Weight</h6>
+                  <p>142 KG</p>
+                </div>
+              </div>
+
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/FUEL SYSTEM.svg" alt="" />
+
+                <div>
+                  <h6>Fuel Tank</h6>
+                  <p>12L</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </a>
 
         <!-- Card 3 -->
-        <div class="bike-card">
-          <div class="card-top">
-            <div>
-              <h3>Honda Shine100</h3>
-              <span>Powered by Honda</span>
-            </div>
-
-            <div class="price">₹68,000*</div>
-          </div>
-
-          <div class="image-box">
-            <img
-              src="/assets/images/kaysons bike/Shine100.png"
-              loading="lazy"
-              alt="Honda Shine100"
-            />
-          </div>
-
-          <div class="spec-row">
-            <div class="spec-box">
-              <h5>YEAR</h5>
-              <p>2025</p>
-            </div>
-
-            <div class="spec-box">
-              <h5>TYPE</h5>
-              <p>Bike</p>
-            </div>
-
-            <div class="spec-box">
-              <h5>MAKE</h5>
-              <p>Honda</p>
-            </div>
-          </div>
-
-          <div class="bottom-specs">
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/ENGINE TYPE.svg" alt="" />
-
+        <a routerLink="/shine-series" class="bike-card-link">
+          <div class="bike-card">
+            <div class="card-top">
               <div>
-                <h6>ENGINE TYPE</h6>
-                <p>98.98 cc</p>
+                <h3>Shine100</h3>
+                <span>Powered by Honda</span>
+              </div>
+
+              <div class="price">₹65,390*</div>
+            </div>
+
+            <div class="image-box">
+              <img
+                src="/assets/images/home-page-product-images/Honda Shine100.png"
+                loading="lazy"
+                alt="Honda Shine100"
+              />
+            </div>
+
+            <div class="spec-row">
+              <div class="spec-box">
+                <h5>YEAR</h5>
+                <p>2026</p>
+              </div>
+
+              <div class="spec-box">
+                <h5>TYPE</h5>
+                <p>Motorcycle</p>
+              </div>
+
+              <div class="spec-box">
+                <h5>MAKE</h5>
+                <p>12V, 3.0Ah</p>
               </div>
             </div>
 
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/ENGINE POWER.svg" alt="" />
+            <div class="bottom-specs">
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/ENGINE TYPE.svg" alt="" />
 
-              <div>
-                <h6>ENGINE POWER</h6>
-                <p>7.3 PS</p>
+                <div>
+                  <h6>Engine Type</h6>
+                  <p>98.98cc, 4 Stroke, Sl Engine</p>
+                </div>
               </div>
-            </div>
 
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/DISPLACEMENT.svg" alt="" />
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/ENGINE POWER.svg" alt="" />
 
-              <div>
-                <h6>Mileage</h6>
-                <p>60-65 km/l</p>
+                <div>
+                  <h6>Max Engine Output</h6>
+                  <p>5.43kW@7500rpm</p>
+                </div>
               </div>
-            </div>
 
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/FUEL SYSTEM.svg" alt="" />
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/DISPLACEMENT.svg" alt="" />
 
-              <div>
-                <h6>FUEL SYSTEM</h6>
-                <p>PGM-FI</p>
+                <div>
+                  <h6>Kerb Weight</h6>
+                  <p>99 KG</p>
+                </div>
+              </div>
+
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/FUEL SYSTEM.svg" alt="" />
+
+                <div>
+                  <h6>Fuel Tank</h6>
+                  <p>9L</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
 
       <!-- ======================================
@@ -494,169 +496,172 @@ rider.
 
       <div *ngIf="activeTab === 'scooter'" class="card-container">
         <!-- Scooter 1 -->
-        <div class="bike-card">
-          <div class="card-top">
-            <div>
-              <h3>Honda Activa 110</h3>
-              <span>Powered by Honda</span>
-            </div>
-
-            <div class="price">₹80,000*</div>
-          </div>
-
-          <div class="image-box">
-            <img
-              src="/assets/images/kaysons Scooters/Activa 110.png"
-              loading="lazy"
-              alt="Honda Activa 110"
-            />
-          </div>
-
-          <div class="spec-row">
-            <div class="spec-box">
-              <h5>YEAR</h5>
-              <p>2025</p>
-            </div>
-
-            <div class="spec-box">
-              <h5>TYPE</h5>
-              <p>Scooter</p>
-            </div>
-
-            <div class="spec-box">
-              <h5>MAKE</h5>
-              <p>Honda</p>
-            </div>
-          </div>
-
-          <div class="bottom-specs">
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/ENGINE TYPE.svg" alt="" />
-
+        <a routerLink="/activa-series" class="bike-card-link">
+          <div class="bike-card">
+            <div class="card-top">
               <div>
-                <h6>ENGINE TYPE</h6>
-                <p>109.51 cc</p>
+                <h3>Activa 110</h3>
+                <span>Powered by Honda</span>
+              </div>
+
+              <div class="price">₹88,643*</div>
+            </div>
+
+            <div class="image-box">
+              <img
+                src="/assets/images/home-page-product-images/Honda Activa 110.png"
+                loading="lazy"
+                alt="Honda Activa 110"
+              />
+            </div>
+
+            <div class="spec-row">
+              <div class="spec-box">
+                <h5>YEAR</h5>
+                <p>2026</p>
+              </div>
+
+              <div class="spec-box">
+                <h5>TYPE</h5>
+                <p>Scooter</p>
+              </div>
+
+              <div class="spec-box">
+                <h5>MAKE</h5>
+                <p>12V, 5.0Ah</p>
               </div>
             </div>
 
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/ENGINE POWER.svg" alt="" />
+            <div class="bottom-specs">
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/ENGINE TYPE.svg" alt="" />
 
-              <div>
-                <h6>ENGINE POWER</h6>
-                <p>7.8 PS</p>
+                <div>
+                  <h6>Engine Type</h6>
+                  <p>109.51cc</p>
+                </div>
               </div>
-            </div>
 
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/DISPLACEMENT.svg" alt="" />
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/ENGINE POWER.svg" alt="" />
 
-              <div>
-                <h6>Mileage</h6>
-                <p>50-55 km/l</p>
+                <div>
+                  <h6>Max Power</h6>
+                  <p>7.88 PS</p>
+                </div>
               </div>
-            </div>
 
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/FUEL SYSTEM.svg" alt="" />
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/DISPLACEMENT.svg" alt="" />
 
-              <div>
-                <h6>FUEL SYSTEM</h6>
-                <p>PGM-FI</p>
+                <div>
+                  <h6>Kerb Weight</h6>
+                  <p>Std & Dlx: 106 kg, H-Smart: 105 kg</p>
+                </div>
+              </div>
+
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/FUEL SYSTEM.svg" alt="" />
+
+                <div>
+                  <h6>Fuel Tank</h6>
+                  <p>5.3 L</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
+        </a>
         <!-- Scooter 2 -->
-        <div class="bike-card">
-          <div class="card-top">
-            <div>
-              <h3>Honda Activa 125</h3>
-              <span>Powered by Honda</span>
-            </div>
-
-            <div class="price">₹94,000*</div>
-          </div>
-
-          <div class="image-box">
-            <img
-              src="/assets/images/kaysons Scooters/Activa 125.png"
-              loading="lazy"
-              alt="Honda Activa 125"
-            />
-          </div>
-
-          <div class="spec-row">
-            <div class="spec-box">
-              <h5>YEAR</h5>
-              <p>2025</p>
-            </div>
-
-            <div class="spec-box">
-              <h5>TYPE</h5>
-              <p>Scooter</p>
-            </div>
-
-            <div class="spec-box">
-              <h5>MAKE</h5>
-              <p>Honda</p>
-            </div>
-          </div>
-
-          <div class="bottom-specs">
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/ENGINE TYPE.svg" alt="" />
-
+        <a routerLink="/activa-series" class="bike-card-link">
+          <div class="bike-card">
+            <div class="card-top">
               <div>
-                <h6>ENGINE TYPE</h6>
-                <p>123.92 cc</p>
+                <h3>Activa 125</h3>
+                <span>Powered by Honda</span>
+              </div>
+
+              <div class="price">₹93,775*</div>
+            </div>
+
+            <div class="image-box">
+              <img
+                src="/assets/images/home-page-product-images/Honda Activa 125.png"
+                loading="lazy"
+                alt="Honda Activa 125"
+              />
+            </div>
+
+            <div class="spec-row">
+              <div class="spec-box">
+                <h5>YEAR</h5>
+                <p>2026</p>
+              </div>
+
+              <div class="spec-box">
+                <h5>TYPE</h5>
+                <p>Scooter</p>
+              </div>
+
+              <div class="spec-box">
+                <h5>MAKE</h5>
+                <p>12V, 5.0 Ah</p>
               </div>
             </div>
 
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/ENGINE POWER.svg" alt="" />
+            <div class="bottom-specs">
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/ENGINE TYPE.svg" alt="" />
 
-              <div>
-                <h6>ENGINE POWER</h6>
-                <p>8.3 PS</p>
+                <div>
+                  <h6>Engine Type</h6>
+                  <p>123.92cc</p>
+                </div>
               </div>
-            </div>
 
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/DISPLACEMENT.svg" alt="" />
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/ENGINE POWER.svg" alt="" />
 
-              <div>
-                <h6>Mileage</h6>
-                <p>45-50 km/l</p>
+                <div>
+                  <h6>Max Power</h6>
+                  <p>8.3 PS</p>
+                </div>
               </div>
-            </div>
 
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/FUEL SYSTEM.svg" alt="" />
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/DISPLACEMENT.svg" alt="" />
 
-              <div>
-                <h6>FUEL SYSTEM</h6>
-                <p>PGM-FI</p>
+                <div>
+                  <h6>Kerb Weight</h6>
+                  <p>Dlx: 107 kg, H-Smart: 106 kg</p>
+                </div>
+              </div>
+
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/FUEL SYSTEM.svg" alt="" />
+
+                <div>
+                  <h6>Fuel Tank</h6>
+                  <p>5.3 L</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
+        </a>
         <!-- Scooter 3 -->
+          <a routerLink="/dio-series" class="bike-card-link">
         <div class="bike-card">
           <div class="card-top">
             <div>
-              <h3>Honda Dio 110</h3>
+              <h3>Dio 110</h3>
               <span>Powered by Honda</span>
             </div>
 
-            <div class="price">₹78,000*</div>
+            <div class="price">₹86,576*</div>
           </div>
 
           <div class="image-box">
             <img
-              src="/assets/images/kaysons Scooters/Dio X Edition.png"
+              src="/assets/images/home-page-product-images/Honda Dio 110.png"
               loading="lazy"
               alt="Honda Dio 110"
             />
@@ -665,17 +670,17 @@ rider.
           <div class="spec-row">
             <div class="spec-box">
               <h5>YEAR</h5>
-              <p>2025</p>
+              <p>2026</p>
             </div>
 
             <div class="spec-box">
               <h5>TYPE</h5>
-              <p>Sports Scooter</p>
+              <p>Scooter</p>
             </div>
 
             <div class="spec-box">
               <h5>MAKE</h5>
-              <p>Honda</p>
+              <p>12V, 5.0Ah</p>
             </div>
           </div>
 
@@ -684,8 +689,8 @@ rider.
               <img src="/assets/images/home-icons/ENGINE TYPE.svg" alt="" />
 
               <div>
-                <h6>ENGINE TYPE</h6>
-                <p>109.51 cc</p>
+                <h6>Engine Type</h6>
+                <p>109.51cc</p>
               </div>
             </div>
 
@@ -693,7 +698,7 @@ rider.
               <img src="/assets/images/home-icons/ENGINE POWER.svg" alt="" />
 
               <div>
-                <h6>ENGINE POWER</h6>
+                <h6>Max Power</h6>
                 <p>7.95 PS</p>
               </div>
             </div>
@@ -702,8 +707,8 @@ rider.
               <img src="/assets/images/home-icons/DISPLACEMENT.svg" alt="" />
 
               <div>
-                <h6>Mileage</h6>
-                <p>50 km/l</p>
+                <h6>Kerb Weight</h6>
+                <p>Std. Dlx: 106kg</p>
               </div>
             </div>
 
@@ -711,18 +716,21 @@ rider.
               <img src="/assets/images/home-icons/FUEL SYSTEM.svg" alt="" />
 
               <div>
-                <h6>FUEL SYSTEM</h6>
-                <p>PGM-FI</p>
+                <h6>Fuel Tank</h6>
+                <p>5.3 L</p>
               </div>
             </div>
           </div>
         </div>
+        </a>
       </div>
 
       <!-- Button -->
       <div class="view-btn">
-        <a href="#"> View All Models </a>
-      </div>
+  <a [routerLink]="activeTab === 'motorcycle' ? '/nx-series' : '/activa-series'">
+    View All Models
+  </a>
+</div>
     </div>
   </section>
 
@@ -737,7 +745,7 @@ rider.
           <div class="row">
             <!-- Full Name -->
             <div class="col-md-6 mb-3">
-              <label>FULL NAME</label>
+              <label>Full Name</label>
 
               <input
                 type="text"
@@ -751,7 +759,7 @@ rider.
 
             <!-- Phone -->
             <div class="col-md-6 mb-3">
-              <label>PHONE NUMBER</label>
+              <label>Phone Number</label>
 
               <input
                 type="text"
@@ -766,7 +774,7 @@ rider.
 
           <!-- Email -->
           <div class="mb-3">
-            <label>EMAIL ADDRESS</label>
+            <label>Email Adress </label>
 
             <input
               type="email"
@@ -780,7 +788,7 @@ rider.
 
           <!-- Select Model -->
           <div class="mb-3">
-            <label>SELECT MODEL</label>
+            <label>Select Model</label>
 
             <select class="form-select" name="model" [(ngModel)]="bookingData.model" required>
               <option *ngFor="let bike of bikeModels" [value]="bike">
@@ -791,7 +799,7 @@ rider.
 
           <!-- Additional Note -->
           <div class="mb-4">
-            <label>ADDITIONAL NOTE</label>
+            <label>Additional Note</label>
 
             <textarea
               rows="4"
@@ -803,7 +811,7 @@ rider.
           </div>
 
           <!-- Button -->
-          <button type="submit" class="btn booking-btn w-100">CONFIRM TEST DRIVE BOOKING</button>
+          <button type="submit" class="btn booking-btn w-100">Confirm Test Drive Booking</button>
         </form>
       </div>
     </div>
@@ -829,7 +837,7 @@ rider.
       <div class="row align-items-center">
         <!-- Left Content -->
         <div class="col-lg-6 mb-4 mb-lg-0">
-          <h2 class="section-title">HONDA SERVICE SUPPORT</h2>
+          <h2 class="section-title">Hond Service Support</h2>
 
           <h3 class="sub-title">Complete Care For Your Hondaa</h3>
 
@@ -864,11 +872,10 @@ rider.
                   class="feature-icon"
                   alt="After Sales Support"
                 />
-                  <div>
-                  <h6>AFTER SALES SUPPORT</h6>
+                <div>
+                  <h6>After Sales Support</h6>
                   <p>Complete Assistance</p>
                 </div>
-
               </div>
             </div>
 
@@ -880,8 +887,8 @@ rider.
                   class="feature-icon"
                   alt="Category"
                 />
-                 <div>
-                  <h6>CATEGORY</h6>
+                <div>
+                  <h6>Category</h6>
                   <p>Honda Two-Wheelers</p>
                 </div>
               </div>
@@ -896,10 +903,9 @@ rider.
                   alt="Technicians"
                 />
                 <div>
-                  <h6>TECHNICIANS</h6>
+                  <h6>Technicians</h6>
                   <p>Certified Experts</p>
                 </div>
-
               </div>
             </div>
 
@@ -912,7 +918,7 @@ rider.
                   alt="Spare Parts"
                 />
                 <div>
-                  <h6>SPARE PARTS</h6>
+                  <h6>Spare Parts</h6>
                   <p>Genuine Honda Parts</p>
                 </div>
               </div>
@@ -928,7 +934,7 @@ rider.
                 />
 
                 <div>
-                  <h6>SERVICE QUALITY</h6>
+                  <h6>Service Quality</h6>
                   <p>Trusted Honda Standards</p>
                 </div>
               </div>
@@ -985,7 +991,7 @@ rider.
       <!-- TITLE -->
 
       <div class="text-center">
-        <h3 class="main-title">WHY PEOPLE ARE TALKING ABOUT US</h3>
+        <h3 class="main-title">Why People Are Talking About Us</h3>
       </div>
 
       <!-- SWIPER -->
@@ -1018,9 +1024,9 @@ rider.
 
             <div class="quote-icon">❞</div>
 
-            <h3 class="card-title">
+            <!-- <h3 class="card-title">
               {{ item.title }}
-            </h3>
+            </h3> -->
 
             <p class="card-desc">
               {{ item.desc }}
@@ -1034,9 +1040,9 @@ rider.
                   {{ item.name }}
                 </h4>
 
-                <p class="bike-name">
+                <!-- <p class="bike-name">
                   {{ item.bike }}
-                </p>
+                </p> -->
               </div>
             </div>
           </div>

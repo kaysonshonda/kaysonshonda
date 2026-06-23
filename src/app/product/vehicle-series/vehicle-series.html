@@ -14,7 +14,7 @@
     </div>
 
     <div class="honda-vehicle-series container" *ngIf="seriesData?.bikes?.length">
-      <swiper-container #swiper init="false" class="shineSwiper" pagination="true">
+      <swiper-container #swiper init="false" class="shineSwiper" pagination="true" navigation="true">
         <swiper-slide *ngFor="let bike of seriesData.bikes">
           <div class="bike-card">
             <!-- LEFT -->
@@ -107,10 +107,10 @@
       </swiper-container>
     </div>
     <!-- ================= ENQUIRY ================= -->
-    <div class="enquiry-section">
+    <div class="enquiry-section" id="get-in-touch-form">
       <div class="container content-wrapper">
         <div class="left-content">
-          <h4>GET IN TOUCH</h4>
+          <h4>Get In Touch</h4>
           <h2>Enquire about {{ seriesData?.title }}</h2>
           <p>Get best price, EMI and test ride details from nearest dealer.</p>
         </div>

@@ -110,6 +110,7 @@ export class VehicleSeries implements OnInit, AfterViewInit {
     Object.assign(swiper, {
       slidesPerView: 1,
       loop: true,
+      navigation: true,
       pagination: {
         clickable: true,
       },
@@ -129,7 +130,14 @@ export class VehicleSeries implements OnInit, AfterViewInit {
     a.click();
   }
 
-  openWhatsapp() {
-  window.open('https://wa.me/918145601235', '_blank');
+openWhatsapp() {
+  const element = document.getElementById('get-in-touch-form');
+
+  if (element) {
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
 }
 }
