@@ -741,7 +741,7 @@
 
     <div class="container">
       <div class="booking-form">
-        <form (ngSubmit)="onSubmit()" #bookingForm="ngForm">
+        <form (ngSubmit)="onSubmit()" [formGroup]="bookingForm">
           <div class="row">
             <!-- Full Name -->
             <div class="col-md-6 mb-3">
@@ -751,7 +751,7 @@
                 type="text"
                 class="form-control"
                 name="fullName"
-                [(ngModel)]="bookingData.fullName"
+                formControlName="fullName"
                 placeholder="Your name"
                 required
               />
@@ -765,7 +765,7 @@
                 type="text"
                 class="form-control"
                 name="phone"
-                [(ngModel)]="bookingData.phone"
+                formControlName="phone"
                 placeholder="Mobile number"
                 required
               />
@@ -780,7 +780,7 @@
               type="email"
               class="form-control"
               name="email"
-              [(ngModel)]="bookingData.email"
+              formControlName="email"
               placeholder="Email"
               required
             />
@@ -790,7 +790,7 @@
           <div class="mb-3">
             <label>Select Model</label>
 
-            <select class="form-select" name="model" [(ngModel)]="bookingData.model" required>
+            <select class="form-select" name="model" formControlName="model" required>
               <option *ngFor="let bike of bikeModels" [value]="bike">
                 {{ bike }}
               </option>
@@ -805,7 +805,7 @@
               rows="4"
               class="form-control"
               name="note"
-              [(ngModel)]="bookingData.note"
+              formControlName="note"
               placeholder="Any questions or special requests....."
             ></textarea>
           </div>

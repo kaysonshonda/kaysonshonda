@@ -4,7 +4,7 @@ import {
   provideBrowserGlobalErrorListeners,
 } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { CommonModule } from '@angular/common';
@@ -32,9 +32,9 @@ import { PrivacyPolicy } from './privacy-policy/privacy-policy';
     VehicleSeries,
     PrivacyPolicy,
   ],
-  imports: [BrowserModule, AppRoutingModule, CommonModule, CustomCommonModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, CommonModule, CustomCommonModule, FormsModule,ReactiveFormsModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule {}
+export class AppModule { }
