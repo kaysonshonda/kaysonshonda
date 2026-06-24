@@ -159,12 +159,12 @@
 }
 .form-card .row {
   display: flex;
-  gap: 10px;
-  margin-bottom: 12px;
 }
 
-.form-card .row input {
+.form-card .row input,
+.form-card textarea {
   flex: 1;
+   width: 100%;
 }
 .sales-page .form-section h2 {
   font-weight: 500;

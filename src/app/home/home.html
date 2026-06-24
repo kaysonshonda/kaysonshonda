@@ -13,7 +13,7 @@
     <!-- Slide 1 -->
     <swiper-slide>
       <div class="slide-content">
-        <img src="/assets/images/home-icons/Home 1st banner.webp" class="slider-img" />
+        <img src="/assets/images/services/home-page-1.webp" class="slider-img" />
 
         <!-- <div class="overlay"></div> -->
 
@@ -37,7 +37,7 @@
     <!-- Slide 2 -->
     <swiper-slide>
       <div class="slide-content">
-        <img src="/assets/images/home-icons/Home 2nd banner.webp" class="slider-img" />
+        <img src="/assets/images/services/home-page-2.webp" class="slider-img" />
 
         <!-- <div class="overlay"></div> -->
 
@@ -276,7 +276,11 @@
             </div>
 
             <div class="image-box">
-              <img src="/assets/images/home-page-product-images/Honda NX200.png" loading="lazy" alt=" NX200" />
+              <img
+                src="/assets/images/home-page-product-images/Honda NX200.png"
+                loading="lazy"
+                alt=" NX200"
+              />
             </div>
 
             <div class="spec-row">
@@ -603,7 +607,7 @@
               </div>
 
               <div class="spec-box">
-                <h5>BATTERY </h5>
+                <h5>BATTERY</h5>
                 <p>12V, 5.0 Ah</p>
               </div>
             </div>
@@ -648,89 +652,89 @@
           </div>
         </a>
         <!-- Scooter 3 -->
-          <a routerLink="/dio-series" class="bike-card-link">
-        <div class="bike-card">
-          <div class="card-top">
-            <div>
-              <h3>Dio 110</h3>
-              <span>Powered by Honda</span>
-            </div>
-
-            <div class="price">₹86,576*</div>
-          </div>
-
-          <div class="image-box">
-            <img
-              src="/assets/images/home-page-product-images/Honda Dio 110.png"
-              loading="lazy"
-              alt="Honda Dio 110"
-            />
-          </div>
-
-          <div class="spec-row">
-            <div class="spec-box">
-              <h5>YEAR</h5>
-              <p>2026</p>
-            </div>
-
-            <div class="spec-box">
-              <h5>TYPE</h5>
-              <p>Scooter</p>
-            </div>
-
-            <div class="spec-box">
-              <h5>BATTERY</h5>
-              <p>12V, 5.0Ah</p>
-            </div>
-          </div>
-
-          <div class="bottom-specs">
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/ENGINE TYPE.svg" alt="" />
-
+        <a routerLink="/dio-series" class="bike-card-link">
+          <div class="bike-card">
+            <div class="card-top">
               <div>
-                <h6>Engine Type</h6>
-                <p>109.51cc</p>
+                <h3>Dio 110</h3>
+                <span>Powered by Honda</span>
+              </div>
+
+              <div class="price">₹86,576*</div>
+            </div>
+
+            <div class="image-box">
+              <img
+                src="/assets/images/home-page-product-images/Honda Dio 110.png"
+                loading="lazy"
+                alt="Honda Dio 110"
+              />
+            </div>
+
+            <div class="spec-row">
+              <div class="spec-box">
+                <h5>YEAR</h5>
+                <p>2026</p>
+              </div>
+
+              <div class="spec-box">
+                <h5>TYPE</h5>
+                <p>Scooter</p>
+              </div>
+
+              <div class="spec-box">
+                <h5>BATTERY</h5>
+                <p>12V, 5.0Ah</p>
               </div>
             </div>
 
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/ENGINE POWER.svg" alt="" />
+            <div class="bottom-specs">
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/ENGINE TYPE.svg" alt="" />
 
-              <div>
-                <h6>Max Power</h6>
-                <p>7.95 PS</p>
+                <div>
+                  <h6>Engine Type</h6>
+                  <p>109.51cc</p>
+                </div>
               </div>
-            </div>
 
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/DISPLACEMENT.svg" alt="" />
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/ENGINE POWER.svg" alt="" />
 
-              <div>
-                <h6>Kerb Weight</h6>
-                <p>Std. Dlx: 106kg</p>
+                <div>
+                  <h6>Max Power</h6>
+                  <p>7.95 PS</p>
+                </div>
               </div>
-            </div>
 
-            <div class="bottom-item">
-              <img src="/assets/images/home-icons/FUEL SYSTEM.svg" alt="" />
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/DISPLACEMENT.svg" alt="" />
 
-              <div>
-                <h6>Fuel Tank</h6>
-                <p>5.3 L</p>
+                <div>
+                  <h6>Kerb Weight</h6>
+                  <p>Std. Dlx: 106kg</p>
+                </div>
+              </div>
+
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/FUEL SYSTEM.svg" alt="" />
+
+                <div>
+                  <h6>Fuel Tank</h6>
+                  <p>5.3 L</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         </a>
       </div>
 
       <!-- Button -->
       <div class="view-btn">
-  <a [routerLink]="activeTab === 'motorcycle' ? '/nx-series' : '/activa-series'">
-    View All Models
-  </a>
-</div>
+        <a [routerLink]="activeTab === 'motorcycle' ? '/nx-series' : '/activa-series'">
+          View All Models
+        </a>
+      </div>
     </div>
   </section>
 
@@ -755,6 +759,12 @@
                 placeholder="Your name"
                 required
               />
+              <small
+                class="text-danger float-start"
+                *ngIf="bookingForm.get('fullName')?.invalid && bookingForm.get('fullName')?.touched"
+              >
+                Full Name is required
+              </small>
             </div>
 
             <!-- Phone -->
@@ -769,6 +779,12 @@
                 placeholder="Mobile number"
                 required
               />
+              <small
+                class="text-danger float-start"
+                *ngIf="bookingForm.get('phone')?.invalid && bookingForm.get('phone')?.touched"
+              >
+                Phone Number is required
+              </small>
             </div>
           </div>
 
@@ -784,6 +800,12 @@
               placeholder="Email"
               required
             />
+            <small
+              class="text-danger float-start"
+              *ngIf="bookingForm.get('email')?.invalid && bookingForm.get('email')?.touched"
+            >
+              Valid Email is required
+            </small>
           </div>
 
           <!-- Select Model -->
@@ -795,6 +817,12 @@
                 {{ bike }}
               </option>
             </select>
+            <small
+              class="text-danger float-start"
+              *ngIf="bookingForm.get('model')?.invalid && bookingForm.get('model')?.touched"
+            >
+              Please select a model
+            </small>
           </div>
 
           <!-- Additional Note -->
@@ -811,10 +839,23 @@
           </div>
 
           <!-- Button -->
-          <button type="submit" class="btn booking-btn w-100">Confirm Test Drive Booking</button>
+          <button
+            type="submit"
+            class="btn booking-btn w-100 d-flex justify-content-center align-items-center"
+            [disabled]="bookingForm.invalid || isLoading"
+          >
+            @if (isLoading) {
+              <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true">
+              </span>
+            } @else {
+              <i class="fa-solid fa-motorcycle me-2"></i>
+            }
+
+            Confirm Test Drive Booking
+          </button>
           <p *ngIf="successMessage" class="text-success mt-2">
-  {{ successMessage }}
-</p>
+            {{ successMessage }}
+          </p>
         </form>
       </div>
     </div>

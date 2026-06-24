@@ -10,6 +10,8 @@ import { FormService } from '../c-services/form-service';
 })
 export class TestDrive {
   successMessage = '';
+  isLoadingEnquiry = false;
+  isLoadingFinance = false;
   enquiryForm: FormGroup;
   financeForm: FormGroup;
   tab: string = 'enquiry';
@@ -38,42 +40,42 @@ export class TestDrive {
   submitEnquiry() {
     if (this.enquiryForm.invalid) {
       this.enquiryForm.markAllAsTouched();
-      alert('Please fill all required fields.');
+      // alert('Please fill all required fields.');
       return;
     }
-
-    this.formService.enquiryForm(this.enquiryForm.value).subscribe(
-      (response) => {
-        console.log('Form submitted successfully:', response);
-        // alert('Your enquiry has been submitted successfully!');
+    this.isLoadingEnquiry = true;
+    this.formService.enquiryForm(this.enquiryForm.value).subscribe({
+      next: (response) => {
         this.successMessage = 'Thank you! Your enquiry has been submitted successfully.';
         this.enquiryForm.reset();
+        this.isLoadingEnquiry = false;
       },
-      (error) => {
-        console.error('Error submitting form:', error);
-        alert('There was an error submitting your enquiry. Please try again later.');
+      error: (error) => {
+        console.error(error);
+        this.isLoadingEnquiry = false;
       },
-    );
+    });
   }
 
   submitFinance() {
     if (this.financeForm.invalid) {
       this.financeForm.markAllAsTouched();
-      alert('Please fill all required fields.');
+      // alert('Please fill all required fields.');
       return;
     }
 
-    this.formService.financeForm(this.financeForm.value).subscribe(
-      (response) => {
-        console.log('Form submitted successfully:', response);
-        // alert('Your finance request has been submitted successfully!');
+    this.isLoadingFinance = true;
+
+    this.formService.financeForm(this.financeForm.value).subscribe({
+      next: (response) => {
         this.successMessage = 'Thank you! Your finance request has been submitted successfully.';
         this.financeForm.reset();
+        this.isLoadingFinance = false;
       },
-      (error) => {
-        console.error('Error submitting form:', error);
-        alert('There was an error submitting your finance request. Please try again later.');
+      error: (error) => {
+        console.error(error);
+        this.isLoadingFinance = false;
       },
-    );
+    });
   }
 }

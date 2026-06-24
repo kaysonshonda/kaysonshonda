@@ -11,7 +11,7 @@ import { FormService } from '../c-services/form-service';
 export class ContactUs {
   contactForm: FormGroup;
   successMessage = '';
-
+  isLoading = false;
   constructor(
     private fb: FormBuilder,
     private formService: FormService,
@@ -27,22 +27,35 @@ export class ContactUs {
   submitForm() {
     if (this.contactForm.invalid) {
       this.contactForm.markAllAsTouched();
-      alert('Please fill all required fields.');
+      // alert('Please fill all required fields.');
       return;
     }
+    this.isLoading = true;
 
-    this.formService.submitContactUsForm(this.contactForm.value).subscribe(
-      (response) => {
-        console.log('Form submitted successfully:', response);
-        // alert('Your message has been sent successfully!');
-        this.successMessage =
-          'Thank you! Your message has been sent successfully. Our team will contact you shortly.';
+    //   this.formService.submitContactUsForm(this.contactForm.value).subscribe(
+    //     (response) => {
+    //       console.log('Form submitted successfully:', response);
+    //       // alert('Your message has been sent successfully!');
+    //       this.successMessage =
+    //         'Thank you! Your message has been sent successfully. Our team will contact you shortly.';
+    //       this.contactForm.reset();
+    //     },
+    //     (error) => {
+    //       console.error('Error submitting form:', error);
+    //       alert('There was an error submitting your message. Please try again later.');
+    //     },
+    //   );
+    // }
+    this.formService.submitContactUsForm(this.contactForm.value).subscribe({
+      next: (response) => {
+        this.successMessage = 'Thank you! Your message has been sent successfully.';
         this.contactForm.reset();
+        this.isLoading = false;
       },
-      (error) => {
-        console.error('Error submitting form:', error);
-        alert('There was an error submitting your message. Please try again later.');
+      error: (error) => {
+        console.error(error);
+        this.isLoading = false;
       },
-    );
+    });
   }
 }

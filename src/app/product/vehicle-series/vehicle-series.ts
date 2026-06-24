@@ -15,7 +15,8 @@ import { FormService } from '../../c-services/form-service';
 })
 export class VehicleSeries implements OnInit, AfterViewInit {
   @ViewChild('swiper') swiperEl!: ElementRef;
-successMessage = '';
+  successMessage = '';
+  isLoading = false;
   seriesData: any;
   activeIndex: number | null = null;
   enquiryForm: FormGroup;
@@ -25,14 +26,14 @@ successMessage = '';
     private meta: Meta,
     @Inject(DOCUMENT) private document: Document,
     private fb: FormBuilder,
-    private formService: FormService
+    private formService: FormService,
   ) {
     this.enquiryForm = this.fb.group({
       fullName: ['', Validators.required],
-      mobileNumber: ['', Validators.required],
-      email: ['', [Validators.email, Validators.required]],
+      mobileNumber: ['', [Validators.required, Validators.pattern('^[6-9][0-9]{9}$')]],
+      email: ['', [Validators.required, Validators.email]],
       model: ['', Validators.required],
-      message: ['']
+      message: [''],
     });
   }
 
@@ -89,26 +90,28 @@ successMessage = '';
     this.activeIndex = this.activeIndex === i ? null : i;
   }
 
-  submitForm() {
-    if (this.enquiryForm.invalid) {
-      this.enquiryForm.markAllAsTouched();
-      alert('Please fill all required fields.');
-      return;
-    }
-
-    this.formService.enquiryForm(this.enquiryForm.value).subscribe(
-      (response) => {
-        console.log('Form submitted successfully:', response);
-        // alert('Your enquiry has been submitted successfully!');
-          this.successMessage = 'Thank you! Your enquiry has been submitted successfully.';
-        this.enquiryForm.reset();
-      },
-      (error) => {
-        console.error('Error submitting form:', error);
-        alert('There was an error submitting your enquiry. Please try again later.');
-      }
-    );
+submitForm() {
+  if (this.enquiryForm.invalid) {
+    this.enquiryForm.markAllAsTouched();
+    return;
   }
+
+  this.isLoading = true;
+
+  this.formService.enquiryForm(this.enquiryForm.value).subscribe({
+    next: (response) => {
+      this.successMessage =
+        'Thank you! Your enquiry has been submitted successfully.';
+
+      this.enquiryForm.reset();
+      this.isLoading = false;
+    },
+    error: (error) => {
+      console.error(error);
+      this.isLoading = false;
+    },
+  });
+}
 
   ngAfterViewInit() {
     const swiper: any = this.swiperEl.nativeElement;
@@ -136,13 +139,13 @@ successMessage = '';
   }
 
   openWhatsapp() {
-     const element = document.getElementById('get-in-touch-form');
+    const element = document.getElementById('get-in-touch-form');
 
-  if (element) {
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-  }
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
   }
 }

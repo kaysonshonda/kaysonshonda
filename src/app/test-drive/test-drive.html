@@ -1,20 +1,24 @@
 <section class="sales-page">
   <div class="banner">
-    <img src="/assets/images/services/test drive.webp" alt="Honda Banner" />
-
+    <img src="/assets/images/services/test-drive-banner.webp" alt="Honda Banner" />
   </div>
- <div class="test-drive-content">
-  <h1>Ride Your Dream Honda two-wheelers Today</h1>
+  <div class="test-drive-content">
+    <h1>Ride Your Dream Honda two-wheelers Today</h1>
 
-  <p>Looking for the latest Honda two-wheelers in Siliguri? Explore a wide range of Honda scooters and motorcycles with expert guidance, attractive offers, and trusted customer support. Submit your new enquiry today and find the perfect Honda bike that matches your lifestyle and budget.
-Get hassle-free Honda two-wheeler financing with flexible down payment options and quick loan approvals. Kaysons Honda partners with leading finance providers to make owning your dream Honda bike or scooter simple, affordable, and convenient.</p>
-</div>
+    <p>
+      Looking for the latest Honda two-wheelers in Siliguri? Explore a wide range of Honda scooters
+      and motorcycles with expert guidance, attractive offers, and trusted customer support. Submit
+      your new enquiry today and find the perfect Honda bike that matches your lifestyle and budget.
+      Get hassle-free Honda two-wheeler financing with flexible down payment options and quick loan
+      approvals. Kaysons Honda partners with leading finance providers to make owning your dream
+      Honda bike or scooter simple, affordable, and convenient.
+    </p>
+  </div>
 
   <!-- FORM CARD -->
   <section class="form-section">
     <h2>Get started</h2>
-    <p>Choose a tab to send us an enquiry or apply for vehicle financing.
-New Enquiry.</p>
+    <p>Choose a tab to send us an enquiry or apply for vehicle financing. New Enquiry.</p>
 
     <div class="tabs">
       <button (click)="tab = 'enquiry'" [class.active]="tab === 'enquiry'">New Enquiry</button>
@@ -24,19 +28,84 @@ New Enquiry.</p>
     @if (tab === 'enquiry') {
       <form [formGroup]="enquiryForm" (ngSubmit)="submitEnquiry()" class="form-card">
         <div class="row">
-          <input type="text" formControlName="fullName" placeholder="Full name" />
-          <input type="text" formControlName="mobileNumber" placeholder="Phone number" />
+          <div class="col-md-6 mb-3">
+            <input type="text" formControlName="fullName" placeholder="Full name" />
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                enquiryForm.get('fullName')?.touched &&
+                enquiryForm.get('fullName')?.errors?.['required']
+              "
+            >
+              Full Name is required
+            </small>
+          </div>
+          <div class="col-md-6 mb-3">
+            <input type="text" formControlName="mobileNumber" placeholder="Phone number" />
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                enquiryForm.get('mobileNumber')?.touched &&
+                enquiryForm.get('mobileNumber')?.errors?.['required']
+              "
+            >
+              Phone Number is required
+            </small>
+          </div>
         </div>
+
         <div class="row">
-          <input type="email" formControlName="email" placeholder="Email" />
-          <input type="text" formControlName="model" placeholder="Model" />
-          <textarea formControlName="message" placeholder="Message"></textarea>
+          <div class="col-md-6 mb-3">
+            <input type="email" formControlName="email" placeholder="Email" />
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                enquiryForm.get('email')?.touched && enquiryForm.get('email')?.errors?.['required']
+              "
+            >
+              Email is required
+            </small>
+
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                enquiryForm.get('email')?.touched && enquiryForm.get('email')?.errors?.['email']
+              "
+            >
+              Please enter a valid email address
+            </small>
+          </div>
+          <div class="col-md-6 mb-3">
+            <input type="text" formControlName="model" placeholder="Model" />
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                enquiryForm.get('model')?.touched && enquiryForm.get('model')?.errors?.['required']
+              "
+            >
+              Model is required
+            </small>
+          </div>
         </div>
-        <button class="btn-primary">Submit Enquiry</button>
+        <textarea formControlName="message" placeholder="Message"></textarea>
+        <button
+          type="submit"
+          class="btn-primary d-inline-flex align-items-center justify-content-center"
+          [disabled]="isLoadingEnquiry"
+        >
+          @if (isLoadingEnquiry) {
+            <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true">
+            </span>
+          } @else {
+            <i class="fa-solid fa-paper-plane me-2"></i>
+          }
+
+          Submit Enquiry
+        </button>
 
         <p *ngIf="successMessage" class="text-success mt-2">
-  {{ successMessage }}
-</p>
+          {{ successMessage }}
+        </p>
 
         <div class="contact">
           <h6>Sales Team</h6>
@@ -55,19 +124,104 @@ New Enquiry.</p>
     @if (tab === 'finance') {
       <form [formGroup]="financeForm" (ngSubmit)="submitFinance()" class="form-card">
         <div class="row">
-          <input type="text" formControlName="fullName" placeholder="Full name" />
-          <input type="text" formControlName="mobileNumber" placeholder="Phone number" />
+          <div class="col-md-6 mb-3">
+            <input type="text" formControlName="fullName" placeholder="Full name" />
+
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                financeForm.get('fullName')?.touched &&
+                financeForm.get('fullName')?.errors?.['required']
+              "
+            >
+              Full Name is required
+            </small>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <input type="text" formControlName="mobileNumber" placeholder="Phone number" />
+
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                financeForm.get('mobileNumber')?.touched &&
+                financeForm.get('mobileNumber')?.errors?.['required']
+              "
+            >
+              Phone Number is required
+            </small>
+
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                financeForm.get('mobileNumber')?.touched &&
+                financeForm.get('mobileNumber')?.errors?.['pattern']
+              "
+            >
+              Please enter a valid 10-digit mobile number
+            </small>
+          </div>
         </div>
+
         <div class="row">
-          <input type="email" formControlName="email" placeholder="Email" />
-          <input type="text" formControlName="model" placeholder="Model" />
+          <div class="col-md-6 mb-3">
+            <input type="email" formControlName="email" placeholder="Email" />
+
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                financeForm.get('email')?.touched && financeForm.get('email')?.errors?.['required']
+              "
+            >
+              Email is required
+            </small>
+
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                financeForm.get('email')?.touched && financeForm.get('email')?.errors?.['email']
+              "
+            >
+              Please enter a valid email address
+            </small>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <input type="text" formControlName="model" placeholder="Model" />
+
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                financeForm.get('model')?.touched && financeForm.get('model')?.errors?.['required']
+              "
+            >
+              Model is required
+            </small>
+          </div>
+        </div>
+
+        <div class="mb-3">
           <textarea formControlName="message" placeholder="Message"></textarea>
         </div>
-        <button class="btn-primary">Get Finance Options</button>
+
+     <button
+  type="submit"
+  class="btn-primary d-inline-flex align-items-center justify-content-center"
+  [disabled]="isLoadingFinance"
+>
+          @if (isLoadingFinance) {
+            <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true">
+            </span>
+          } @else {
+            <i class="fa-solid fa-money-bill-wave me-2"></i>
+          }
+
+          Get Finance Options
+        </button>
 
         <p *ngIf="successMessage" class="text-success mt-2">
-  {{ successMessage }}
-</p>
+          {{ successMessage }}
+        </p>
 
         <div class="contact">
           <h6>Finance Team</h6>

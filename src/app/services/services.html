@@ -1,7 +1,7 @@
 <section class="services-page">
   <div class="banner">
-    <img src="/assets/images/services/services.webp" alt="Honda Banner" width="100%" />
-     <!-- <div class="banner-content">
+    <img src="/assets/images/services/services-page-banner.webp" alt="Honda Banner" width="100%" />
+    <!-- <div class="banner-content">
       <h1>Services</h1>
     </div> -->
   </div>
@@ -33,7 +33,9 @@
 
       <button (click)="tab = 'parts'" [class.active]="tab === 'parts'">Spare Parts Enquiry</button>
 
-      <button (click)="tab = 'insurance'" [class.active]="tab === 'insurance'">Insurance Renewal</button>
+      <button (click)="tab = 'insurance'" [class.active]="tab === 'insurance'">
+        Insurance Renewal
+      </button>
 
       <!-- <button (click)="tab = 'warranty'" [class.active]="tab === 'warranty'">Extended Warranty</button> -->
     </div>
@@ -42,40 +44,128 @@
     @if (tab === 'vehicle') {
       <form [formGroup]="vehicleServiceForm" (ngSubmit)="submitVehicle()" class="form-card">
         <div class="row">
-          <input name="fullName" formControlName="fullName" placeholder="Full Name" />
-          <input name="phone" formControlName="mobileNumber" placeholder="Phone Number" />
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <input formControlName="fullName" placeholder="Full Name" />
+
+              <small
+                class="text-danger float-start"
+                *ngIf="
+                  vehicleServiceForm.get('fullName')?.touched &&
+                  vehicleServiceForm.get('fullName')?.errors?.['required']
+                "
+              >
+                Full Name is required
+              </small>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <input formControlName="mobileNumber" placeholder="Phone Number" />
+
+              <small
+                class="text-danger float-start"
+                *ngIf="
+                  vehicleServiceForm.get('mobileNumber')?.touched &&
+                  vehicleServiceForm.get('mobileNumber')?.errors?.['required']
+                "
+              >
+                Phone Number is required
+              </small>
+            </div>
+          </div>
         </div>
 
         <div class="row">
-          <input name="email" formControlName="email" placeholder="Email" />
-          <input name="model" formControlName="model" placeholder="Model" />
+          <div class="col-md-6 mb-3">
+            <input name="email" formControlName="email" placeholder="Email" />
+
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                vehicleServiceForm.get('email')?.touched &&
+                vehicleServiceForm.get('email')?.errors?.['required']
+              "
+            >
+              Email is required
+            </small>
+
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                vehicleServiceForm.get('email')?.touched &&
+                vehicleServiceForm.get('email')?.errors?.['email']
+              "
+            >
+              Please enter a valid email address
+            </small>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <input name="model" formControlName="model" placeholder="Model" />
+
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                vehicleServiceForm.get('model')?.touched &&
+                vehicleServiceForm.get('model')?.errors?.['required']
+              "
+            >
+              Model is required
+            </small>
+          </div>
         </div>
 
         <div class="row">
-          <select name="serviceType" formControlName="serviceType">
-            <option value="">Service Type</option>
-            <option>General Service</option>
-            <option>Engine Repair</option>
-            <option>Oil Change</option>
-            <option>Brake Check</option>
-          </select>
+          <div class="col-md-12 mb-3">
+            <select name="serviceType" formControlName="serviceType">
+              <option value="">Service Type</option>
+              <option>General Service</option>
+              <option>Engine Repair</option>
+              <option>Oil Change</option>
+              <option>Brake Check</option>
+            </select>
 
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                vehicleServiceForm.get('serviceType')?.touched &&
+                vehicleServiceForm.get('serviceType')?.errors?.['required']
+              "
+            >
+              Service Type is required
+            </small>
+          </div>
+        </div>
+        <div class="col-md-12 mb-3">
           <textarea name="message" formControlName="message" placeholder="Message"></textarea>
         </div>
 
-        <button class="btn-primary">Submit Request</button>
+        <button
+          type="submit"
+          class="btn-primary d-inline-flex align-items-center justify-content-center"
+          [disabled]="isLoadingVehicle"
+        >
+          @if (isLoadingVehicle) {
+            <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true">
+            </span>
+          } @else {
+            <i class="fa-solid fa-paper-plane me-2"></i>
+          }
+
+          Submit Request
+        </button>
 
         <p *ngIf="successMessage" class="text-success mt-3">
-  {{ successMessage }}
-</p>
+          {{ successMessage }}
+        </p>
 
         <div class="contact">
           <h6>Services Team</h6>
-                  <div class="inline-contact-data">
-          <p><i class="bi bi-telephone-fill"></i> 9932031315</p>
-          <p><i class="bi bi-envelope-fill"></i> backoffice.service@kaysonshonda.com</p>
-          <p><i class="bi bi-clock-fill"></i> Mon - Sun 9:30 AM to 7:00 PM</p>
-        </div>
+          <div class="inline-contact-data">
+            <p><i class="bi bi-telephone-fill"></i> 9932031315</p>
+            <p><i class="bi bi-envelope-fill"></i> backoffice.service@kaysonshonda.com</p>
+            <p><i class="bi bi-clock-fill"></i> Mon - Sun 9:30 AM to 7:00 PM</p>
+          </div>
         </div>
       </form>
     }
@@ -84,32 +174,114 @@
     @if (tab === 'parts') {
       <form [formGroup]="sparePartsForm" (ngSubmit)="submitParts()" class="form-card">
         <div class="row">
-          <input name="fullName" formControlName="fullName" placeholder="Full Name" />
-          <input name="phone" formControlName="mobileNumber" placeholder="Phone Number" />
+          <div class="col-md-6 mb-3">
+            <input name="fullName" formControlName="fullName" placeholder="Full Name" />
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                sparePartsForm.get('fullName')?.touched &&
+                sparePartsForm.get('fullName')?.errors?.['required']
+              "
+            >
+              Full Name is required
+            </small>
+          </div>
+          <div class="col-md-6 mb-3">
+            <input name="phone" formControlName="mobileNumber" placeholder="Phone Number" />
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                sparePartsForm.get('mobileNumber')?.touched &&
+                sparePartsForm.get('mobileNumber')?.errors?.['required']
+              "
+            >
+              Phone Number is required
+            </small>
+          </div>
         </div>
 
         <div class="row">
-          <input name="email" formControlName="email" placeholder="Email" />
-          <input name="model" formControlName="model" placeholder="Model" />
+          <div class="col-md-6 mb-3">
+            <input name="email" formControlName="email" placeholder="Email" />
+
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                sparePartsForm.get('email')?.touched &&
+                sparePartsForm.get('email')?.errors?.['required']
+              "
+            >
+              Email is required
+            </small>
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                sparePartsForm.get('email')?.touched &&
+                sparePartsForm.get('email')?.errors?.['email']
+              "
+            >
+              Please enter a valid email address
+            </small>
+          </div>
+          <div class="col-md-6 mb-3">
+            <input name="model" formControlName="model" placeholder="Model" />
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                sparePartsForm.get('model')?.touched &&
+                sparePartsForm.get('model')?.errors?.['required']
+              "
+            >
+              Model is required
+            </small>
+          </div>
         </div>
 
         <div class="row">
-          <input name="partsType" formControlName="partName" placeholder="Honda Genuine Parts" />
-          <textarea name="message" formControlName="message" placeholder="What parts are you looking for?"></textarea>
+          <div class="col-md-12 mb-3">
+            <input name="partsType" formControlName="partName" placeholder="Honda Genuine Parts" />
+
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                sparePartsForm.get('partName')?.touched &&
+                sparePartsForm.get('partName')?.errors?.['required']
+              "
+            >
+              Part Name is required
+            </small>
+          </div>
+          <textarea
+            name="message"
+            formControlName="message"
+            placeholder="What parts are you looking for?"
+          ></textarea>
         </div>
 
-        <button class="btn-primary">Send Enquiry</button>
+        <button
+          type="submit"
+          class="btn-primary d-inline-flex align-items-center justify-content-center"
+          [disabled]="isLoadingParts"
+        >
+          @if (isLoadingParts) {
+            <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true">
+            </span>
+          } @else {
+            <i class="fa-solid fa-paper-plane me-2"></i>
+          }
+          Send Enquiry
+        </button>
         <p *ngIf="successMessage" class="text-success mt-3">
-  {{ successMessage }}
-</p>
+          {{ successMessage }}
+        </p>
 
         <div class="contact">
           <h6>Spare Parts Team</h6>
-                  <div class="inline-contact-data">
-          <p><i class="bi bi-telephone-fill"></i> 9933343300</p>
-          <p><i class="bi bi-envelope-fill"></i> spkaysons@kaysonshonda.com</p>
-          <p><i class="bi bi-clock-fill"></i> Mon - Sun 9:30 AM to 7:00 PM</p>
-        </div>
+          <div class="inline-contact-data">
+            <p><i class="bi bi-telephone-fill"></i> 9933343300</p>
+            <p><i class="bi bi-envelope-fill"></i> spkaysons@kaysonshonda.com</p>
+            <p><i class="bi bi-clock-fill"></i> Mon - Sun 9:30 AM to 7:00 PM</p>
+          </div>
         </div>
       </form>
     }
@@ -118,24 +290,102 @@
     @if (tab === 'insurance') {
       <form [formGroup]="insuranceForm" (ngSubmit)="submitInsurance()" class="form-card">
         <div class="row">
-          <input name="fullName" formControlName="fullName" placeholder="Full Name" />
-          <input name="phone" formControlName="mobileNumber" placeholder="Phone Number" />
+          <div class="col-md-6 mb-3">
+            <input name="fullName" formControlName="fullName" placeholder="Full Name" />
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                insuranceForm.get('fullName')?.touched &&
+                insuranceForm.get('fullName')?.errors?.['required']
+              "
+            >
+              Full Name is required
+            </small>
+          </div>
+          <div class="col-md-6 mb-3">
+            <input name="phone" formControlName="mobileNumber" placeholder="Phone Number" />
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                insuranceForm.get('mobileNumber')?.touched &&
+                insuranceForm.get('mobileNumber')?.errors?.['required']
+              "
+            >
+              Phone Number is required
+            </small>
+          </div>
         </div>
 
         <div class="row">
-          <input name="email" formControlName="email" placeholder="Email" />
-          <input name="model" formControlName="model" placeholder="Model" />
+          <div class="col-md-6 mb-3">
+            <input name="email" formControlName="email" placeholder="Email" />
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                insuranceForm.get('email')?.touched &&
+                insuranceForm.get('email')?.errors?.['required']
+              "
+            >
+              Email is required
+            </small>
+
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                insuranceForm.get('email')?.touched && insuranceForm.get('email')?.errors?.['email']
+              "
+            >
+              Please enter a valid email address
+            </small>
+          </div>
+          <div class="col-md-6 mb-3">
+            <input name="model" formControlName="model" placeholder="Model" />
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                insuranceForm.get('model')?.touched &&
+                insuranceForm.get('model')?.errors?.['required']
+              "
+            >
+              Model is required
+            </small>
+          </div>
         </div>
 
         <div class="row">
-          <input type="date" name="purchaseDate" formControlName="date" />
-          <textarea name="message" formControlName="message" placeholder="Message"></textarea>
+          <div class="col-md-12 mb-3">
+            <input type="date" name="purchaseDate" formControlName="date" />
+            <small
+              class="text-danger float-start"
+              *ngIf="
+                insuranceForm.get('date')?.touched &&
+                insuranceForm.get('date')?.errors?.['required']
+              "
+            >
+               Date is required
+            </small>
+          </div>
         </div>
+        <textarea name="message" formControlName="message" placeholder="Message"></textarea>
 
-        <button class="btn-primary">Renew Insurance</button>
+        <button
+          type="submit"
+          class="btn-primary d-inline-flex align-items-center justify-content-center"
+          [disabled]="isLoadingInsurance"
+        >
+          @if (isLoadingInsurance) {
+            <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true">
+            </span>
+          } @else {
+            <i class="fa-solid fa-shield-halved me-2"></i>
+          }
+
+          Renew Insurance
+        </button>
+
         <p *ngIf="successMessage" class="text-success mt-3">
-  {{ successMessage }}
-</p>
+          {{ successMessage }}
+        </p>
 
         <div class="contact">
           <h6>Insurance Team</h6>

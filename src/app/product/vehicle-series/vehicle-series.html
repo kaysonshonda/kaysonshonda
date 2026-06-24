@@ -14,9 +14,15 @@
     </div>
 
     <div class="honda-vehicle-series container" *ngIf="seriesData?.bikes?.length">
-      <swiper-container #swiper init="false" class="shineSwiper" pagination="true" navigation="true">
+      <swiper-container
+        #swiper
+        init="false"
+        class="shineSwiper"
+        pagination="true"
+        navigation="true"
+      >
         <swiper-slide *ngFor="let bike of seriesData.bikes">
-          <div class="bike-card">
+          <div class="bike-card" id="bikes">
             <!-- LEFT -->
             <div class="bike-image">
               <div class="image">
@@ -117,44 +123,107 @@
 
         <div class="form-container">
           <form [formGroup]="enquiryForm" (ngSubmit)="submitForm()">
-            <input
-              type="text"
-              name="fullName"
-              placeholder="Full Name"
-              formControlName="fullName"
-            />
-            <small class="error"> Full Name is required </small>
-            <input
-              type="tel"
-              name="mobileNumber"
-              placeholder="Mobile Number"
-              formControlName="mobileNumber"
-            />
-            <small class="error"> Mobile Number is required </small>
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              formControlName="email"
-            />
-            <small class="error"> Email is required </small>
-            <!-- <input type="text" name="model" placeholder="Model" [(ngModel)]="enquiry.model" /> -->
-            <select name="model" formControlName="model">
+            <!-- Full Name -->
+            <input type="text" placeholder="Full Name" formControlName="fullName" />
+
+            <small
+              class="error"
+              *ngIf="
+                enquiryForm.get('fullName')?.touched &&
+                enquiryForm.get('fullName')?.errors?.['required']
+              "
+            >
+              Full Name is required
+            </small>
+
+            <!-- Mobile -->
+            <input type="tel" placeholder="Mobile Number" formControlName="mobileNumber" />
+
+            <small
+              class="error"
+              *ngIf="
+                enquiryForm.get('mobileNumber')?.touched &&
+                enquiryForm.get('mobileNumber')?.errors?.['required']
+              "
+            >
+              Mobile Number is required
+            </small>
+
+            <small
+              class="error"
+              *ngIf="
+                enquiryForm.get('mobileNumber')?.touched &&
+                enquiryForm.get('mobileNumber')?.errors?.['pattern']
+              "
+            >
+              Please enter a valid 10-digit mobile number
+            </small>
+
+            <!-- Email -->
+            <input type="email" placeholder="Email" formControlName="email" />
+
+            <small
+              class="error"
+              *ngIf="
+                enquiryForm.get('email')?.touched && enquiryForm.get('email')?.errors?.['required']
+              "
+            >
+              Email is required
+            </small>
+
+            <small
+              class="error"
+              *ngIf="
+                enquiryForm.get('email')?.touched && enquiryForm.get('email')?.errors?.['email']
+              "
+            >
+              Please enter a valid email address
+            </small>
+
+            <!-- Model -->
+            <select formControlName="model">
               <option value="">Select Model</option>
 
               <option *ngFor="let model of seriesData?.models" [value]="model">
                 {{ model }}
               </option>
             </select>
-            <small class="error"> Model is required </small>
 
-            <textarea rows="3" name="message" placeholder="Message" formControlName="message">
-            </textarea>
+            <small
+              class="error"
+              *ngIf="
+                enquiryForm.get('model')?.touched && enquiryForm.get('model')?.errors?.['required']
+              "
+            >
+              Model is required
+            </small>
 
-            <button type="submit">Submit Enquiry</button>
+            <!-- Message -->
+            <textarea rows="3" placeholder="Message" formControlName="message"></textarea>
+
+            <!-- Submit -->
+            <button
+              type="submit"
+              class="d-inline-flex align-items-center justify-content-center"
+              [disabled]="isLoading"
+            >
+              @if (isLoading) {
+                <span
+                  class="spinner-border spinner-border-sm me-2"
+                  role="status"
+                  aria-hidden="true"
+                >
+                </span>
+              } @else {
+                <i class="fa-solid fa-paper-plane me-2"></i>
+              }
+
+              Submit Enquiry
+            </button>
+
             <p class="text-success mt-2" *ngIf="successMessage">
-  {{ successMessage }}
-</p>
+              {{ successMessage }}
+            </p>
           </form>
         </div>
       </div>

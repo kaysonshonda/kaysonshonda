@@ -32,7 +32,7 @@
           </li>
 
           <!-- Motorcycles Dropdown -->
-          <li class="nav-item dropdown">
+          <!-- <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
               id="motorcyclesDropdown"
@@ -68,8 +68,71 @@
                 <a class="dropdown-item" routerLink="/commuter-series">Commuter Series</a>
               </li>
             </ul>
+          </li> -->
+          <li class="nav-item dropdown mega-dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              id="motorcyclesDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Motorcycles
+            </a>
+
+            <div class="dropdown-menu mega-menu">
+              <div class="mega-grid">
+                <a [routerLink]="['/nx-series']" class="bike-item">
+                  <img
+                    src="/assets/images/kaysons bike/NX200/Radiant Red Metallic.png"
+                    alt="NX Series"
+                  />
+                  <span>NX Series</span>
+                </a>
+
+                <a routerLink="/hornet-series" class="bike-item">
+                  <img
+                    src="/assets/images/kaysons bike/hornet-series/CB-125/Pearl Siren Blue with Lemon Ice Yellow.png"
+                    alt="Hornet Series"
+                  />
+                  <span>Hornet Series</span>
+                </a>
+
+                <a routerLink="/shine-series" class="bike-item">
+                  <img
+                    src="/assets/images/shine-series/Shine100/Red with Black.png"
+                    alt="Shine Series"
+                  />
+                  <span>Shine Series</span>
+                </a>
+
+                <a routerLink="/sp-series" class="bike-item">
+                  <img
+                    src="/assets/images/kaysons bike/SP-Series/SP125/Pearl Siren Blue.png"
+                    alt="SP Series"
+                  />
+                  <span>SP Series</span>
+                </a>
+
+                <a routerLink="/unicorn-series" class="bike-item">
+                  <img
+                    src="/assets/images/kaysons bike/Unicorn-Series/Unicorn/Pearl Igneous Black.png"
+                    alt="Unicorn Series"
+                  />
+                  <span>Unicorn Series</span>
+                </a>
+
+                <a routerLink="/commuter-series" class="bike-item">
+                  <img
+                    src="/assets/images/kaysons bike/Commuter-Series/Livo/Pearl Siren Blue A (Geny Gray Shroud + Green Stripes).png"
+                    alt="Commuter Series"
+                  />
+                  <span>Commuter Series</span>
+                </a>
+              </div>
+            </div>
           </li>
-          <li class="nav-item dropdown">
+          <!-- <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -89,8 +152,37 @@
                 <a class="dropdown-item" routerLink="/dio-series"> Dio Series </a>
               </li>
             </ul>
-          </li>
+          </li> -->
+          <li class="nav-item dropdown mega-dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Scooters
+            </a>
 
+            <div class="dropdown-menu mega-menu scooter-menu">
+              <div class="scooter-grid">
+                <a routerLink="/activa-series" class="bike-item">
+                  <img
+                    src="/assets/images/kaysons bike/Activa-Series/Activa-110/Decent Blue Metallic.png"
+                    alt="Activa Series"
+                  />
+                  <span>Activa Series</span>
+                </a>
+
+                <a routerLink="/dio-series" class="bike-item">
+                  <img
+                    src="/assets/images/kaysons bike/Dio-Series/Dio-110/Imperial.png"
+                    alt="Dio Series"
+                  />
+                  <span>Dio Series</span>
+                </a>
+              </div>
+            </div>
+          </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/test-drive" routerLinkActive="active"> Test Drive </a>
           </li>
@@ -119,7 +211,6 @@
               <li>
                 <a class="dropdown-item" routerLink="/blog" routerLinkActive="active"> Blogs </a>
               </li>
-
             </ul>
           </li>
         </ul>

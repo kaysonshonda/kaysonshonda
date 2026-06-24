@@ -587,6 +587,7 @@ swiper-container::part(button-next):hover {
   font-weight: 600;
   margin-bottom: 8px;
   display: block;
+  padding-top: 6px;
   letter-spacing: 1px;
 }
 

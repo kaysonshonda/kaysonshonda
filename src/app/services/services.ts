@@ -9,16 +9,19 @@ import { FormService } from '../c-services/form-service';
   styleUrl: './services.css',
 })
 export class Services {
-successMessage = '';
+  successMessage = '';
+  isLoadingVehicle = false;
+  isLoadingParts = false;
+  isLoadingInsurance = false;
   tab: string = 'vehicle';
   vehicleServiceForm: FormGroup;
   sparePartsForm: FormGroup;
-  insuranceForm: FormGroup
+  insuranceForm: FormGroup;
   warrantyForm: FormGroup;
 
   constructor(
     private formService: FormService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
   ) {
     // Initialize forms here if needed
     this.vehicleServiceForm = this.fb.group({
@@ -27,7 +30,7 @@ successMessage = '';
       email: ['', [Validators.email, Validators.required]],
       model: ['', Validators.required],
       serviceType: ['', Validators.required],
-      message: ['']
+      message: [''],
     });
 
     this.sparePartsForm = this.fb.group({
@@ -36,7 +39,7 @@ successMessage = '';
       email: ['', [Validators.email, Validators.required]],
       model: ['', Validators.required],
       partName: ['', Validators.required],
-      message: ['']
+      message: [''],
     });
 
     this.insuranceForm = this.fb.group({
@@ -45,7 +48,7 @@ successMessage = '';
       email: ['', [Validators.email, Validators.required]],
       model: ['', Validators.required],
       date: ['', Validators.required],
-      message: ['']
+      message: [''],
     });
 
     this.warrantyForm = this.fb.group({
@@ -54,30 +57,45 @@ successMessage = '';
       email: ['', [Validators.email, Validators.required]],
       model: ['', Validators.required],
       date: ['', Validators.required],
-      message: ['']
+      message: [''],
     });
   }
   // VEHICLE SERVICES
   submitVehicle() {
     if (this.vehicleServiceForm.invalid) {
       this.vehicleServiceForm.markAllAsTouched();
-      alert('Please fill all required fields.');
+      // alert('Please fill all required fields.');
       return;
     }
+    this.isLoadingInsurance = true;
 
-    this.formService.vehicleServiceForm(this.vehicleServiceForm.value).subscribe(
-      (response) => {
-        console.log('Form submitted successfully:', response);
-        // alert('Your Vehicle Service form has been submitted successfully!');
-          this.successMessage = 'Thank you! Your Vehicle Service request has been submitted successfully.';
+    // this.formService.vehicleServiceForm(this.vehicleServiceForm.value).subscribe(
+    //   (response) => {
+    //     console.log('Form submitted successfully:', response);
+    //     // alert('Your Vehicle Service form has been submitted successfully!');
+    //     this.successMessage =
+    //       'Thank you! Your Vehicle Service request has been submitted successfully.';
 
+    //     this.vehicleServiceForm.reset();
+    //   },
+    //   (error) => {
+    //     console.error('Error submitting form:', error);
+    //     alert('There was an error submitting your Vehicle Service form. Please try again later.');
+    //   },
+    // );
+
+    this.formService.vehicleServiceForm(this.vehicleServiceForm.value).subscribe({
+      next: (response) => {
+        this.successMessage =
+          'Thank you! Your Vehicle Service request has been submitted successfully.';
         this.vehicleServiceForm.reset();
+        this.isLoadingVehicle = false;
       },
-      (error) => {
-        console.error('Error submitting form:', error);
-        alert('There was an error submitting your Vehicle Service form. Please try again later.');
-      }
-    );
+      error: (error) => {
+        console.error(error);
+        this.isLoadingVehicle = false;
+      },
+    });
     this.tab = 'vehicle';
   }
 
@@ -85,22 +103,36 @@ successMessage = '';
   submitParts() {
     if (this.sparePartsForm.invalid) {
       this.sparePartsForm.markAllAsTouched();
-      alert('Please fill all required fields.');
+      // alert('Please fill all required fields.');
       return;
     }
+    this.isLoadingParts = true;
 
-    this.formService.sparePartsForm(this.sparePartsForm.value).subscribe(
-      (response) => {
-        console.log('Form submitted successfully:', response);
-        // alert('Your Spare Parts form has been submitted successfully!');
-          this.successMessage = 'Thank you! Your Spare Parts request has been submitted successfully.';
+    // this.formService.sparePartsForm(this.sparePartsForm.value).subscribe(
+    //   (response) => {
+    //     console.log('Form submitted successfully:', response);
+    //     // alert('Your Spare Parts form has been submitted successfully!');
+    //     this.successMessage =
+    //       'Thank you! Your Spare Parts request has been submitted successfully.';
+    //     this.sparePartsForm.reset();
+    //   },
+    //   (error) => {
+    //     console.error('Error submitting form:', error);
+    //     alert('There was an error submitting your Spare Parts form. Please try again later.');
+    //   },
+    // );
+    this.formService.sparePartsForm(this.sparePartsForm.value).subscribe({
+      next: (response) => {
+        this.successMessage =
+          'Thank you! Your Spare Parts request has been submitted successfully.';
         this.sparePartsForm.reset();
+        this.isLoadingParts = false;
       },
-      (error) => {
-        console.error('Error submitting form:', error);
-        alert('There was an error submitting your Spare Parts form. Please try again later.');
-      }
-    );
+      error: (error) => {
+        console.error(error);
+        this.isLoadingParts = false;
+      },
+    });
     this.tab = 'parts';
   }
 
@@ -108,23 +140,38 @@ successMessage = '';
   submitInsurance() {
     if (this.insuranceForm.invalid) {
       this.insuranceForm.markAllAsTouched();
-      alert('Please fill all required fields.');
+      // alert('Please fill all required fields.');
       return;
     }
+    this.isLoadingInsurance = true;
 
-    this.formService.insuranceForm(this.insuranceForm.value).subscribe(
-      (response) => {
-        console.log('Form submitted successfully:', response);
-        // alert('Your Insurance form has been submitted successfully!');
-        this.successMessage = 'Thank you! Your Vehicle Insurance Service request has been submitted successfully.';
+    // this.formService.insuranceForm(this.insuranceForm.value).subscribe(
+    //   (response) => {
+    //     console.log('Form submitted successfully:', response);
+    //     // alert('Your Insurance form has been submitted successfully!');
+    //     this.successMessage =
+    //       'Thank you! Your Vehicle Insurance Service request has been submitted successfully.';
 
-        this.insuranceForm.reset();
-      },
-      (error) => {
-        console.error('Error submitting form:', error);
-        alert('There was an error submitting your Insurance form. Please try again later.');
-      }
-    );
+    //     this.insuranceForm.reset();
+    //   },
+    //   (error) => {
+    //     console.error('Error submitting form:', error);
+    //     alert('There was an error submitting your Insurance form. Please try again later.');
+    //   },
+    // );
+
+    this.formService.insuranceForm(this.insuranceForm.value).subscribe({
+    next: (response) => {
+      this.successMessage =
+        'Thank you! Your Vehicle Insurance request has been submitted successfully.';
+      this.insuranceForm.reset();
+      this.isLoadingInsurance = false;
+    },
+    error: (error) => {
+      console.error(error);
+      this.isLoadingInsurance = false;
+    },
+  });
     this.tab = 'insurance';
   }
 
@@ -132,7 +179,7 @@ successMessage = '';
   submitWarranty() {
     if (this.warrantyForm.invalid) {
       this.warrantyForm.markAllAsTouched();
-      alert('Please fill all required fields.');
+      // alert('Please fill all required fields.');
       return;
     }
 
@@ -145,7 +192,7 @@ successMessage = '';
       (error) => {
         console.error('Error submitting form:', error);
         alert('There was an error submitting your Warranty form. Please try again later.');
-      }
+      },
     );
     this.tab = 'warranty';
   }

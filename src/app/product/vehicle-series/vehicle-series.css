@@ -476,7 +476,7 @@
 .enquiry-section .error {
   color: var(--primary-red);
   font-size: 12px;
-  display: none;
+  /* display: none; */
   margin-top: 4px;
 }
 .enquiry-section input,
@@ -601,7 +601,11 @@
 
   transition: all 0.5s ease;
 }
-
+.spinner-border {
+  width: 1rem;
+  height: 1rem;
+  color: #fff;
+}
 @media (max-width: 991px) {
   .honda-vehicle-series .heading h3 {
     font-size: 34px;

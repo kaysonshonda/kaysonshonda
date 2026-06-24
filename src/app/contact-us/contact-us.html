@@ -133,7 +133,7 @@
               formControlName="name"
             />
             <small
-              class="text-danger"
+              class="text-danger float-start"
               *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched"
             >
               Name is required
@@ -151,7 +151,7 @@
               formControlName="email"
             />
             <small
-              class="text-danger"
+              class="text-danger float-start"
               *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
             >
               Valid email is required
@@ -170,7 +170,7 @@
             formControlName="subject"
           />
           <small
-            class="text-danger"
+            class="text-danger float-start"
             *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched"
           >
             Subject is required
@@ -190,7 +190,23 @@
         </div>
 
         <!-- Submit Button -->
-        <button type="submit" class="btn send-btn">SEND MESSAGE</button>
+       <button
+  type="submit"
+  class="btn send-btn d-inline-flex align-items-center"
+  [disabled]="contactForm.invalid || isLoading"
+>
+  @if (isLoading) {
+    <span
+      class="spinner-border spinner-border-sm me-2"
+      role="status"
+      aria-hidden="true">
+    </span>
+  } @else {
+    <i class="fa-solid fa-paper-plane me-2"></i>
+  }
+
+  Send Message
+</button>
         <p *ngIf="successMessage" class="success-message">
   {{ successMessage }}
 </p>
