@@ -28,7 +28,27 @@
   color: var(--primary-red);
   font-size: 34px;
 }
+.accordion-header{
+    color: var(--gray-dark);
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0;
 
+}
+.accordion-header button{
+  padding: 20px 15px;
+   color: var(--gray-dark);
+  font-size: 22px;
+  font-weight: 500;
+}
+.accordion-item .accordion-body{
+    padding: 10px 20px 15px;
+    margin: 0;
+    text-align: left;
+    color: var(--gray-dark);
+    font-weight: 400;
+    font-size: 18px;
+}
 :host ::ng-deep .blog-content h2,
 :host ::ng-deep .blog-content h3 {
   color: var(--primary-red);
@@ -38,7 +58,8 @@
 
 :host ::ng-deep .blog-content p {
   font-weight: 400;
-  line-height: 1.8;
+  /* line-height: 1.8; */
+  font-size: 20px;
 }
 
 :host ::ng-deep .blog-content ul {
@@ -46,7 +67,7 @@
 }
 
 :host ::ng-deep .blog-content li {
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 .accordion-button {
@@ -55,7 +76,7 @@
 
 .accordion-button:not(.collapsed) {
   background: var(--primary-red);
-  color: var(--white);
+  color: var(--white) !important;
 }
 
 .accordion-button:focus {
