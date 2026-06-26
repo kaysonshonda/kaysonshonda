@@ -527,7 +527,12 @@
   clip-path: polygon(100% 0, 100% 84%, 18% 100%, 0 80%, 0 0);
   z-index: 1;
 }
-
+.bike-slider-section.scooty-bg {
+  background: url('/assets/images/Banner-scooty.jpeg') center center/cover no-repeat;
+}
+.bike-slider-section.scooty-bg .slider-bg {
+   background: rgba(0, 0, 0, 0.1);
+}
 /* Background */
 
 .bike-slider-section .slider-bg {

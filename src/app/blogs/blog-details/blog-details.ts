@@ -21,9 +21,9 @@ export class BlogDetails implements OnInit  {
     const slug = this.route.snapshot.paramMap.get('slug');
 
     this.blog = this.blogData.blogs.find(
-      item => item.slug === slug
+      x => x.slug === slug
     );
 
   }
-  }
 
+}

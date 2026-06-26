@@ -1,12 +1,15 @@
 <div class="blog-posts">
   <div class="banner">
     <img src="/assets/images/blog/Blog.webp" alt="Honda Banner" width="100%" />
-     <!-- <div class="banner-content">
+    <!-- <div class="banner-content">
       <h1>Blog</h1>
     </div> -->
   </div>
   <div class="container">
-  <div class="journal-container mt-5 mb-5">
+    <div class="heading mt-5">
+      <h1>Latest</h1>
+    </div>
+    <div class="journal-container  mb-5">
       <a
         *ngFor="let blog of blogs"
         [routerLink]="['/blog', blog.slug]"

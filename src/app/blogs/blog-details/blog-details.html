@@ -1,17 +1,67 @@
-<!-- <p>blog-details works!</p> -->
 <div class="blog-details">
+
   <div class="banner">
-    <img src="assets/images/wd33.jpg" alt="Honda Banner" width="100%" />
+    <img
+     [src]="blog.image"
+      [alt]="blog.title"
+      class="img-fluid w-100"
+     >
   </div>
-<div class="container py-5" *ngIf="blog">
 
-  <h1>{{ blog.title }}</h1>
+  <div class="container py-5" *ngIf="blog">
 
-  <img [src]="blog.image"
-       [alt]="blog.title"
-       class="img-fluid my-4">
+    <!-- <img
+      [src]="blog.image"
+      [alt]="blog.title"
+      class="img-fluid rounded mb-4"> -->
 
-  <div [innerHTML]="blog.content"></div>
+    <div class="blog-content" [innerHTML]="blog.content"></div>
 
-</div>
+    <div class="mt-5" *ngIf="blog.faqs?.length">
+
+      <h2 class="mb-4">Frequently Asked Questions</h2>
+
+      <div class="accordion" id="faqAccordion">
+
+        <div
+          class="accordion-item"
+          *ngFor="let faq of blog.faqs; let i=index">
+
+          <h2 class="accordion-header">
+
+            <button
+              class="accordion-button"
+              [class.collapsed]="i!=0"
+              type="button"
+              data-bs-toggle="collapse"
+              [attr.data-bs-target]="'#faq'+i">
+
+              {{faq.question}}
+
+            </button>
+
+          </h2>
+
+          <div
+            [id]="'faq'+i"
+            class="accordion-collapse collapse"
+            [class.show]="i==0"
+            data-bs-parent="#faqAccordion">
+
+            <div class="accordion-body">
+
+              {{faq.answer}}
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </div>

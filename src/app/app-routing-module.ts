@@ -75,7 +75,7 @@ const routes: Routes = [
     data: { type: 'unicorn' },
   },
   {
-    path: 'commuter-series',
+    path: 'livo',
     component: VehicleSeries,
     data: { type: 'commuter' },
   },

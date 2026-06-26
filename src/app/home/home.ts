@@ -23,7 +23,7 @@ export class Home implements OnInit, AfterViewInit {
       fullName: ['', Validators.required],
       phone: ['', [Validators.required, Validators.pattern('^[6-9][0-9]{9}$')]],
       email: ['', [Validators.required, Validators.email]],
-      model: ['', Validators.required],
+      model: [this.bikeModels[0], Validators.required],
       note: [''],
     });
   }
@@ -175,11 +175,25 @@ export class Home implements OnInit, AfterViewInit {
   // TEST DRIVE FORM
 
   bikeModels: string[] = [
-    'Honda NX200',
-    'Honda Hornet 2.0',
-    'Honda Shine',
-    'Honda SP125',
-    'Honda Unicorn',
+    'NX200',
+  'CB 125',
+  'Hornet 2.0',
+  'Shine100',
+  'Shine100 DX',
+  'Shine125',
+  'Shine 125 Limited',
+  'SP125',
+  'SP125 Nav',
+  'SP160',
+  'Unicorn',
+  'Livo',
+  'Activa 110',
+  'Activa 125',
+  'Activa 110 Anniversary Edition',
+  'Activa 125 Anniversary Edition',
+  'Dio 110',
+  'Dio 125',
+  'Dio X Edition'
   ];
   onSubmit(): void {
     if (this.bookingForm.invalid) {
@@ -202,4 +216,20 @@ export class Home implements OnInit, AfterViewInit {
       },
     });
   }
+  scrollToVehicles(): void {
+  const section = document.getElementById('vehicle-section');
+
+  if (section) {
+    section.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+}
+
+// motor cycle
+showAllMotorcycles = false;
+viewMoreMotorcycles(): void {
+  this.showAllMotorcycles = true;
+}
 }

@@ -54,13 +54,13 @@ swiper-container.swiper-s {
   height: 100%;
   object-fit: cover;
   transform: scale(1);
-  transition: transform 7s ease;
+  /* transition: transform 7s ease; */
 }
 
 /* Smooth Zoom Effect */
 
 .swiper-s swiper-slide.swiper-slide-active .slider-img {
-  transform: scale(1.08);
+  /* transform: scale(1.08); */
 }
 
 /* .swiper-s .overlay {
@@ -106,6 +106,9 @@ swiper-container.swiper-s {
   display: flex;
   gap: 25px;
   flex-wrap: wrap;
+}
+.slider-buttons .btn-learn{
+  cursor: pointer;
 }
 
 .btn-learn,
@@ -518,7 +521,8 @@ swiper-container::part(button-next):hover {
   margin-top: 60px;
 }
 
-.view-btn a {
+.view-btn a,
+.view-btn  .btn-motor {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -529,11 +533,13 @@ swiper-container::part(button-next):hover {
   text-decoration: none;
   font-size: 20px;
   font-weight: 500;
+  border-radius: 0px;
   cursor: pointer;
   transition: 0.3s ease;
 }
 .view-btn a::after,
-.btn-learn::after {
+.btn-learn::after,
+.view-btn  .btn-motor::after{
   content: '\F4F4'; /* Bootstrap play icon */
   font-family: 'bootstrap-icons';
 
@@ -1137,7 +1143,7 @@ swiper-slide {
   .caption {
     left: 5%;
     right: 5%;
-    top: 45% !important;
+    top: 40% !important;
     max-width: 100%;
   }
 
@@ -1159,6 +1165,8 @@ swiper-slide {
   }
 
   .slider-buttons {
+    justify-content:start;
+    padding-left: 30px;
     gap: 15px;
   }
 
@@ -1293,7 +1301,8 @@ swiper-slide {
   }
 
   .caption h1 {
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: 400;
   }
 
   .caption p {
@@ -1328,6 +1337,6 @@ swiper-slide {
     font-size: 20px;
   }
   swiper-container.swiper-s {
-    height: 85vh;
+    height:75vh;
   }
 }

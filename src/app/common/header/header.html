@@ -3,8 +3,8 @@
     <div class="container-fluid">
       <!-- Logo -->
       <a class="navbar-brand" routerLink="/">
-        <img src="/assets/images/header-logo.png" alt="Logo" />
-        <!-- <img src="/assets/images/honda logo/Kaysons logo.png" alt="Logo" /> -->
+        <img src="/assets/images/logo .png" alt="Logo" class="pe-3" />
+        <!-- <img src="/assets/images/header-logo1.png" alt="Logo" /> -->
       </a>
 
       <!-- Toggle -->
@@ -24,15 +24,31 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/home" routerLinkActive="active"> Home </a>
+            <a
+              class="nav-link"
+              routerLink="/home"
+              routerLinkActive="active"
+              data-bs-toggle="collapse"
+              data-bs-target=".navbar-collapse.show"
+            >
+              Home
+            </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" routerLink="/about-us" routerLinkActive="active"> About Us </a>
+            <a
+              class="nav-link"
+              routerLink="/about-us"
+              routerLinkActive="active"
+              data-bs-toggle="collapse"
+              data-bs-target=".navbar-collapse.show"
+            >
+              About Us
+            </a>
           </li>
 
-          <!-- Motorcycles Dropdown -->
-          <!-- <li class="nav-item dropdown">
+          <!-- mobile Motorcycles Dropdown -->
+          <li class="nav-item dropdown d-lg-none">
             <a
               class="nav-link dropdown-toggle"
               id="motorcyclesDropdown"
@@ -45,31 +61,68 @@
 
             <ul class="dropdown-menu" aria-labelledby="motorcyclesDropdown">
               <li>
-                <a class="dropdown-item" routerLink="/nx-series">NX Series</a>
+                <a
+                  class="dropdown-item"
+                  routerLink="/nx-series"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  >NX Series</a
+                >
               </li>
 
               <li>
-                <a class="dropdown-item" routerLink="/hornet-series">Hornet Series</a>
+                <a
+                  class="dropdown-item"
+                  routerLink="/hornet-series"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  >Hornet Series</a
+                >
               </li>
 
               <li>
-                <a class="dropdown-item" routerLink="/shine-series">Shine Series</a>
+                <a
+                  class="dropdown-item"
+                  routerLink="/shine-series"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  >Shine Series</a
+                >
               </li>
 
               <li>
-                <a class="dropdown-item" routerLink="/sp-series">SP Series</a>
+                <a
+                  class="dropdown-item"
+                  routerLink="/sp-series"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  >SP Series</a
+                >
               </li>
 
               <li>
-                <a class="dropdown-item" routerLink="/unicorn-series">Unicorn Series</a>
+                <a
+                  class="dropdown-item"
+                  routerLink="/unicorn-series"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  >Unicorn Series</a
+                >
               </li>
 
               <li>
-                <a class="dropdown-item" routerLink="/commuter-series">Commuter Series</a>
+                <a
+                  class="dropdown-item"
+                  routerLink="/livo"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  >Livo</a
+                >
               </li>
             </ul>
-          </li> -->
-          <li class="nav-item dropdown mega-dropdown">
+          </li>
+          <!-- desktop version -->
+          <li class="nav-item dropdown mega-dropdown d-none d-lg-block">
             <a
               class="nav-link dropdown-toggle"
               id="motorcyclesDropdown"
@@ -122,17 +175,18 @@
                   <span>Unicorn Series</span>
                 </a>
 
-                <a routerLink="/commuter-series" class="bike-item">
+                <a routerLink="/livo" class="bike-item">
                   <img
                     src="/assets/images/kaysons bike/Commuter-Series/Livo/Pearl-Igneous.png"
-                    alt="Commuter Series"
+                    alt="Livo"
                   />
-                  <span>Commuter Series</span>
+                  <span>Livo</span>
                 </a>
               </div>
             </div>
           </li>
-          <!-- <li class="nav-item dropdown">
+          <!-- mobile scooty Dropdown -->
+          <li class="nav-item dropdown d-lg-none">
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -145,15 +199,31 @@
 
             <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item" routerLink="/activa-series"> Activa Series </a>
+                <a
+                  class="dropdown-item"
+                  routerLink="/activa-series"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                >
+                  Activa Series
+                </a>
               </li>
 
               <li>
-                <a class="dropdown-item" routerLink="/dio-series"> Dio Series </a>
+                <a
+                  class="dropdown-item"
+                  routerLink="/dio-series"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                >
+                  Dio Series
+                </a>
               </li>
             </ul>
-          </li> -->
-          <li class="nav-item dropdown mega-dropdown">
+          </li>
+
+          <!-- desktop version -->
+          <li class="nav-item dropdown mega-dropdown d-none d-lg-block">
             <a
               class="nav-link dropdown-toggle"
               role="button"
@@ -184,15 +254,39 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/test-drive" routerLinkActive="active"> Test Drive </a>
+            <a
+              class="nav-link"
+              routerLink="/test-drive"
+              routerLinkActive="active"
+              data-bs-toggle="collapse"
+              data-bs-target=".navbar-collapse.show"
+            >
+              Test Drive
+            </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" routerLink="/services" routerLinkActive="active"> Services </a>
+            <a
+              class="nav-link"
+              routerLink="/services"
+              routerLinkActive="active"
+              data-bs-toggle="collapse"
+              data-bs-target=".navbar-collapse.show"
+            >
+              Services
+            </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" routerLink="/contact-us" routerLinkActive="active"> Contact Us </a>
+            <a
+              class="nav-link"
+              routerLink="/contact-us"
+              routerLinkActive="active"
+              data-bs-toggle="collapse"
+              data-bs-target=".navbar-collapse.show"
+            >
+              Contact Us
+            </a>
           </li>
 
           <li class="nav-item dropdown">
@@ -209,7 +303,8 @@
 
             <ul class="dropdown-menu" aria-labelledby="moreDropdown">
               <li>
-                <a class="dropdown-item" routerLink="/blog" routerLinkActive="active"> Blogs </a>
+                <a class="dropdown-item" routerLink="/blog" routerLinkActive="active"  data-bs-toggle="collapse"
+  data-bs-target=".navbar-collapse.show"> Blogs </a>
               </li>
             </ul>
           </li>

@@ -678,13 +678,13 @@ export const VEHICLE_DATA: any = {
     ],
   },
   commuter: {
-    title: 'Commuter Series',
+    title: 'Livo',
     subtitle: 'Best Mileage & Performance Commuter Bikes in India',
     banner: 'assets/images/products-banner/commuter-series.jpeg',
     description:
       "The Honda Livo is a popular motorcycle from Honda's trusted Commuter Series. Designed for everyday riders, the Livo offers a blend of fuel efficiency, comfort, and stylish looks, making it an ideal choice for daily commuting. Its refined engine, comfortable seating, and reliable performance ensure a smooth riding experience on city roads and beyond. If you are searching for the Honda Livo On Road Price in Siliguri, visit Kaysons Honda for the latest pricing, attractive offers, finance options, and expert guidance. Discover why the Livo continues to be a preferred commuter motorcycle.",
 
-    models: ['Hnda Livo'],
+    models: ['Livo'],
 
     bikes: [
       {

@@ -13,22 +13,26 @@
     <!-- Slide 1 -->
     <swiper-slide>
       <div class="slide-content">
-        <img src="/assets/images/services/home-page-1.webp" class="slider-img" />
-
-        <!-- <div class="overlay"></div> -->
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcset="/assets/images/services/banner-mobile-1.webp"
+          />
+          <img
+            src="/assets/images/services/home-page-1.webp"
+            class="slider-img"
+            alt="Honda Bikes"
+          />
+        </picture>
 
         <div class="caption">
-          <!-- <span class="sub-title"> TAKING RIDES TO A NEWER LEVEL </span>
-
-          <h3>A Legacy Built on Trust, Growth & Automotive Excellence</h3> -->
-
           <h1>
             Explore the Latest Honda Bikes and Ride Home Happy Every Model. Every Budget. Right
             Here.
           </h1>
 
           <div class="slider-buttons">
-            <a href="#" class="btn-learn"> Learn More </a>
+            <a (click)="scrollToVehicles()" class="btn-learn">Learn More</a>
           </div>
         </div>
       </div>
@@ -37,19 +41,26 @@
     <!-- Slide 2 -->
     <swiper-slide>
       <div class="slide-content">
-        <img src="/assets/images/services/home-page-2.webp" class="slider-img" />
-
-        <!-- <div class="overlay"></div> -->
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcset="/assets/images/services/banner-mobile-2.webp"
+          />
+          <img
+            src="/assets/images/services/home-page-2.webp"
+            class="slider-img"
+            alt="Honda Scooters"
+          />
+        </picture>
 
         <div class="caption">
-          <!-- <span class="sub-title"> TAKING RIDES TO A NEWER LEVEL </span> -->
-
-          <!-- <h1>A Legacy Built on Trust, Growth & Automotive Excellence</h1> -->
-
-          <h1>Honda Scooters for Every Road and Every Rider Explore. Book. Ride Today.</h1>
+          <h1>
+            Honda Scooters for Every Road and Every Rider Explore.<br />
+            Book. Ride Today.
+          </h1>
 
           <div class="slider-buttons">
-            <a href="#" class="btn-learn"> Learn More </a>
+            <a (click)="scrollToVehicles()" class="btn-learn">Learn More</a>
           </div>
         </div>
       </div>
@@ -227,7 +238,7 @@
 
   <!-- vehicle-section.component.html -->
 
-  <section class="vehicle-section">
+  <section class="vehicle-section" id="vehicle-section">
     <div class="container">
       <!-- Heading -->
       <h2 class="title">Browse Our Honda Two-Wheeler Range</h2>
@@ -492,6 +503,225 @@
             </div>
           </div>
         </a>
+
+        <!-- card 4 -->
+         <ng-container *ngIf="showAllMotorcycles">
+        <a routerLink="/commuter-series" class="bike-card-link">
+          <div class="bike-card">
+            <div class="card-top">
+              <div>
+                <h3>Livo</h3>
+                <span>Powered by Honda</span>
+              </div>
+
+              <div class="price">₹82,094*</div>
+            </div>
+
+            <div class="image-box">
+              <img
+                src="/assets/images/home-page-product-images/Livo.png"
+                loading="lazy"
+                alt="Honda Livo"
+              />
+            </div>
+
+            <div class="spec-row">
+              <div class="spec-box">
+                <h5>YEAR</h5>
+                <p>2026</p>
+              </div>
+
+              <div class="spec-box">
+                <h5>TYPE</h5>
+                <p>Motorcycle</p>
+              </div>
+
+              <div class="spec-box">
+                <h5>BATTERY</h5>
+                <p>12V, 4.0Ah</p>
+              </div>
+            </div>
+
+            <div class="bottom-specs">
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/ENGINE TYPE.svg" alt="" />
+                <div>
+                  <h6>Engine Type</h6>
+                  <p>109.51 cc, Air Cooled, 4 Stroke, SI Engine</p>
+                </div>
+              </div>
+
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/ENGINE POWER.svg" alt="" />
+                <div>
+                  <h6>Max Power</h6>
+                  <p>8.79 PS</p>
+                </div>
+              </div>
+
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/DISPLACEMENT.svg" alt="" />
+                <div>
+                  <h6>Kerb Weight</h6>
+                  <p>112 KG</p>
+                </div>
+              </div>
+
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/FUEL SYSTEM.svg" alt="" />
+                <div>
+                  <h6>Fuel Tank</h6>
+                  <p>9 L</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <!-- 5 card -->
+        <a routerLink="/sp-series" class="bike-card-link">
+          <div class="bike-card">
+            <div class="card-top">
+              <div>
+                <h3>SP125</h3>
+                <span>Powered by Honda</span>
+              </div>
+
+              <div class="price">₹96,210*</div>
+            </div>
+
+            <div class="image-box">
+              <img
+                src="/assets/images/home-page-product-images/SP125.png"
+                loading="lazy"
+                alt="Honda SP125"
+              />
+            </div>
+
+            <div class="spec-row">
+              <div class="spec-box">
+                <h5>YEAR</h5>
+                <p>2026</p>
+              </div>
+
+              <div class="spec-box">
+                <h5>TYPE</h5>
+                <p>Motorcycle</p>
+              </div>
+
+              <div class="spec-box">
+                <h5>BATTERY</h5>
+                <p>12V, 5.0Ah</p>
+              </div>
+            </div>
+
+            <div class="bottom-specs">
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/ENGINE TYPE.svg" alt="" />
+                <div>
+                  <h6>Engine Type</h6>
+                  <p>123.94cc, 4 Stroke, SI Engine</p>
+                </div>
+              </div>
+
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/ENGINE POWER.svg" alt="" />
+                <div>
+                  <h6>Max Power</h6>
+                  <p>10.8 PS</p>
+                </div>
+              </div>
+
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/DISPLACEMENT.svg" alt="" />
+                <div>
+                  <h6>Kerb Weight</h6>
+                  <p>Disc -117 kg, Drum -116 kg</p>
+                </div>
+              </div>
+
+              <div class="bottom-item">
+                <img src="/assets/images/home-icons/FUEL SYSTEM.svg" alt="" />
+                <div>
+                  <h6>Fuel Tank</h6>
+                  <p>11 L</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <!-- 6 card -->
+         <a routerLink="/unicorn-series" class="bike-card-link">
+  <div class="bike-card">
+    <div class="card-top">
+      <div>
+        <h3> Unicorn</h3>
+        <span>Powered by Honda</span>
+      </div>
+
+      <div class="price">₹1,13,786*</div>
+    </div>
+
+    <div class="image-box">
+      <img
+        src="/assets/images/home-page-product-images/Unicorn.png"
+        loading="lazy"
+        alt="Honda Unicorn"
+      />
+    </div>
+
+    <div class="spec-row">
+      <div class="spec-box">
+        <h5>YEAR</h5>
+        <p>2026</p>
+      </div>
+
+      <div class="spec-box">
+        <h5>TYPE</h5>
+        <p>Motorcycle</p>
+      </div>
+
+      <div class="spec-box">
+        <h5>BATTERY</h5>
+        <p>12V, 5.0Ah</p>
+      </div>
+    </div>
+
+    <div class="bottom-specs">
+      <div class="bottom-item">
+        <img src="/assets/images/home-icons/ENGINE TYPE.svg" alt="" />
+        <div>
+          <h6>Engine Type</h6>
+          <p>162.71 cc, 4 Stroke, SI Engine</p>
+        </div>
+      </div>
+
+      <div class="bottom-item">
+        <img src="/assets/images/home-icons/ENGINE POWER.svg" alt="" />
+        <div>
+          <h6>Max Power</h6>
+          <p>13.18 PS</p>
+        </div>
+      </div>
+
+      <div class="bottom-item">
+        <img src="/assets/images/home-icons/DISPLACEMENT.svg" alt="" />
+        <div>
+          <h6>Kerb Weight</h6>
+          <p>139 KG</p>
+        </div>
+      </div>
+
+      <div class="bottom-item">
+        <img src="/assets/images/home-icons/FUEL SYSTEM.svg" alt="" />
+        <div>
+          <h6>Fuel Tank</h6>
+          <p>13 L</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
+</ng-container>
       </div>
 
       <!-- ======================================
@@ -730,11 +960,24 @@
       </div>
 
       <!-- Button -->
-      <div class="view-btn">
-        <a [routerLink]="activeTab === 'motorcycle' ? '/nx-series' : '/activa-series'">
-          View All Models
-        </a>
-      </div>
+    <div class="view-btn">
+  <!-- Motorcycle -->
+  <button
+    *ngIf="activeTab === 'motorcycle' && !showAllMotorcycles"
+    class="btn btn-motor"
+    (click)="viewMoreMotorcycles()"
+  >
+    View  All Models
+  </button>
+
+  <!-- Scooter -->
+  <a
+    *ngIf="activeTab === 'scooter'"
+    routerLink="/activa-series"
+  >
+    View All Models
+  </a>
+</div>
     </div>
   </section>
 

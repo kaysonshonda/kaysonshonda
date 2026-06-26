@@ -36,6 +36,7 @@ export class VehicleSeries implements OnInit, AfterViewInit {
       message: [''],
     });
   }
+  currentSeries = '';
 
   // ngOnInit() {
   //   const type = this.route.snapshot.data['type'];
@@ -49,7 +50,7 @@ export class VehicleSeries implements OnInit, AfterViewInit {
 
   ngOnInit() {
     const type = this.route.snapshot.data['type'];
-
+  this.currentSeries = type;
     this.seriesData = VEHICLE_DATA[type];
 
     if (this.seriesData) {
@@ -148,4 +149,5 @@ submitForm() {
       });
     }
   }
+
 }
