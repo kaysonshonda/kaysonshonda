@@ -329,7 +329,8 @@
   }
 
   .footer-title {
-    font-size: 34px;
+    font-size: 30px;
+    justify-content: center;
   }
 
   .footer-heading {

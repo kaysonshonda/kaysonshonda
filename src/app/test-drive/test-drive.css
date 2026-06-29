@@ -222,7 +222,7 @@
     font-size: 35px;
   }
   .sales-page section.form-section {
-    box-shadow: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
   }
   .sales-page p {
     padding: 4px 20px;

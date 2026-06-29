@@ -87,7 +87,10 @@ swiper-container.swiper-s {
   display: inline-block;
   margin-bottom: 15px;
 }
-
+  .about-section .about-content .main-img-scooter{
+    display: none;
+    width: 100%;
+  }
 .caption h1 {
   font-size: 42px;
   font-weight: 600;
@@ -179,7 +182,9 @@ swiper-container::part(button-next):hover {
 .about-section .about-content {
   padding-left: 30px;
 }
-
+.bottom-images{
+  display: block;
+}
 .about-section .sub-title {
   color: var(--primary-red);
   font-size: 22px;
@@ -342,7 +347,7 @@ swiper-container::part(button-next):hover {
   /* text-transform: uppercase; */
   transition: 0.4s ease;
   cursor: pointer;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
 }
 
 .vehicle-section .tab-btn.active {
@@ -594,7 +599,7 @@ swiper-container::part(button-next):hover {
   margin-bottom: 8px;
   display: block;
   padding-top: 6px;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
 }
 
 .test-drive-section .booking-form .form-control,
@@ -1149,7 +1154,7 @@ swiper-slide {
 
   .sub-title {
     font-size: 14px;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
   }
 
   .caption h1 {
@@ -1244,7 +1249,7 @@ swiper-slide {
     clip-path: none;
   }
   .service-section .feature-box img {
-    width: 20px;
+    width: 30px;
   }
   .spec-row .spec-box {
     border-right: 1px solid var(--black);
@@ -1258,6 +1263,7 @@ swiper-slide {
   }
   .service-section .slider-box swiper-container {
     clip-path: none;
+    height: 200px;
   }
 }
 
@@ -1268,7 +1274,7 @@ swiper-slide {
 @media (max-width: 480px) {
   .service-section .sub-title {
     letter-spacing: 0px;
-    font-size: 25px;
+    font-size: 20px;
   }
   .service-section .section-title {
     font-size: 30px;
@@ -1288,9 +1294,15 @@ swiper-slide {
   .about-section .about-content {
     padding-left: 0px;
   }
-  .bottom-images {
+  .about-section .about-content .main-img-scooter{
+    display: block;
+    width: 100%;
+    margin: 20px auto;
+  }
+  .about-content .bottom-images {
     position: inherit;
     padding: 0;
+    display: none;
     background-color: transparent;
   }
   swiper-container,
