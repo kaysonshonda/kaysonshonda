@@ -105,7 +105,7 @@ export const VEHICLE_DATA: any = {
     description:
       'The trusted Honda Shine Series includes the Shine100, Shine100 DX, Shine125, and Shine125 Limited. Known for their reliability, fuel efficiency, and comfortable ride quality, these motorcycles  are ideal for daily commuting and long-term ownership. Whether you are looking for the Honda  Shine100 On Road Price in Siliguri, Honda Shine100 DX On Road Price in Siliguri, Honda Shine125  On Road Price in Siliguri, or Honda Shine125 Limited On Road Price in Siliguri, our team can help  with the latest prices, finance options, and offers. Visit Kaysons Honda to explore the complete Shine  Series. ',
 
-    models: [' Shine100', ' Shine100 DX', ' Shine125', ' Shine 125 Limited'],
+    models: [' Shine100', ' Shine100 DX', ' Shine125', ' Shine 125 Limited', ' Shine 125 Drum'],
     bikes: [
       {
         name: ' Shine100',
@@ -254,6 +254,48 @@ export const VEHICLE_DATA: any = {
             name: 'Pearl Siren Blue',
             image: '/assets/images/shine-series/Shine125/Decent Blue Metallic.png',
             code: '#0047ab',
+          },
+        ],
+        selectedColor: 0,
+      },
+      {
+        name: 'Shine 125 Drum ',
+        subtitle: 'Powered by Honda',
+        price: '₹82,250*',
+        year: '2026',
+        type: 'Motorcycle',
+        make: '12V, 5Ah',
+        engine: '123.94 cc, 4 Stroke, SI, BS-VI Engine',
+        power: '7.93 kW@ 7500 rpm',
+        displacement: '113 KG',
+        fuel: '10.5 L',
+        brochure: '/assets/Brochure/shine-125-limited-edition.pdf',
+
+        colors: [
+          {
+            name: 'Gray',
+            image: '/assets/images/shine-series/Shine100/Gray with Black.png',
+            code: 'rgb(107, 106, 105)',
+          },
+          {
+            name: 'Red',
+            image: '/assets/images/shine-series/Shine100/Red with Black.png',
+            code: 'rgb(161, 26, 22)',
+          },
+          {
+            name: 'Blue',
+            image: '/assets/images/shine-series/Shine100/Blue with Black.png',
+            code: 'rgb(0, 99, 173)',
+          },
+          {
+            name: 'Green',
+            image: '/assets/images/shine-series/Shine100/Green with Black.png',
+            code: 'rgb(0, 102, 106)',
+          },
+          {
+            name: 'Orange',
+            image: '/assets/images/shine-series/Shine100/Orange with Black.png',
+            code: 'rgb(209, 88, 44)',
           },
         ],
         selectedColor: 0,
@@ -465,7 +507,7 @@ export const VEHICLE_DATA: any = {
     banner: 'assets/images/products-banner/SP Series.webp',
     description:
       'The Honda SP Series includes the sporty SP125, SP125 Nav, and SP160. Designed for riders who want style, performance, and everyday practicality, the SP Series delivers a comfortable and enjoyable riding experience. With modern features, fuel-efficient engines, and bold styling, these motorcycles are ideal for both daily commutes and weekend rides. Whether you are searching for the Honda SP125 On Road Price in Siliguri, Honda SP125 Nav On Road Price in Siliguri, or Honda SP160 On Road Price in Siliguri, visit Kaysons Honda for the latest prices, offers, and finance options.',
-    models: [' SP125', ' SP160'],
+    models: [' SP125', 'SP125 (STD) ', ' SP160', 'SP 160 Front Disc & Rear Drum'],
     bikes: [
       {
         name: ' SP125',
@@ -508,6 +550,46 @@ export const VEHICLE_DATA: any = {
         ],
       },
       {
+        name: ' SP125 (STD) ',
+        subtitle: 'Powered by Honda',
+        price: '₹89,373*',
+        year: '2026',
+        type: 'Motorcycle',
+        make: '12V, 5.0Ah',
+        engine: '123.94 cc, 4 Stroke, SI, BS-VI Engine',
+        power: '7.93 kW@ 7500 rpm',
+        displacement: '117 KG',
+        fuel: '10.5 L',
+        brochure: '/assets/Brochure/Sp 125.pdf',
+        colors: [
+          {
+            name: 'Imperial Red Metallic',
+            image: '/assets/images/kaysons bike/SP-Series/SP125/Imperial Red Metallic.png',
+            code: 'rgb(150, 20, 27)',
+          },
+          {
+            name: 'Pearl Siren Blue',
+            image: '/assets/images/kaysons bike/SP-Series/SP125/Pearl Siren Blue.png',
+            code: 'rgb(33, 34, 43)',
+          },
+          {
+            name: 'Mat Axis Grey Metallic',
+            image: '/assets/images/kaysons bike/SP-Series/SP125/Mat Axis Grey Metallic​.png',
+            code: 'rgb(57, 56, 62)',
+          },
+          {
+            name: 'Mat Marvel Blue Metallic',
+            image: '/assets/images/kaysons bike/SP-Series/SP125/Mat Marvel Blue Metallic​.png',
+            code: 'rgb(6, 102, 176)',
+          },
+          {
+            name: 'Pearl Igneous Black',
+            image: '/assets/images/kaysons bike/SP-Series/SP125/Pearl Igneous Black​.png',
+            code: 'rgb(0, 0, 0)',
+          },
+        ],
+      },
+      {
         name: ' SP160',
         subtitle: 'Powered by Honda',
         price: '₹1,21,241*',
@@ -530,6 +612,42 @@ export const VEHICLE_DATA: any = {
             name: 'Pearl Igneous Black',
             image: '/assets/images/kaysons bike/SP-Series/SP-160/Pearl Igneous Black.png',
             code: 'rgb(28, 29, 33)',
+          },
+          {
+            name: 'Pearl Deep Ground Gray',
+            image: '/assets/images/kaysons bike/SP-Series/SP-160/Pearl Deep Ground Gray.png',
+            code: 'rgb(179, 179, 179)',
+          },
+          {
+            name: 'Athletic Blue Metallic',
+            image: '/assets/images/kaysons bike/SP-Series/SP-160/Athletic Blue Metallic.png',
+            code: 'rgb(0, 38, 140)',
+          },
+        ],
+      },
+      {
+        name: ' SP 160 Front Disc & Rear Drum',
+        subtitle: 'Powered by Honda',
+        price: '₹1,16,731*',
+        year: '2026',
+        type: 'Motorcycle',
+        make: '12V, 5.0Ah',
+        engine: '16.71 cc,  4 Stroke, SI Engine',
+        power: '10.8 PS',
+        displacement: '140 kg',
+        fuel: '12L',
+        brochure: '/assets/Brochure/sp 160.pdf',
+
+        colors: [
+          {
+            name: 'Pearl Igneous Black',
+            image: '/assets/images/kaysons bike/SP-Series/SP-160/Pearl Igneous Black.png',
+            code: 'rgb(28, 29, 33)',
+          },
+          {
+            name: 'Radiant Red Metallic',
+            image: '/assets/images/kaysons bike/SP-Series/SP-160/Radiant Red Metallic.png',
+            code: 'rgb(255, 0, 0)',
           },
           {
             name: 'Pearl Deep Ground Gray',
@@ -684,7 +802,7 @@ export const VEHICLE_DATA: any = {
     description:
       "The Honda Livo is a popular motorcycle from Honda's trusted Commuter Series. Designed for everyday riders, the Livo offers a blend of fuel efficiency, comfort, and stylish looks, making it an ideal choice for daily commuting. Its refined engine, comfortable seating, and reliable performance ensure a smooth riding experience on city roads and beyond. If you are searching for the Honda Livo On Road Price in Siliguri, visit Kaysons Honda for the latest pricing, attractive offers, finance options, and expert guidance. Discover why the Livo continues to be a preferred commuter motorcycle.",
 
-    models: ['Livo'],
+    models: ['Livo', 'Livo Drum'],
 
     bikes: [
       {
@@ -712,6 +830,40 @@ export const VEHICLE_DATA: any = {
             image:
               '/assets/images/kaysons bike/Commuter-Series/Livo/Pearl Igneous Black (Geny Gray Shroud + Blue Stripes).png',
             code: 'rgb(0, 99, 173)',
+          },
+          {
+            name: 'Pearl Igneous Black (Pearl Igneous Black Shroud + Orange Stripes)',
+            image:
+              '/assets/images/kaysons bike/Commuter-Series/Livo/Pearl Igneous Black (Pearl Igneous Black Shroud + Orange Stripes).png',
+            code: 'rgb(209, 88, 44)',
+          },
+        ],
+      },
+      {
+        name: ' Livo Drum',
+        subtitle: 'Powered by Honda',
+        price: '₹80,330*',
+        year: '2026',
+        type: 'Bike',
+        make: '12V, 4Ah',
+        engine: '109.51 cc, 4 Stroke, SI Engine',
+        power: '6.47 KW @ 7500 rpm',
+        displacement: '112 KG',
+        fuel: '9 L',
+        brochure: '/assets/Brochure/Livo.pdf',
+
+        colors: [
+          {
+            name: 'Pearl Igneous Black (Geny Gray Shroud + Blue Stripes)',
+            image:
+              '/assets/images/kaysons bike/Commuter-Series/Livo/Pearl Igneous Black (Geny Gray Shroud + Blue Stripes).png',
+            code: 'rgb(0, 99, 173)',
+          },
+          {
+            name: 'Pearl Siren Blue A (Geny Gray Shroud + Green Stripes)',
+            image:
+              '/assets/images/kaysons bike/Commuter-Series/Livo/Pearl Siren Blue A (Geny Gray Shroud + Green Stripes).png',
+            code: 'rgb(33, 34, 43)',
           },
           {
             name: 'Pearl Igneous Black (Pearl Igneous Black Shroud + Orange Stripes)',
@@ -779,7 +931,10 @@ export const VEHICLE_DATA: any = {
 
     models: [
       ' Activa 110',
+      'Activa 110 Smart',
+      'Activa 110 DLX',
       ' Activa 125',
+      'Activa 125 SMART',
       ' Activa 110 Anniversary Edition',
       ' Activa 125 Anniversary Edition',
     ],
@@ -833,6 +988,102 @@ export const VEHICLE_DATA: any = {
         ],
       },
 
+       {
+        name: ' Activa 110 Smart',
+        subtitle: 'Powered by Honda',
+        price: '₹92,697*',
+        year: '2026',
+        type: 'Scooter',
+        make: '12V, 5.0Ah',
+        engine: '109.51cc',
+        power: '5.88 kW @ 8000 rpm',
+        displacement: '105 kg',
+        fuel: '5.3 L',
+        brochure: '/assets/Brochure/activa110.pdf',
+
+        colors: [
+
+          {
+            name: 'Mat Axis Gray Metallic',
+            image:
+              '/assets/images/kaysons bike/Activa-Series/Activa-110/Mat Axis Gray Metallic.png',
+            code: 'rgb(57, 56, 62)',
+          },
+           {
+            name: 'Decent Blue Metallic',
+            image: '/assets/images/kaysons bike/Activa-Series/Activa-110/Decent Blue Metallic.png',
+            code: 'rgb(25, 76, 117)',
+          },
+          {
+            name: 'Pearl Igneous Black',
+            image: '/assets/images/kaysons bike/Activa-Series/Activa-110/Pearl Igneous Black.png',
+            code: 'rgb(57, 56, 62)',
+          },
+          {
+            name: 'Pearl Precious White',
+            image: '/assets/images/kaysons bike/Activa-Series/Activa-110/Pearl Precious White.png',
+            code: 'rgb(237, 237, 237)',
+          },
+          {
+            name: 'Pearl Siren Blue',
+            image: '/assets/images/kaysons bike/Activa-Series/Activa-110/Pearl Siren Blue.png',
+            code: 'rgb(33, 34, 43)',
+          },
+          {
+            name: 'Rebel Red Metallic',
+            image: '/assets/images/kaysons bike/Activa-Series/Activa-110/Rebel Red Metallic.png',
+            code: 'rgb(131, 31, 43)',
+          },
+        ],
+      },
+   {
+        name: '  Activa 110 DLX',
+        subtitle: 'Powered by Honda',
+        price: '₹88,643*',
+        year: '2026',
+        type: 'Scooter',
+        make: '12V, 5.0Ah',
+        engine: '109.51cc',
+        power: '5.88 kW @ 8000 rpm',
+        displacement: '106',
+        fuel: '5.3 L',
+        brochure: '/assets/Brochure/activa110.pdf',
+
+        colors: [
+         {
+            name: 'Pearl Igneous Black',
+            image: '/assets/images/kaysons bike/Activa-Series/Activa-110/Pearl Igneous Black.png',
+            code: 'rgb(57, 56, 62)',
+          },
+          {
+            name: 'Mat Axis Gray Metallic',
+            image:
+              '/assets/images/kaysons bike/Activa-Series/Activa-110/Mat Axis Gray Metallic.png',
+            code: 'rgb(57, 56, 62)',
+          },
+           {
+            name: 'Decent Blue Metallic',
+            image: '/assets/images/kaysons bike/Activa-Series/Activa-110/Decent Blue Metallic.png',
+            code: 'rgb(25, 76, 117)',
+          },
+
+          {
+            name: 'Pearl Precious White',
+            image: '/assets/images/kaysons bike/Activa-Series/Activa-110/Pearl Precious White.png',
+            code: 'rgb(237, 237, 237)',
+          },
+          {
+            name: 'Pearl Siren Blue',
+            image: '/assets/images/kaysons bike/Activa-Series/Activa-110/Pearl Siren Blue.png',
+            code: 'rgb(33, 34, 43)',
+          },
+          {
+            name: 'Rebel Red Metallic',
+            image: '/assets/images/kaysons bike/Activa-Series/Activa-110/Rebel Red Metallic.png',
+            code: 'rgb(131, 31, 43)',
+          },
+        ],
+      },
       {
         name: ' Activa 110 Anniversary Edition',
         subtitle: 'Powered by Honda',
@@ -886,6 +1137,54 @@ export const VEHICLE_DATA: any = {
             image:
               '/assets/images/kaysons bike/Activa-Series/Activa-125/Mat Axis Gray Metallic.png',
             code: 'rgb(57, 56, 62)',
+          },
+          {
+            name: 'Pearl Deep Ground Gray',
+            image:
+              '/assets/images/kaysons bike/Activa-Series/Activa-125/Pearl Deep Ground Gray.png',
+            code: 'rgb(179, 179, 179)',
+          },
+          {
+            name: 'Pearl Igneous Black',
+            image: '/assets/images/kaysons bike/Activa-Series/Activa-125/Pearl Igneous Black.png',
+            code: 'rgb(40, 40, 40)',
+          },
+          {
+            name: 'Pearl Precious White',
+            image: '/assets/images/kaysons bike/Activa-Series/Activa-125/Pearl Precious White.png',
+            code: 'rgb(237, 237, 237)',
+          },
+          {
+            name: 'Pearl Siren Blue',
+            image: '/assets/images/kaysons bike/Activa-Series/Activa-125/Pearl Siren Blue.png',
+            code: 'rgb(33, 34, 43)',
+          },
+        ],
+      },
+       {
+        name: ' Activa 125 SMART',
+        subtitle: 'Powered by Honda',
+        price: '₹98,844*',
+        year: '2026',
+        type: 'Scooter',
+        make: '12V, 5.0 Ah',
+        engine: '123.92 cc',
+        power: '6.20 kW @ 6500 rpm',
+        displacement: '106',
+        fuel: '5.3 L',
+        brochure: '/assets/Brochure/activa125.pdf',
+
+        colors: [
+          {
+            name: 'Mat Axis Gray Metallic',
+            image:
+              '/assets/images/kaysons bike/Activa-Series/Activa-125/Mat Axis Gray Metallic.png',
+            code: 'rgb(57, 56, 62)',
+          },
+          {
+            name: 'Rebel Red Metallic',
+            image: '/assets/images/kaysons bike/Activa-Series/Activa-125/Rebel Red Metallic.png',
+            code: 'rgb(186, 29, 46)',
           },
           {
             name: 'Pearl Deep Ground Gray',
@@ -1001,7 +1300,7 @@ export const VEHICLE_DATA: any = {
     description:
       'The stylish Honda Dio Series features the Dio 110, Dio 125, and Dio X Edition. Designed for riders who want sporty looks, everyday convenience, and reliable performance, the Dio range offers an enjoyable riding experience for city commutes and daily travel. With modern features, comfortable ergonomics, and fuel-efficient engines, the Dio Series remains a popular choice among scooter enthusiasts. Whether you are searching for the Honda Dio 110 On Road Price in Siliguri, Honda Dio 125 On Road Price in Siliguri, or Honda Dio X Edition On Road Price in Siliguri, visit Kaysons Honda for the latest offers and pricing.',
 
-    models: [' Dio 110', ' Dio 125', ' Dio X Edition'],
+    models: [' Dio 110', ' Dio STD', ' Dio 125', ' Dio 125 STD', ' Dio X Edition'],
 
     bikes: [
       {
@@ -1028,6 +1327,50 @@ export const VEHICLE_DATA: any = {
             image: '/assets/images/kaysons bike/Dio-Series/Dio-110/Mat Axis Gray Metallic.png',
             code: 'rgb(57, 56, 62)',
           },
+          {
+            name: 'Mat Marvel Blue​',
+            image: '/assets/images/kaysons bike/Dio-Series/Dio-110/Mat Marvel Blue.png',
+            code: 'rgb(6, 102, 176)',
+          },
+          {
+            name: 'Pearl Igneous Black"​',
+            image: '/assets/images/kaysons bike/Dio-Series/Dio-110/Pearl Igneous Black.png',
+            code: 'rgb(40, 40, 40)',
+          },
+          {
+            name: 'Pearl Igneous Black + Pearl Deep Ground Gray',
+            image:
+              '/assets/images/kaysons bike/Dio-Series/Dio-110/Pearl Igneous Black + Pearl Deep Ground Gray.png',
+            code: 'rgb(163, 156, 175)',
+          },
+        ],
+      },
+
+      {
+        name: 'Dio STD',
+        subtitle: 'Powered by Honda',
+        price: '₹74,899*',
+        year: '2026',
+        type: 'Scooter',
+        make: '12V, 5.0Ah',
+        engine: '109.51cc',
+        power: '5.85 kW @ 8000 rpm',
+        displacement: '106kg',
+        fuel: '5.3 L',
+        brochure: '/assets/Brochure/dio110.pdf',
+
+        colors: [
+          {
+            name: 'Mat Axis Gray Metallic​',
+            image: '/assets/images/kaysons bike/Dio-Series/Dio-110/Mat Axis Gray Metallic.png',
+            code: 'rgb(57, 56, 62)',
+          },
+          {
+            name: 'Imperial Red Metallic​',
+            image: '/assets/images/kaysons bike/Dio-Series/Dio-110/Imperial Red Metallic​.png',
+            code: 'rgb(150, 20, 27)',
+          },
+
           {
             name: 'Mat Marvel Blue​',
             image: '/assets/images/kaysons bike/Dio-Series/Dio-110/Mat Marvel Blue.png',
@@ -1095,6 +1438,57 @@ export const VEHICLE_DATA: any = {
           },
         ],
       },
+
+       {
+        name: ' Dio 125 STD',
+        subtitle: 'Powered by Honda',
+        price: '₹92,535*',
+        year: '2026',
+        type: 'Scooter',
+        make: '12V, 5.0Ah',
+        engine: '123.92cc',
+        power: '6.11 kW @6500 rpm',
+        displacement: '104 kg',
+        fuel: '5.3 L',
+        brochure: '/assets/Brochure/dio125.pdf',
+
+        colors: [
+           {
+            name: 'Imperial Red',
+            image: '/assets/images/kaysons bike/Dio-Series/Dio 125/Imperial Red.png',
+            code: 'rgb(166, 45, 48)',
+          },
+          {
+            name: 'Pearl Deep Ground Gray (Emblem)',
+            image:
+              '/assets/images/kaysons bike/Dio-Series/Dio 125/Pearl Deep Ground Gray (Emblem).png',
+            code: 'rgb(173, 173, 173)',
+          },
+          {
+            name: 'Mat Marvel Blue Metallic',
+            image: '/assets/images/kaysons bike/Dio-Series/Dio 125/Mat Marvel Blue Metallic.png',
+            code: 'rgb(6, 102, 176)',
+          },
+
+          {
+            name: 'Pearl Deep Ground Gray (Stripe)',
+            image:
+              '/assets/images/kaysons bike/Dio-Series/Dio 125/Pearl Deep Ground Gray (Stripe).png',
+            code: 'rgb(175, 176, 174)',
+          },
+          {
+            name: 'Pearl Sports Yellow',
+            image: '/assets/images/kaysons bike/Dio-Series/Dio 125/Pearl Sports Yellow.png',
+            code: 'rgb(229, 183, 30)',
+          },
+          {
+            name: 'Pearl Igneous Black',
+            image: '/assets/images/kaysons bike/Dio-Series/Dio 125/Pearl Igneous Black.png',
+            code: 'rgb(40, 40, 40)',
+          },
+        ],
+      },
+
 
       {
         name: ' Dio X Edition',
