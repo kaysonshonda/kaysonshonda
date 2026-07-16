@@ -28,6 +28,14 @@
               <div class="image">
                 <img [src]="bike.colors[bike.selectedColor]?.image" />
               </div>
+<!-- Mobile Only -->
+              <div class="top-row mobile-top-row">
+                <div>
+                  <h2>{{ bike.name }}</h2>
+                  <h4>{{ bike.subtitle }}</h4>
+                </div>
+                <h3 class="price">{{ bike.price }}</h3>
+              </div>
 
               <h5>Available Colours - {{ bike.colors[bike.selectedColor]?.name }}</h5>
 
@@ -230,10 +238,10 @@
     </div>
 
     <!-- ================= FEATURES ================= -->
-<section
-  class="bike-slider-section"
-  [class.scooty-bg]="currentSeries === 'activa' || currentSeries === 'dio'"
->
+    <section
+      class="bike-slider-section"
+      [class.scooty-bg]="currentSeries === 'activa' || currentSeries === 'dio'"
+    >
       <div class="slider-bg"></div>
 
       <div class="slider-wrapper">

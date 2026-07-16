@@ -40,8 +40,8 @@
 
 .honda-vehicle-series .heading h1 {
   color: var(--primary-red);
-     font-size: 22px;
-    font-weight: 600;
+  font-size: 22px;
+  font-weight: 600;
   /* text-transform: uppercase; */
   margin-bottom: 15px;
 }
@@ -207,7 +207,7 @@
   color: var(--primary-red);
   border: 1px solid var(--primary-red);
   border-radius: 50%;
-   background: url('/assets/images/right-arrow.svg') center no-repeat;
+  background: url('/assets/images/right-arrow.svg') center no-repeat;
 }
 .shineSwiper::part(button-prev) {
   display: none;
@@ -531,7 +531,7 @@
   background: url('/assets/images/Banner-scooty.jpeg') center center/cover no-repeat;
 }
 .bike-slider-section.scooty-bg .slider-bg {
-   background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.1);
 }
 /* Background */
 
@@ -611,6 +611,14 @@
   height: 1rem;
   color: #fff;
 }
+.mobile-top-row {
+  display: none;
+}
+
+.desktop-top-row {
+  display: flex;
+}
+
 @media (max-width: 991px) {
   .honda-vehicle-series .heading h3 {
     font-size: 34px;
@@ -632,6 +640,39 @@
 }
 
 @media (max-width: 768px) {
+  .mobile-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1px;
+    padding-right:0px;
+    margin: 15px 0;
+  }
+
+  .mobile-top-row > div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .mobile-top-row h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .mobile-top-row h4 {
+    font-size: 16px;
+    margin: 4px 0 0;
+  }
+
+  .mobile-top-row .price {
+    font-size: 22px;
+    white-space: nowrap;
+    margin: 0;
+  }
+  .bike-info .top-row {
+    display: none;
+  }
   .bike-slider-section .slide-content h3 {
     font-size: 20px;
   }
@@ -682,6 +723,7 @@
   .honda-vehicle-series .top-row {
     flex-direction: column;
     text-align: center;
+    padding-right: 0px;
     align-items: center;
   }
 
@@ -771,5 +813,8 @@
   }
   .honda-vehicle-series .spec-row div:not(:last-child)::after {
     right: -10px;
+  }
+   .shineSwiper::part(button-next) {
+    top: 18%;
   }
 }
