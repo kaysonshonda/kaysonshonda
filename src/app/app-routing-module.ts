@@ -48,24 +48,23 @@ const routes: Routes = [
     path: 'blog/:slug', // ':id' allows you to pass a dynamic parameter for specific blog posts
     component: BlogDetails,
   },
-
-  {
-    path: 'nx-series',
+{
+    path: 'nx200',
     component: VehicleSeries,
     data: { type: 'nx' },
   },
   {
-    path: 'hornet-series',
+    path: 'cb125-hornet',
     component: VehicleSeries,
     data: { type: 'hornet' },
   },
   {
-    path: 'shine-series',
+    path: 'shine-100-125',
     component: VehicleSeries,
     data: { type: 'shine' },
   },
   {
-    path: 'sp-series',
+    path: 'sp-125-160',
     component: VehicleSeries,
     data: { type: 'sp' },
   },
@@ -79,15 +78,25 @@ const routes: Routes = [
     component: VehicleSeries,
     data: { type: 'commuter' },
   },
+
+  // =======================
+  // Scooters
+  // =======================
   {
-    path: 'activa-series',
+    path: 'activa-110-125',
     component: VehicleSeries,
     data: { type: 'activa' },
   },
   {
-    path: 'dio-series',
+    path: 'dio-110-125',
     component: VehicleSeries,
     data: { type: 'dio' },
+  },
+
+  // Redirect invalid URLs
+  {
+    path: '**',
+    redirectTo: '',
   },
 ];
 

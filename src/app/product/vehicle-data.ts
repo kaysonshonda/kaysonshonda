@@ -1,6 +1,6 @@
 export const VEHICLE_DATA: any = {
   nx: {
-    title: 'NX Series',
+    title: 'Nx200',
     subtitle: 'Best Mileage & Performance Commuter Bikes in India',
     banner: 'assets/images/products-banner/NX Series.webp',
     description:
@@ -94,7 +94,7 @@ export const VEHICLE_DATA: any = {
 
   shine: {
     subtitle: 'Best Mileage & Performance Commuter Bikes in India',
-    title: 'Shine Series',
+    title: 'Shine 100 & 125',
     metaTitle: 'Honda Shine Series Bikes | Kaysons Honda',
     metaDescription:
       'Explore Honda Shine 100, Shine 100 DX and Shine 125 bikes with mileage, specifications, colours and latest prices.',
@@ -359,7 +359,7 @@ export const VEHICLE_DATA: any = {
   },
 
   hornet: {
-    title: 'Hornet Series',
+    title: 'CB125 Hornet',
     subtitle: 'Best Mileage & Performance Commuter Bikes in India',
     banner: 'assets/images/products-banner/Hornet Series.webp',
 
@@ -502,7 +502,7 @@ export const VEHICLE_DATA: any = {
     ],
   },
   sp: {
-    title: 'SP Series',
+    title: 'Sp 125 & 160',
     subtitle: 'Best Mileage & Performance Commuter Bikes in India',
     banner: 'assets/images/products-banner/SP Series.webp',
     description:
@@ -923,7 +923,7 @@ export const VEHICLE_DATA: any = {
     ],
   },
   activa: {
-    title: ' Activa Series',
+    title: 'Activa 110 & 125',
     subtitle: 'Best Mileage & Performance Commuter Bikes in India',
     banner: 'assets/images/products-banner/Activa Series.webp',
     description:
@@ -1294,7 +1294,7 @@ export const VEHICLE_DATA: any = {
     ],
   },
   dio: {
-    title: 'Dio Series',
+    title: 'Dio 110 & 125',
     subtitle: 'Best Mileage & Performance Commuter Bikes in India',
     banner: 'assets/images/products-banner/Dio Series.webp',
     description:
