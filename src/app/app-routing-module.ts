@@ -69,7 +69,7 @@ const routes: Routes = [
     data: { type: 'sp' },
   },
   {
-    path: 'unicorn-series',
+    path: 'unicorn',
     component: VehicleSeries,
     data: { type: 'unicorn' },
   },

@@ -4,7 +4,7 @@ export const VEHICLE_DATA: any = {
     subtitle: 'Best Mileage & Performance Commuter Bikes in India',
     banner: 'assets/images/products-banner/NX Series.webp',
     description:
-      'Kaysons Honda is your trusted destination for the latest motorcycles from the popular NX Series. Built for riders who enjoy both daily commuting and weekend adventures, the NX200 combines sporty performance, comfort, and modern technology. Its powerful 184.4cc engine, bold design, and advanced features make it a practical choice for every journey. If you are looking for the Honda NX200 On Road Price in Siliguri, our team is here to assist you with the latest prices, finance options, and ongoing offers. Visit Kaysons Honda to discover the complete NX Series range today.',
+      'Kaysons Honda is your trusted destination for the latest motorcycles from the popular NX200. Built for riders who enjoy both daily commuting and weekend adventures, the NX200 combines sporty performance, comfort, and modern technology. Its powerful 184.4cc engine, bold design, and advanced features make it a practical choice for every journey. If you are looking for the Honda NX200 On Road Price in Siliguri, our team is here to assist you with the latest prices, finance options, and ongoing offers. Visit Kaysons Honda to discover the complete NX200 range today.',
     models: ['NX200'],
     bikes: [
       {
@@ -707,7 +707,7 @@ export const VEHICLE_DATA: any = {
     ],
   },
   unicorn: {
-    title: 'Unicorn Series',
+    title: 'Unicorn',
     subtitle: 'Best Mileage & Performance Commuter Bikes in India',
     banner: 'assets/images/products-banner/Unicorn Series.webp',
     description:
