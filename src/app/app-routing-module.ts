@@ -59,14 +59,24 @@ const routes: Routes = [
     data: { type: 'hornet' },
   },
   {
-    path: 'shine-100-125',
+    path: 'shine-100',
     component: VehicleSeries,
     data: { type: 'shine' },
   },
   {
-    path: 'sp-125-160',
+    path: 'shine-125',
+    component: VehicleSeries,
+    data: { type: 'shine',  initialSlide: 2},
+  },
+  {
+    path: 'sp-125',
     component: VehicleSeries,
     data: { type: 'sp' },
+  },
+  {
+    path: 'sp-160',
+    component: VehicleSeries,
+    data: { type: 'sp',  initialSlide: 2 },
   },
   {
     path: 'unicorn',
@@ -83,15 +93,26 @@ const routes: Routes = [
   // Scooters
   // =======================
   {
-    path: 'activa-110-125',
+    path: 'activa-110',
     component: VehicleSeries,
     data: { type: 'activa' },
   },
+   {
+    path: 'activa-125',
+    component: VehicleSeries,
+    data: { type: 'activa', initialSlide: 4  },
+  },
   {
-    path: 'dio-110-125',
+    path: 'dio-110',
     component: VehicleSeries,
     data: { type: 'dio' },
   },
+  {
+    path: 'dio-125',
+    component: VehicleSeries,
+    data: { type: 'dio', initialSlide: 2},
+  },
+
 
   // Redirect invalid URLs
   {

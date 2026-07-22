@@ -15,6 +15,8 @@ import { FormService } from '../../c-services/form-service';
 })
 export class VehicleSeries implements OnInit, AfterViewInit {
   @ViewChild('swiper') swiperEl!: ElementRef;
+  @ViewChild('bikeSection') bikeSection!: ElementRef;
+   initialSlide: number = 0;
   successMessage = '';
   isLoading = false;
   seriesData: any;
@@ -48,45 +50,94 @@ export class VehicleSeries implements OnInit, AfterViewInit {
   //   });
   // }
 
+  // ngOnInit() {
+  //   const type = this.route.snapshot.data['type'];
+  // this.currentSeries = type;
+  //   this.seriesData = VEHICLE_DATA[type];
+
+  //   if (this.seriesData) {
+  //     // Title
+  //     this.titleService.setTitle(this.seriesData.metaTitle || this.seriesData.title);
+
+  //     // Description
+  //     this.meta.updateTag({
+  //       name: 'description',
+  //       content: this.seriesData.metaDescription || '',
+  //     });
+
+  //     // Keywords
+  //     this.meta.updateTag({
+  //       name: 'keywords',
+  //       content: this.seriesData.keywords || '',
+  //     });
+
+  //     // Canonical URL
+  //     let link: HTMLLinkElement =
+  //       this.document.querySelector("link[rel='canonical']") || this.document.createElement('link');
+
+  //     const canonicalUrl = window.location.href.split('?')[0];
+
+  //     link.setAttribute('rel', 'canonical');
+  //     link.setAttribute('href', canonicalUrl);
+
+  //     if (!this.document.head.contains(link)) {
+  //       this.document.head.appendChild(link);
+  //     }
+
+  //     this.seriesData?.bikes?.forEach((b: any) => {
+  //       b.selectedColor = b.selectedColor ?? 0;
+  //     });
+  //   }
+  // }
   ngOnInit() {
-    const type = this.route.snapshot.data['type'];
-  this.currentSeries = type;
+
+  this.route.data.subscribe(data => {
+
+    const type = data['type'];
+    this.initialSlide = data['initialSlide'] ?? 0;
+     console.log(data);
+  console.log('initialSlide:', data['initialSlide']);
+
+    this.currentSeries = type;
     this.seriesData = VEHICLE_DATA[type];
 
     if (this.seriesData) {
-      // Title
+
       this.titleService.setTitle(this.seriesData.metaTitle || this.seriesData.title);
 
-      // Description
       this.meta.updateTag({
         name: 'description',
         content: this.seriesData.metaDescription || '',
       });
 
-      // Keywords
       this.meta.updateTag({
         name: 'keywords',
         content: this.seriesData.keywords || '',
       });
 
-      // Canonical URL
       let link: HTMLLinkElement =
-        this.document.querySelector("link[rel='canonical']") || this.document.createElement('link');
-
-      const canonicalUrl = window.location.href.split('?')[0];
+        this.document.querySelector("link[rel='canonical']")
+        || this.document.createElement('link');
 
       link.setAttribute('rel', 'canonical');
-      link.setAttribute('href', canonicalUrl);
+      link.setAttribute('href', window.location.href.split('?')[0]);
 
       if (!this.document.head.contains(link)) {
         this.document.head.appendChild(link);
       }
 
-      this.seriesData?.bikes?.forEach((b: any) => {
+      this.seriesData.bikes.forEach((b: any) => {
         b.selectedColor = b.selectedColor ?? 0;
       });
+
+      // Route change to slide change
+
+
     }
-  }
+
+  });
+
+}
   toggleFaq(i: number) {
     this.activeIndex = this.activeIndex === i ? null : i;
   }
@@ -114,20 +165,44 @@ submitForm() {
   });
 }
 
-  ngAfterViewInit() {
-    const swiper: any = this.swiperEl.nativeElement;
+ngAfterViewInit() {
+  const swiper: any = this.swiperEl.nativeElement;
 
-    Object.assign(swiper, {
-      slidesPerView: 1,
-      loop: true,
-      pagination: {
-        clickable: true,
-      },
-    });
+  Object.assign(swiper, {
+    slidesPerView: 1,
+    loop: false,
+    initialSlide: this.initialSlide,
+    pagination: {
+      clickable: true,
+    },
+  });
 
-    swiper.initialize();
-  }
+  swiper.initialize();
 
+  setTimeout(() => {
+
+    swiper.swiper.update();
+
+    // Slide change
+    swiper.swiper.slideTo(this.initialSlide, 0);
+
+    // initialSlide > 0 unte matrame scroll
+    if (this.initialSlide > 0) {
+
+      const y =
+        this.bikeSection.nativeElement.getBoundingClientRect().top +
+        window.pageYOffset -
+        90;
+
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth',
+      });
+
+    }
+
+  }, 300);
+}
   changeColor(bike: any, i: number) {
     bike.selectedColor = i;
   }

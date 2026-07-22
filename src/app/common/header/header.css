@@ -70,7 +70,7 @@
   width: 100%;
    left: 20%;
     transform: translateX(-20%);
-  min-width: 850px !important;
+  min-width: 950px !important;
   right: 0;
   border: none;
   border-radius: 0;
@@ -80,7 +80,7 @@
 
 .mega-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   gap: 20px;
 }
 
@@ -218,13 +218,13 @@
 }
 .scooter-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
 .mega-dropdown .scooter-menu {
   width: 500px !important;
-  min-width: 300px !important;
-  max-width: 300px !important;
+  min-width: 500px !important;
+  max-width: 500px !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
 }
